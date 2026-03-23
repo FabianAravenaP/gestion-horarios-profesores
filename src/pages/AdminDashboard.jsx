@@ -330,26 +330,27 @@ function AdminDashboard() {
   }
 
   async function handleDeleteCoverage(cov) {
-    // Delete by properties to clean any duplicates for this specific block/date
+    if (!cov?.id) return
+    
     try {
+      // Use 'cancelada' for a more robust "soft delete" that syncs better
       const { error } = await supabase
         .from('coberturas')
-        .delete()
-        .eq('fecha', cov.fecha)
-        .eq('horario_id', cov.horario_id)
-        .eq('profesor_ausente_id', cov.profesor_ausente_id)
+        .update({ estado: 'cancelada' })
+        .eq('id', cov.id)
       
       if (error) throw error
       
-      // Optimistic update for the summary modal
-      setSummaryCoverages(prev => prev.filter(c => 
-        !(c.fecha === cov.fecha && c.horario_id === cov.horario_id && c.profesor_ausente_id === cov.profesor_ausente_id)
-      ))
+      // Optimistic update
+      setSummaryCoverages(prev => prev.filter(c => c.id !== cov.id))
       
-      // Refresh other lists
+      // Full refreshes
       fetchPlannedCoverages()
-      if (selectedTeacherId) {
-        fetchTeacherSchedule()
+      if (selectedTeacherId) fetchTeacherSchedule()
+      
+      // Re-fetch the summary to be 100% sure we are synced with server
+      if (isSummaryModalOpen) {
+        fetchDailySummary()
       }
     } catch (error) {
       alert('Error al eliminar: ' + error.message)
