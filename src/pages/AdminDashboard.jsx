@@ -51,6 +51,7 @@ function AdminDashboard() {
   const [selectedTeacherId, setSelectedTeacherId] = useState('')
   const [teacherSchedule, setTeacherSchedule] = useState([])
   const [teacherCoverages, setTeacherCoverages] = useState([])
+  const [totalCoverageUsage, setTotalCoverageUsage] = useState(0)
   const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false)
   const [editingBlock, setEditingBlock] = useState(null) // { dia, bloque, item? }
   const [newBlock, setNewBlock] = useState({ 
@@ -326,6 +327,16 @@ function AdminDashboard() {
       
       if (cError) throw cError
       setTeacherCoverages(coverages)
+
+      // 3. Fetch TOTAL coverage usage (for the budget counter)
+      const { count, error: countError } = await supabase
+        .from('coberturas')
+        .select('*', { count: 'exact', head: true })
+        .eq('profesor_reemplazante_id', selectedTeacherId)
+        .neq('estado', 'cancelada')
+      
+      if (countError) throw countError
+      setTotalCoverageUsage(count || 0)
 
     } catch (error) {
       console.error('Error fetching teacher schedule:', error.message)
@@ -1238,8 +1249,60 @@ function AdminDashboard() {
 
             {selectedTeacherId ? (
               <div className="schedule-container">
-                <div className="schedule-header">
-                  <h3>Horario Semanal: {profesores.find(p => p.id === selectedTeacherId)?.nombre}</h3>
+                <div style={{ 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  alignItems: 'flex-start',
+                  marginBottom: '2rem',
+                  padding: '1.5rem',
+                  background: 'var(--bg-soft)',
+                  borderRadius: '1.25rem',
+                  border: '1px solid var(--border)'
+                }}>
+                  <div className="teacher-info-header">
+                    <h3 style={{ margin: 0, fontSize: '1.4rem' }}>
+                      Horario Semanal: {profesores.find(p => p.id === selectedTeacherId)?.nombre}
+                    </h3>
+                    <p style={{ margin: '0.4rem 0 0 0', opacity: 0.7 }}>
+                      {profesores.find(p => p.id === selectedTeacherId)?.cargo} • {profesores.find(p => p.id === selectedTeacherId)?.email}
+                    </p>
+                  </div>
+                  
+                  {(() => {
+                    const st = profesores.find(p => p.id === selectedTeacherId)
+                    if (!st) return null
+                    const budget = getDetailedBudget(st.horas_excedentes, st.horas_no_lectivas)
+                    const surplusUsed = Math.min(totalCoverageUsage, budget.surplus)
+                    const surplusRemaining = budget.surplus - surplusUsed
+                    const nonTeachingUsed = Math.max(0, totalCoverageUsage - budget.surplus)
+                    const overBudget = nonTeachingUsed > budget.noLectivas
+
+                    return (
+                      <div className="budget-mini-panel" style={{ display: 'flex', gap: '2rem' }}>
+                        <div className="stat-mini">
+                          <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 600, display: 'block' }}>EXCEDENTES</span>
+                          <span style={{ fontSize: '1.2rem', fontWeight: 800, color: surplusRemaining > 0 ? 'var(--accent)' : '#94a3b8' }}>
+                            {surplusRemaining} / {budget.surplus}
+                          </span>
+                        </div>
+                        <div className="stat-mini">
+                          <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 600, display: 'block' }}>NO LECTIVAS</span>
+                          <span style={{ fontSize: '1.2rem', fontWeight: 800, color: overBudget ? '#ef4444' : 'var(--text)' }}>
+                             Usadas: {nonTeachingUsed} (De {budget.noLectivas})
+                          </span>
+                        </div>
+                        <div className="stat-mini">
+                          <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 600, display: 'block' }}>TOTAL CUBIERTO</span>
+                          <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent)' }}>
+                            {totalCoverageUsage} blq
+                          </span>
+                        </div>
+                      </div>
+                    )
+                  })()}
+                </div>
+
+                <div className="schedule-header" style={{ marginTop: '1rem' }}>
                   <div className="legend">
                     <span className="legend-item class">Clase</span>
                     <span className="legend-item tc">TC</span>
