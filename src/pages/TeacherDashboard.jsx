@@ -378,7 +378,7 @@ function TeacherDashboard({ user: initialUser }) {
                       )
 
                       if (isFridayEarlyExit || (b.id === 10 && !item)) {
-                        return <td key={d.id} className="slot is-closed"><span style={{ fontSize: '0.75rem', opacity: 0.5 }}>-</span></td>
+                        return <td key={d.id} className="slot is-disabled"></td>
                       }
 
                       if (dayCoverage) {

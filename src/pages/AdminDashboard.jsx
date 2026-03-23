@@ -1477,12 +1477,14 @@ function AdminDashboard() {
                             const isBloqueado = type === 'bloqueado'
                             const isClass = item && !isTC && !isDupla && !isApoderado && !isBloqueado
                             
+                            const isFridayEnd = d.id === 5 && b.id > 6
+                            
                             return (
                               <td 
                                 key={d.id} 
-                                className={`slot ${isBloqueado ? 'is-bloqueado' : isClass ? 'is-class' : isTC ? 'is-tc' : isDupla ? 'is-dupla' : isApoderado ? 'is-apoderado' : 'is-available'} ${item?.isInherited ? 'is-inherited' : ''}`}
-                                onClick={() => !item?.isInherited && openScheduleModal(d.id, b.id, item)}
-                                style={{ cursor: item?.isInherited ? 'default' : 'pointer' }}
+                                className={`slot ${isFridayEnd ? 'is-disabled' : isBloqueado ? 'is-bloqueado' : isClass ? 'is-class' : isTC ? 'is-tc' : isDupla ? 'is-dupla' : isApoderado ? 'is-apoderado' : 'is-available'} ${item?.isInherited ? 'is-inherited' : ''}`}
+                                onClick={() => !item?.isInherited && !isFridayEnd && openScheduleModal(d.id, b.id, item)}
+                                style={{ cursor: (item?.isInherited || isFridayEnd) ? 'default' : 'pointer' }}
                               >
                                 {item ? (
                                   <div className="item-content">
@@ -1668,7 +1670,12 @@ function AdminDashboard() {
                   <label>Día</label>
                   <select 
                     value={newBlock.dia_semana} 
-                    onChange={e => setNewBlock({...newBlock, dia_semana: Number(e.target.value)})}
+                    onChange={e => {
+                      const newDay = Number(e.target.value)
+                      let newBId = newBlock.bloque_id
+                      if (newDay === 5 && newBId > 6) newBId = 6
+                      setNewBlock({...newBlock, dia_semana: newDay, bloque_id: newBId})
+                    }}
                   >
                     {DIAS.map(d => (
                       <option key={d.id} value={d.id}>{d.nombre}</option>
@@ -1681,7 +1688,7 @@ function AdminDashboard() {
                     value={newBlock.bloque_id} 
                     onChange={e => setNewBlock({...newBlock, bloque_id: Number(e.target.value)})}
                   >
-                    {BLOQUES.map(b => (
+                    {BLOQUES.filter(b => !(newBlock.dia_semana === 5 && b.id > 6)).map(b => (
                       <option key={b.id} value={b.id}>{b.id}° ({b.inicio}-{b.fin})</option>
                     ))}
                   </select>
