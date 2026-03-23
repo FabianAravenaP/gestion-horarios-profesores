@@ -272,12 +272,7 @@ function AdminDashboard() {
       setProcessing(true)
       const { data, error } = await supabase
         .from('coberturas')
-        .select(`
-          *,
-          ausente:profesores!profesor_ausente_id(nombre),
-          reemplazo:profesores!profesor_reemplazante_id(nombre),
-          horarios(bloque_id, asignaturas(nombre))
-        `)
+        .select('*, ausente:profesores!profesor_ausente_id(nombre), reemplazo:profesores!profesor_reemplazante_id(nombre), horarios(*, asignaturas(nombre))')
         .eq('fecha', selectedDate)
         .neq('estado', 'cancelada')
       if (error) throw error
@@ -287,7 +282,7 @@ function AdminDashboard() {
       setSummaryCoverages(sorted)
       setIsSummaryModalOpen(true)
     } catch (error) {
-      alert('Error al obtener resumen [v2]: ' + error.message)
+      alert('Error al obtener resumen [v3]: ' + error.message)
     } finally {
       setProcessing(false)
     }
