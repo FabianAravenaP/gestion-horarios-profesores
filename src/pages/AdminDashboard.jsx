@@ -335,18 +335,18 @@ function AdminDashboard() {
     if (!cov?.id) return
     
     try {
-      // Use 'cancelada' for a more robust "soft delete" that syncs better
+      // Hard delete by ID — RLS now allows this for all roles
       const { error } = await supabase
         .from('coberturas')
-        .update({ estado: 'cancelada' })
+        .delete()
         .eq('id', cov.id)
       
       if (error) throw error
       
-      // Optimistic update — immediate UI feedback
+      // Optimistic update — remove from modal immediately
       setSummaryCoverages(prev => prev.filter(c => c.id !== cov.id))
       
-      // Refresh the planner list and teacher schedule
+      // Refresh planner list and teacher schedule
       fetchPlannedCoverages()
       if (selectedTeacherId) fetchTeacherSchedule()
       
