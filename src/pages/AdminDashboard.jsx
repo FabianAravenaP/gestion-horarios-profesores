@@ -319,16 +319,22 @@ function AdminDashboard() {
   }
 
   async function handleDeleteCoverage(id) {
-    if (!confirm('¿Eliminar esta planificación?')) return
+    if (!id) {
+      alert('Error: ID no válido.')
+      return
+    }
+    if (!confirm('¿Deseas eliminar permanentemente esta cobertura?')) return
+    
     try {
       const { error } = await supabase.from('coberturas').delete().eq('id', id)
       if (error) throw error
+      
+      alert('Cobertura eliminada con éxito.')
+      
       fetchPlannedCoverages()
-      // Also refresh current teacher schedule if selected, so the grid updates
       if (selectedTeacherId) {
         fetchTeacherSchedule()
       }
-      // Re-fetch the full summary from server to ensure sync
       if (isSummaryModalOpen) {
         fetchDailySummary()
       }
@@ -1256,7 +1262,7 @@ function AdminDashboard() {
                           <td>{c.reemplazo?.nombre}</td>
                           <td>{BLOQUES.find(b => b.inicio.startsWith(c.horarios?.hora_inicio?.slice(0,5)))?.id}°</td>
                           <td>
-                            <button className="btn-delete" onClick={() => handleDeleteCoverage(c.id)}>Eliminar</button>
+                            <button type="button" className="btn-delete" onClick={() => { alert('Debug: Click pendiende ' + c.id); handleDeleteCoverage(c.id); }}>Eliminar</button>
                           </td>
                         </tr>
                       ))}
@@ -1746,9 +1752,10 @@ function AdminDashboard() {
                           </td>
                           <td>
                             <button 
+                              type="button"
                               className="btn-delete"
                               style={{ padding: '0.4rem', fontSize: '1rem' }}
-                              onClick={() => handleDeleteCoverage(cov.id)}
+                              onClick={() => { alert('Debug: Click resumen ' + cov.id); handleDeleteCoverage(cov.id); }}
                               title="Eliminar esta cobertura"
                             >
                               🗑️
