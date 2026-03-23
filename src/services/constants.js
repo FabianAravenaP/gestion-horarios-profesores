@@ -8,7 +8,7 @@ export const BLOQUES = [
   { id: 7, inicio: '13:55:00', fin: '14:40:00' },
   { id: 8, inicio: '14:40:00', fin: '15:25:00' },
   { id: 9, inicio: '15:25:00', fin: '16:10:00' },
-  { id: 10, inicio: '16:15:00', fin: '17:00:00' },
+  { id: 10, inicio: '16:15:00', fin: '17:30:00' },
 ];
 
 export const DIAS = [
