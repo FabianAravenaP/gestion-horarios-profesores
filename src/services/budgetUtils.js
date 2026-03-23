@@ -1,10 +1,22 @@
 import { DURACION_BLOQUE_H } from './constants'
 
 /**
- * Max Lectiva calculation.
- * A 44h contract has a maximum of 38 teaching (lectiva) blocks.
- * Budget for coverages = Max Lectiva - Assigned Classes.
+ * New budget calculation based on HORAS.xlsx requirements.
+ * 1. Surplus (excedentes) are chronological (60m). Convert to pedagogical (45m) factor 1.33.
+ * 2. Non-teaching (no lectivas) are the second pool.
  */
+export const getDetailedBudget = (excedentes, noLectivas) => {
+  const surplusPedagogical = Math.floor((excedentes || 0) * 1.3333)
+  const nonTeaching = noLectivas || 0
+  
+  return {
+    surplus: surplusPedagogical,
+    nonTeaching: nonTeaching,
+    total: surplusPedagogical + nonTeaching
+  }
+}
+
+// Legacy support for other parts of the app if needed
 export const getBaseCoverageBudget = (contractHours, assignedClassesCount) => {
   if (!contractHours) return 0
   const maxLectiva = Math.floor((contractHours / 44) * 38)

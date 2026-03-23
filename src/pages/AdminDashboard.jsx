@@ -4,7 +4,7 @@ import * as XLSX from 'xlsx'
 import logo from '../assets/logo.jpg'
 import { formatLongDate, getWeekRange } from '../services/dateUtils'
 import { BLOQUES, DIAS, DURACION_BLOQUE_H } from '../services/constants'
-import { getBaseCoverageBudget, formatUsage } from '../services/budgetUtils'
+import { getDetailedBudget, formatUsage } from '../services/budgetUtils'
 
 
 
@@ -14,7 +14,16 @@ function AdminDashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [editingId, setEditingId] = useState(null)
-  const [newProf, setNewProf] = useState({ nombre: '', email: '', cargo: '', rol: 'profesor', contrato_horas: 0, password: '' })
+  const [newProf, setNewProf] = useState({ 
+    nombre: '', 
+    email: '', 
+    cargo: '', 
+    rol: 'profesor', 
+    contrato_horas: 0, 
+    horas_excedentes: 0,
+    horas_no_lectivas: 0,
+    password: '' 
+  })
   const [processing, setProcessing] = useState(false)
   const [activeTab, setActiveTab] = useState('profesores')
   
@@ -168,11 +177,6 @@ function AdminDashboard() {
     return profesores
       .filter(p => p.activo && p.rol === 'profesor' && !busyTeacherIds.includes(p.id))
       .map(p => {
-        // Count assigned classes in the schedule (tipo_bloque === 'clase')
-        const assignedClasses = allSchedules
-          .filter(s => s.profesor_id === p.id && s.tipo_bloque === 'clase')
-          .length
-        
         // Count planned coverages for the SAME week as selectedDate
         const { start, end } = getWeekRange(selectedDate)
         const weekCoveragesCount = plannedCoverages.filter(c => 
@@ -182,10 +186,17 @@ function AdminDashboard() {
           c.fecha <= end
         ).length
 
-        const budget = getBaseCoverageBudget(p.contrato_horas, assignedClasses)
-        const remaining = budget - weekCoveragesCount
+        const budget = getDetailedBudget(p.horas_excedentes, p.horas_no_lectivas)
+        const remaining = budget.total - weekCoveragesCount
+        const isOverSurplus = weekCoveragesCount >= budget.surplus
 
-        return { ...p, usage: weekCoveragesCount, budget, remaining }
+        return { 
+          ...p, 
+          usage: weekCoveragesCount, 
+          budget, 
+          remaining,
+          isOverSurplus
+        }
       })
   }
 
@@ -642,9 +653,14 @@ function AdminDashboard() {
           const { data: authData, error: authError } = await supabase.functions.invoke('admin-update-user', {
             body: { userId: editingId, password: newProf.password }
           })
+          
           if (authError) {
-             const errorMsg = authError.context?.error?.message || authError.message || 'Error desconocido en la función'
-             throw new Error(`Error de autenticación: ${errorMsg}`)
+             const errorMsg = authError.context?.error?.message || authError.message || 'Error de red en la función'
+             throw new Error(`Error de conexión: ${errorMsg}`)
+          }
+
+          if (authData && authData.success === false) {
+             throw new Error(`Error de Supabase: ${authData.error}`)
           }
         }
 
@@ -654,7 +670,9 @@ function AdminDashboard() {
           p_email: finalEmail,
           p_cargo: newProf.cargo,
           p_rol: newProf.rol,
-          p_contrato_horas: newProf.contrato_horas
+          p_contrato_horas: newProf.contrato_horas,
+          p_horas_excedentes: newProf.horas_excedentes,
+          p_horas_no_lectivas: newProf.horas_no_lectivas
         })
         if (error) throw error
 
@@ -668,7 +686,9 @@ function AdminDashboard() {
           p_email: finalEmail,
           p_cargo: newProf.cargo,
           p_rol: newProf.rol,
-          p_contrato_horas: newProf.contrato_horas
+          p_contrato_horas: newProf.contrato_horas,
+          p_horas_excedentes: newProf.horas_excedentes,
+          p_horas_no_lectivas: newProf.horas_no_lectivas
         })
         if (error) throw error
       }
@@ -676,7 +696,16 @@ function AdminDashboard() {
       setIsModalOpen(false)
       setIsEditing(false)
       setEditingId(null)
-      setNewProf({ nombre: '', email: '', cargo: '', rol: 'profesor', contrato_horas: 0, password: '' })
+      setNewProf({ 
+        nombre: '', 
+        email: '', 
+        cargo: '', 
+        rol: 'profesor', 
+        contrato_horas: 0, 
+        horas_excedentes: 0,
+        horas_no_lectivas: 0,
+        password: '' 
+      })
       fetchProfesores()
       alert(isEditing ? 'Profesor actualizado con éxito' : 'Profesor creado con éxito. Clave por defecto: info1234')
     } catch (error) {
@@ -693,6 +722,8 @@ function AdminDashboard() {
       cargo: prof.cargo || '',
       rol: prof.rol,
       contrato_horas: prof.contrato_horas || 0,
+      horas_excedentes: prof.horas_excedentes || 0,
+      horas_no_lectivas: prof.horas_no_lectivas || 0,
       password: ''
     })
     setEditingId(prof.id)
@@ -828,11 +859,31 @@ function AdminDashboard() {
                         onChange={e => setNewProf({...newProf, rol: e.target.value})}
                       >
                         <option value="profesor">Profesor</option>
-                        <option value="admin">Administrador</option>
                       </select>
                     </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                      <div className="form-group">
+                        <label>Excedentes (Cronológicas)</label>
+                        <input 
+                          type="number" 
+                          step="0.5"
+                          value={newProf.horas_excedentes} 
+                          onChange={e => setNewProf({...newProf, horas_excedentes: parseFloat(e.target.value) || 0})} 
+                        />
+                        <small style={{ opacity: 0.7 }}>→ ~{Math.floor(newProf.horas_excedentes * 1.33)} blq pedagógicos</small>
+                      </div>
+                      <div className="form-group">
+                        <label>Horas No Lectivas</label>
+                        <input 
+                          type="number" 
+                          step="0.5"
+                          value={newProf.horas_no_lectivas} 
+                          onChange={e => setNewProf({...newProf, horas_no_lectivas: parseFloat(e.target.value) || 0})} 
+                        />
+                      </div>
+                    </div>
                     <div className="form-group">
-                      <label>Horas de Contrato</label>
+                      <label>Horas de Contrato (Total)</label>
                       <input 
                         type="number" 
                         value={newProf.contrato_horas} 
@@ -879,7 +930,9 @@ function AdminDashboard() {
                     <tr>
                       <th>Nombre</th>
                       <th>Cargo</th>
-                      <th>Horas</th>
+                      <th>Contrato</th>
+                      <th>Exced. (P)</th>
+                      <th>No Lect.</th>
                       <th>Email</th>
                       <th>Rol</th>
                       <th>Estado</th>
@@ -891,7 +944,13 @@ function AdminDashboard() {
                       <tr key={p.id}>
                         <td>{p.nombre}</td>
                         <td>{p.cargo || '-'}</td>
-                        <td style={{ textAlign: 'center', fontWeight: 'bold' }}>{p.contrato_horas || 0}</td>
+                        <td style={{ textAlign: 'center' }}>{p.contrato_horas || 0}</td>
+                        <td style={{ textAlign: 'center', fontWeight: 'bold', color: 'var(--primary)' }}>
+                          {Math.floor((p.horas_excedentes || 0) * 1.33)}
+                        </td>
+                        <td style={{ textAlign: 'center', fontWeight: 'bold', color: '#ef4444' }}>
+                          {p.horas_no_lectivas || 0}
+                        </td>
                         <td>{p.email}</td>
                         <td>{p.rol}</td>
                         <td>{p.activo ? 'Activo' : 'Inactivo'}</td>
@@ -980,8 +1039,12 @@ function AdminDashboard() {
                           >
                             <option value="">Sin reemplazo</option>
                             {available.map(p => (
-                              <option key={p.id} value={p.id}>
-                                {p.nombre} ({p.remaining} blq disp)
+                              <option 
+                                key={p.id} 
+                                value={p.id}
+                                style={{ color: p.isOverSurplus ? '#ef4444' : 'inherit' }}
+                              >
+                                {p.nombre} ({p.remaining} blq {p.isOverSurplus ? '⚠️ NO LECTIVAS' : 'disponibles'})
                               </option>
                             ))}
                           </select>
