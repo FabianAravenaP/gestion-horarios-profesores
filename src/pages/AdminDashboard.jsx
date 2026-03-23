@@ -298,13 +298,15 @@ function AdminDashboard() {
     if (summaryCoverages.length === 0) return
     
     try {
-      const excelData = summaryCoverages.map(cov => ({
-        'Bloque': `${cov.horarios?.bloque_id}°`,
-        'Profesor Ausente': cov.ausente?.nombre,
-        'Profesor Reemplaza': cov.reemplazo?.nombre,
-        'Asignatura': cov.horarios?.asignaturas?.nombre || 'Administrativo',
-        'Curso/Detalle': cov.curso || 'N/A'
-      }))
+      const excelData = summaryCoverages
+        .filter(c => c.tipo === 'cobertura') // Only ad-hoc coverages in Excel
+        .map(cov => ({
+          'Bloque': `${cov.horarios?.bloque_id}°`,
+          'Profesor Ausente': cov.ausente?.nombre,
+          'Profesor Reemplaza': cov.reemplazo?.nombre,
+          'Asignatura': cov.horarios?.asignaturas?.nombre || 'Administrativo',
+          'Curso/Detalle': cov.curso || 'N/A'
+        }))
 
       const ws = XLSX.utils.json_to_sheet(excelData)
       const wb = XLSX.utils.book_new()
@@ -326,9 +328,9 @@ function AdminDashboard() {
       if (selectedTeacherId) {
         fetchTeacherSchedule()
       }
-      // Also refresh summary if open
+      // Re-fetch the full summary from server to ensure sync
       if (isSummaryModalOpen) {
-        setSummaryCoverages(prev => prev.filter(c => c.id !== id))
+        fetchDailySummary()
       }
     } catch (error) {
       alert('Error al eliminar: ' + error.message)
