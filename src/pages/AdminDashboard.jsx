@@ -1133,7 +1133,7 @@ function AdminDashboard() {
               {loading ? (
                 <p>Cargando lista...</p>
               ) : (
-                <table>
+                <table className="responsive-table">
                   <thead>
                     <tr>
                       <th>Nombre</th>
@@ -1150,18 +1150,18 @@ function AdminDashboard() {
                   <tbody>
                     {profesores.map(p => (
                       <tr key={p.id}>
-                        <td>{p.nombre}</td>
-                        <td>{p.cargo || '-'}</td>
-                        <td style={{ textAlign: 'center' }}>{p.contrato_horas || 0}</td>
-                        <td style={{ textAlign: 'center', fontWeight: 'bold', color: 'var(--primary)' }}>
+                        <td data-label="Nombre">{p.nombre}</td>
+                        <td data-label="Cargo">{p.cargo || '-'}</td>
+                        <td data-label="Contrato" style={{ textAlign: 'center' }}>{p.contrato_horas || 0}</td>
+                        <td data-label="Exced. (P)" style={{ textAlign: 'center', fontWeight: 'bold', color: 'var(--primary)' }}>
                           {Math.floor((p.horas_excedentes || 0) * 1.33)}
                         </td>
-                        <td style={{ textAlign: 'center', fontWeight: 'bold', color: '#ef4444' }}>
+                        <td data-label="No Lect." style={{ textAlign: 'center', fontWeight: 'bold', color: '#ef4444' }}>
                           {p.horas_no_lectivas || 0}
                         </td>
-                        <td>{p.email}</td>
-                        <td>{p.rol}</td>
-                        <td>{p.activo ? 'Activo' : 'Inactivo'}</td>
+                        <td data-label="Email">{p.email}</td>
+                        <td data-label="Rol">{p.rol}</td>
+                        <td data-label="Estado">{p.activo ? 'Activo' : 'Inactivo'}</td>
                         <td className="table-actions">
                           <button 
                             className="btn-edit" 
@@ -1305,7 +1305,7 @@ function AdminDashboard() {
                   <div className="planned-list" style={{ marginTop: '3rem' }}>
                     <h3>Planificaciones Recientes</h3>
                     <div className="grid-wrapper">
-                      <table style={{ background: 'var(--bg)', borderRadius: '1rem', border: '1px solid var(--border)' }}>
+                      <table className="responsive-table" style={{ background: 'var(--bg)', borderRadius: '1rem', border: '1px solid var(--border)' }}>
                         <thead>
                           <tr>
                             <th>Fecha</th>
@@ -1318,11 +1318,11 @@ function AdminDashboard() {
                         <tbody>
                           {plannedCoverages.map(c => (
                             <tr key={c.id}>
-                              <td>{new Date(c.fecha + 'T00:00:00').toLocaleDateString('es-ES')}</td>
-                              <td>{c.ausente?.nombre}</td>
-                              <td>{c.reemplazo?.nombre}</td>
-                              <td>{BLOQUES.find(b => b.inicio.startsWith(c.horarios?.hora_inicio?.slice(0,5)))?.id}°</td>
-                              <td>
+                              <td data-label="Fecha">{new Date(c.fecha + 'T00:00:00').toLocaleDateString('es-ES')}</td>
+                              <td data-label="Ausente">{c.ausente?.nombre}</td>
+                              <td data-label="Reemplazo">{c.reemplazo?.nombre}</td>
+                              <td data-label="Bloque">{BLOQUES.find(b => b.inicio.startsWith(c.horarios?.hora_inicio?.slice(0,5)))?.id}°</td>
+                              <td className="table-actions">
                                 <button type="button" className="btn-delete" onClick={() => handleDeleteCoverage(c)}>Eliminar</button>
                               </td>
                             </tr>
@@ -1355,7 +1355,7 @@ function AdminDashboard() {
                   ))}
                 </select>
               </div>
-              <div className="action-buttons" style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+              <div className="action-buttons" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem' }}>
                 <button 
                   className="secondary" 
                   onClick={handleExportIndividual}
