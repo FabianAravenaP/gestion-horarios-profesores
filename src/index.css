@@ -386,9 +386,43 @@ main {
   color: var(--accent);
 }
 
-.modal-content h3 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2, .modal-header h3 {
+  margin: 0;
+}
+
+.btn-close {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-close:hover {
+  background: #e5e7eb;
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+.btn-close::before {
+  content: '✕';
+  font-size: 0.75rem;
 }
 
 .form-group {

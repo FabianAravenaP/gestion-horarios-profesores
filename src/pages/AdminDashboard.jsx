@@ -1003,7 +1003,10 @@ function AdminDashboard() {
             {isModalOpen && (
               <div className="modal-overlay">
                 <div className="modal-content">
-                  <h3>{isEditing ? 'Editar Profesor' : 'Agregar Nuevo Profesor'}</h3>
+                  <div className="modal-header">
+                    <h3>{isEditing ? 'Editar Profesor' : 'Agregar Nuevo Profesor'}</h3>
+                    <button className="btn-close" type="button" onClick={() => setIsModalOpen(false)}>Cerrar</button>
+                  </div>
                   <form onSubmit={handleSaveProfessor}>
                     <div className="form-group">
                       <label>Nombre Completo</label>
@@ -1090,7 +1093,7 @@ function AdminDashboard() {
                       </div>
                     </div>
                     <div className="modal-actions">
-                      <button type="button" className="btn-cancel" onClick={() => setIsModalOpen(false)}>Cancelar</button>
+                      <button type="button" className="btn-cancel" onClick={() => setIsModalOpen(false)}>Cerrar</button>
                       <button type="submit" className="btn-save" disabled={processing}>
                         {processing ? 'Guardando...' : 'Guardar'}
                       </button>
@@ -1581,7 +1584,7 @@ function AdminDashboard() {
           <div className="modal-content schedule-modal">
             <div className="modal-header">
               <h2>{editingBlock?.item ? 'Editar Bloque' : 'Añadir Bloque'}</h2>
-              <button className="btn-close" onClick={() => setIsScheduleModalOpen(false)}>×</button>
+              <button className="btn-close" onClick={() => setIsScheduleModalOpen(false)}>Cerrar</button>
             </div>
             
             <p className="modal-subtitle">
@@ -1691,7 +1694,7 @@ function AdminDashboard() {
               <h3 style={{ textTransform: 'capitalize' }}>
                 Resumen de Coberturas: {new Date(selectedDate + 'T12:00:00').toLocaleDateString('es-CL', { weekday: 'long', day: 'numeric', month: 'long' })}
               </h3>
-              <button className="btn-close" onClick={() => setIsSummaryModalOpen(false)}>×</button>
+              <button className="btn-close" onClick={() => setIsSummaryModalOpen(false)}>Cerrar</button>
             </div>
             
             <div style={{ marginBottom: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>

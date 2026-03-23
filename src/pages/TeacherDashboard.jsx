@@ -402,7 +402,10 @@ function TeacherDashboard() {
         {isPasswordModalOpen && (
           <div className="modal-overlay">
             <div className="modal-content">
-              <h3>Cambiar Contraseña</h3>
+              <div className="modal-header">
+                <h3>Cambiar Contraseña</h3>
+                <button className="btn-close" type="button" onClick={() => setIsPasswordModalOpen(false)}>Cerrar</button>
+              </div>
               <form onSubmit={handleChangePassword}>
                 <div className="form-group">
                   <label>Nueva Contraseña</label>
@@ -423,7 +426,7 @@ function TeacherDashboard() {
                   />
                 </div>
                 <div className="modal-actions">
-                  <button type="button" className="btn-cancel" onClick={() => setIsPasswordModalOpen(false)}>Cancelar</button>
+                  <button type="button" className="btn-cancel" onClick={() => setIsPasswordModalOpen(false)}>Cerrar</button>
                   <button type="submit" className="btn-save" disabled={passwordProcessing}>
                     {passwordProcessing ? 'Cambiando...' : 'Cambiar Contraseña'}
                   </button>
