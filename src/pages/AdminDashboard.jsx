@@ -31,6 +31,8 @@ function AdminDashboard() {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0])
   const [absentTeacherId, setAbsentTeacherId] = useState('')
   const [absentSchedule, setAbsentSchedule] = useState([])
+  const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false)
+  const [summaryCoverages, setSummaryCoverages] = useState([])
   const [allSchedules, setAllSchedules] = useState([])
   const [assignments, setAssignments] = useState({}) // { horarioId: substituteId }
   const [plannedCoverages, setPlannedCoverages] = useState([])
@@ -262,6 +264,31 @@ function AdminDashboard() {
       setPlannedCoverages(data)
     } catch (error) {
       console.error('Error fetching planned coverages:', error.message)
+    }
+  }
+
+  async function fetchDailySummary() {
+    try {
+      setProcessing(true)
+      const { data, error } = await supabase
+        .from('coberturas')
+        .select(`
+          *,
+          ausente:profesores!profesor_ausente_id(nombre),
+          reemplazo:profesores!profesor_reemplazante_id(nombre),
+          horarios(bloque_id, asignaturas(nombre))
+        `)
+        .eq('fecha', selectedDate)
+        .neq('estado', 'cancelada')
+        .order('bloque_id')
+      
+      if (error) throw error
+      setSummaryCoverages(data || [])
+      setIsSummaryModalOpen(true)
+    } catch (error) {
+      alert('Error al obtener resumen: ' + error.message)
+    } finally {
+      setProcessing(false)
     }
   }
 
@@ -1102,13 +1129,23 @@ function AdminDashboard() {
                   onChange={e => setSelectedDate(e.target.value)} 
                 />
               </div>
-              <button 
-                className="btn-save" 
-                onClick={handleSaveCoverages}
-                disabled={processing || absentSchedule.length === 0}
-              >
-                {processing ? 'Guardando...' : 'Guardar Planificación'}
-              </button>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <button 
+                  className="btn-save" 
+                  onClick={handleSaveCoverages}
+                  disabled={processing || absentSchedule.length === 0}
+                >
+                  {processing ? 'Guardando...' : 'Guardar Planificación'}
+                </button>
+                <button 
+                  className="btn-edit" 
+                  onClick={fetchDailySummary}
+                  style={{ background: 'var(--accent)', borderColor: 'var(--accent)' }}
+                  disabled={processing}
+                >
+                  📑 Ver Resumen del Día
+                </button>
+              </div>
             </div>
 
             <div className="planner-content">
@@ -1578,6 +1615,79 @@ function AdminDashboard() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+      
+      {isSummaryModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal-content" style={{ maxWidth: '800px', width: '90%' }}>
+            <div className="modal-header">
+              <h3 style={{ textTransform: 'capitalize' }}>
+                Resumen de Coberturas: {new Date(selectedDate + 'T12:00:00').toLocaleDateString('es-CL', { weekday: 'long', day: 'numeric', month: 'long' })}
+              </h3>
+              <button className="btn-close" onClick={() => setIsSummaryModalOpen(false)}>×</button>
+            </div>
+            
+            <div style={{ marginBottom: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
+               <div className="stat-card" style={{ flex: 1, padding: '1rem', textAlign: 'center', background: 'var(--bg-soft)', borderRadius: '1rem' }}>
+                  <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 600 }}>TOTAL BLOQUES A CUBRIR</span>
+                  <p style={{ fontSize: '2rem', fontWeight: 800, margin: 0, color: 'var(--accent)' }}>{summaryCoverages.length}</p>
+               </div>
+            </div>
+
+            <div className="summary-table-container" style={{ maxHeight: '50vh', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: '1rem' }}>
+              <table className="profesores-table" style={{ margin: 0 }}>
+                <thead style={{ position: 'sticky', top: 0, zIndex: 10 }}>
+                  <tr>
+                    <th>Bloque</th>
+                    <th>Profesor Ausente</th>
+                    <th>Reemplaza</th>
+                    <th>Materia / Detalle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {summaryCoverages.length === 0 ? (
+                    <tr>
+                      <td colSpan="4" style={{ textAlign: 'center', padding: '3rem', opacity: 0.5 }}>
+                        No hay coberturas planificadas para este día.
+                      </td>
+                    </tr>
+                  ) : (
+                    summaryCoverages.map(cov => (
+                      <tr key={cov.id}>
+                        <td style={{ fontWeight: 800, color: 'var(--accent)', fontSize: '1.1rem' }}>{cov.horarios?.bloque_id}°</td>
+                        <td style={{ fontWeight: 500 }}>{cov.ausente?.nombre}</td>
+                        <td>
+                          <span style={{ 
+                            padding: '0.4rem 0.8rem', 
+                            background: 'rgba(56, 189, 248, 0.1)', 
+                            borderRadius: '0.6rem',
+                            fontSize: '0.9rem',
+                            fontWeight: 700,
+                            color: 'var(--accent)'
+                          }}>
+                            {cov.reemplazo?.nombre}
+                          </span>
+                        </td>
+                        <td>
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span style={{ fontWeight: 600 }}>{cov.horarios?.asignaturas?.nombre || 'Administrativo'}</span>
+                            <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>{cov.curso}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="modal-actions" style={{ marginTop: '2rem' }}>
+              <button className="btn-save" onClick={() => setIsSummaryModalOpen(false)} style={{ width: '100%' }}>
+                Cerrar Resumen
+              </button>
+            </div>
           </div>
         </div>
       )}
