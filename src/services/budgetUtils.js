@@ -6,7 +6,8 @@ import { DURACION_BLOQUE_H } from './constants'
  * 2. Non-teaching (no lectivas) are the second pool.
  */
 export const getDetailedBudget = (excedentes, noLectivas) => {
-  const surplusPedagogical = Math.floor((excedentes || 0) * 1.3333)
+  // 1 hour (60m) = 1.3333 blocks (45m each) -> factor is 4/3
+  const surplusPedagogical = Math.round((excedentes || 0) * (4/3))
   const nonTeaching = noLectivas || 0
   
   return {
