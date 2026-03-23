@@ -16,7 +16,6 @@ function TeacherDashboard({ user: initialUser }) {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [passwordProcessing, setPasswordProcessing] = useState(false)
-  const [teacherBlocks, setTeacherBlocks] = useState([])
 
   useEffect(() => {
     if (initialUser) setUser(initialUser)
@@ -88,15 +87,6 @@ function TeacherDashboard({ user: initialUser }) {
       if (coverageError) throw coverageError
       setCoberturas(coverageData)
 
-      // 6. Fetch blocks
-      const { data: blockData, error: bError } = await supabase
-        .from('bloqueos_profesor')
-        .select('*')
-        .eq('profesor_id', profile.id)
-      
-      if (bError) throw bError
-      setTeacherBlocks(blockData || [])
-
     } catch (error) {
       console.error('Error fetching teacher data:', error.message)
     } finally {
@@ -146,19 +136,6 @@ function TeacherDashboard({ user: initialUser }) {
       (h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5))
     )
     if (inherited) return inherited
-
-    // Check if this slot is blocked
-    const bloqueObj = BLOQUES.find(b => b.inicio.slice(0, 5) === horaInicio.slice(0, 5))
-    if (bloqueObj) {
-      const bloqueo = teacherBlocks.find(bl =>
-        bl.dia_semana === diaId &&
-        bloqueObj.id >= bl.bloque_desde &&
-        bloqueObj.id <= bl.bloque_hasta
-      )
-      if (bloqueo) {
-        return { tipo_bloque: 'bloqueado', motivo: bloqueo.motivo }
-      }
-    }
 
     return null
   }
@@ -423,7 +400,7 @@ function TeacherDashboard({ user: initialUser }) {
                               {isBloqueado ? (
                                 <>
                                   <span className="subject" style={{ fontSize: '1.2rem' }}>🚫</span>
-                                  {item.motivo && <span className="course" style={{ opacity: 0.7 }}>{item.motivo}</span>}
+                                  {item.curso && <span className="course" style={{ opacity: 0.7 }}>{item.curso}</span>}
                                 </>
                               ) : isClass ? (
                                 <>
