@@ -280,6 +280,7 @@ function AdminDashboard() {
       const { data, error } = await supabase
         .from('coberturas')
         .select('*, ausente:profesores!profesor_ausente_id(nombre), reemplazo:profesores!profesor_reemplazante_id(nombre), horarios(*)')
+        .eq('tipo', 'cobertura')
         .order('fecha', { ascending: false })
         .limit(20)
       
@@ -297,6 +298,7 @@ function AdminDashboard() {
         .from('coberturas')
         .select('*, ausente:profesores!profesor_ausente_id(nombre), reemplazo:profesores!profesor_reemplazante_id(nombre), horarios(*, asignaturas(nombre))')
         .eq('fecha', selectedDate)
+        .eq('tipo', 'cobertura')
         .neq('estado', 'cancelada')
       if (error) throw error
       
@@ -316,6 +318,7 @@ function AdminDashboard() {
       const { data, error } = await supabase
         .from('coberturas')
         .select('fecha')
+        .eq('tipo', 'cobertura')
         .neq('estado', 'cancelada')
       
       if (error) throw error
