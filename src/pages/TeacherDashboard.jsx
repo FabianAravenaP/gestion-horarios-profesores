@@ -3,7 +3,7 @@ import { supabase } from '../services/supabase'
 import logo from '../assets/logo.jpg'
 import { formatLongDate, getWeekRange } from '../services/dateUtils'
 import { BLOQUES, DIAS, DURACION_BLOQUE_H } from '../services/constants'
-import { getBaseCoverageBudget, formatUsage } from '../services/budgetUtils'
+import { getDetailedBudget, formatUsage } from '../services/budgetUtils'
 
 function TeacherDashboard() {
   const [user, setUser] = useState(null)
@@ -131,15 +131,10 @@ function TeacherDashboard() {
   const uniqueSubjects = Array.from(new Set(horarios.filter(h => h.asignaturas?.nombre).map(h => h.asignaturas.nombre)))
   const clasesCount = horarios.filter(h => h.tipo_bloque === 'clase').length
 
-  const calculateRemainingBudget = () => {
-    if (!profile?.contrato_horas) return 0
-    
-    // Count assigned classes in the schedule
-    const assignedClassesCount = horarios.filter(h => h.tipo_bloque === 'clase').length
-    const budget = getBaseCoverageBudget(profile.contrato_horas, assignedClassesCount)
-    
-    return budget - horasCubiertas
-  }
+  const budget = getDetailedBudget(profile?.horas_excedentes, profile?.horas_no_lectivas)
+  const remainingSurplus = Math.max(0, budget.surplus - horasCubiertas)
+  const usedFromNoLectivas = Math.max(0, horasCubiertas - budget.surplus)
+  const remainingNoLectivas = Math.max(0, budget.noLectivas - usedFromNoLectivas)
 
   return (
     <div className="teacher-dashboard">
@@ -190,15 +185,18 @@ function TeacherDashboard() {
             <p>{horasCubiertas}</p>
           </div>
           <div className="stat-card">
-            <h3>Presupuesto No Lectivo</h3>
-            {profile?.contrato_horas ? (
-              <>
-                <p style={{ fontSize: '1.2rem' }}>
-                  {calculateRemainingBudget()} blq disponible
-                </p>
-                <small style={{ opacity: 0.7 }}>de {getBaseCoverageBudget(profile.contrato_horas, horarios.filter(h => h.tipo_bloque === 'clase').length)} semanal</small>
-              </>
-            ) : <p>0</p>}
+            <h3>Presupuesto Excedentes</h3>
+            <p style={{ fontSize: '1.2rem', color: remainingSurplus > 0 ? 'var(--primary)' : 'var(--text-soft)' }}>
+              {remainingSurplus} blq disponible
+            </p>
+            <small style={{ opacity: 0.7 }}>de {budget.surplus} pedagógicos</small>
+          </div>
+          <div className="stat-card">
+            <h3>Horas No Lectivas</h3>
+            <p style={{ fontSize: '1.2rem', color: usedFromNoLectivas > 0 ? '#ef4444' : 'inherit' }}>
+              {remainingNoLectivas} blq disponible
+            </p>
+            <small style={{ opacity: 0.7 }}>de {budget.noLectivas} total</small>
           </div>
           <div className="stat-card">
             <h3>Rol</h3>
