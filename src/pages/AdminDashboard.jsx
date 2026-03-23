@@ -317,6 +317,10 @@ function AdminDashboard() {
       const { error } = await supabase.from('coberturas').delete().eq('id', id)
       if (error) throw error
       fetchPlannedCoverages()
+      // Also refresh current teacher schedule if selected, so the grid updates
+      if (selectedTeacherId) {
+        fetchTeacherSchedule()
+      }
       // Also refresh summary if open
       if (isSummaryModalOpen) {
         setSummaryCoverages(prev => prev.filter(c => c.id !== id))
@@ -1683,61 +1687,63 @@ function AdminDashboard() {
                   </tr>
                 </thead>
                 <tbody>
-                  {summaryCoverages.length === 0 ? (
+                  {summaryCoverages.filter(c => c.tipo === 'cobertura').length === 0 ? (
                     <tr>
                       <td colSpan="6" style={{ textAlign: 'center', padding: '3rem', opacity: 0.5 }}>
                         No hay coberturas planificadas para este día.
                       </td>
                     </tr>
                   ) : (
-                    summaryCoverages.map(cov => (
-                      <tr key={cov.id}>
-                        <td style={{ fontWeight: 800, color: 'var(--accent)', fontSize: '1.1rem' }}>{cov.horarios?.bloque_id}°</td>
-                        <td>
-                          <span style={{ 
-                            fontSize: '0.7rem', 
-                            padding: '0.2rem 0.4rem', 
-                            borderRadius: '0.3rem',
-                            fontWeight: 700,
-                            textTransform: 'uppercase',
-                            background: cov.tipo === 'reemplazo' ? '#fff7ed' : 'rgba(56, 189, 248, 0.1)',
-                            color: cov.tipo === 'reemplazo' ? '#c2410c' : 'var(--accent)',
-                            border: `1px solid ${cov.tipo === 'reemplazo' ? '#ffedd5' : 'rgba(56, 189, 248, 0.2)'}`
-                          }}>
-                            {cov.tipo === 'reemplazo' ? 'Reemplazo Largo' : 'Cobertura'}
-                          </span>
-                        </td>
-                        <td style={{ fontWeight: 500 }}>{cov.ausente?.nombre}</td>
-                        <td>
-                          <span style={{ 
-                            padding: '0.4rem 0.8rem', 
-                            background: 'var(--bg-soft)', 
-                            borderRadius: '0.6rem',
-                            fontSize: '0.9rem',
-                            fontWeight: 700,
-                            color: 'var(--text)'
-                          }}>
-                            {cov.reemplazo?.nombre}
-                          </span>
-                        </td>
-                        <td>
-                          <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <span style={{ fontWeight: 600 }}>{cov.horarios?.asignaturas?.nombre || 'Administrativo'}</span>
-                            <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>{cov.curso}</span>
-                          </div>
-                        </td>
-                        <td>
-                          <button 
-                            className="btn-delete"
-                            style={{ padding: '0.4rem', fontSize: '1rem' }}
-                            onClick={() => handleDeleteCoverage(cov.id)}
-                            title="Eliminar esta cobertura"
-                          >
-                            🗑️
-                          </button>
-                        </td>
-                      </tr>
-                    ))
+                    summaryCoverages
+                      .filter(c => c.tipo === 'cobertura') // EXCLUSIVE for coverages
+                      .map(cov => (
+                        <tr key={cov.id}>
+                          <td style={{ fontWeight: 800, color: 'var(--accent)', fontSize: '1.1rem' }}>{cov.horarios?.bloque_id}°</td>
+                          <td>
+                            <span style={{ 
+                              fontSize: '0.7rem', 
+                              padding: '0.2rem 0.4rem', 
+                              borderRadius: '0.3rem',
+                              fontWeight: 700,
+                              textTransform: 'uppercase',
+                              background: 'rgba(56, 189, 248, 0.1)',
+                              color: 'var(--accent)',
+                              border: '1px solid rgba(56, 189, 248, 0.2)'
+                            }}>
+                              Cobertura
+                            </span>
+                          </td>
+                          <td style={{ fontWeight: 500 }}>{cov.ausente?.nombre}</td>
+                          <td>
+                            <span style={{ 
+                              padding: '0.4rem 0.8rem', 
+                              background: 'var(--bg-soft)', 
+                              borderRadius: '0.6rem',
+                              fontSize: '0.9rem',
+                              fontWeight: 700,
+                              color: 'var(--text)'
+                            }}>
+                              {cov.reemplazo?.nombre}
+                            </span>
+                          </td>
+                          <td>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                              <span style={{ fontWeight: 600 }}>{cov.horarios?.asignaturas?.nombre || 'Administrativo'}</span>
+                              <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>{cov.curso}</span>
+                            </div>
+                          </td>
+                          <td>
+                            <button 
+                              className="btn-delete"
+                              style={{ padding: '0.4rem', fontSize: '1rem' }}
+                              onClick={() => handleDeleteCoverage(cov.id)}
+                              title="Eliminar esta cobertura"
+                            >
+                              🗑️
+                            </button>
+                          </td>
+                        </tr>
+                      ))
                   )}
                 </tbody>
               </table>
