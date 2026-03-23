@@ -8,19 +8,22 @@ function Dashboard() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (event === 'SIGNED_OUT') {
+    // Get current session immediately (don't rely on INITIAL_SESSION event
+    // which may fire before this listener is registered)
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session?.user) {
         window.location.href = '/'
         return
       }
+      fetchUserRole(session.user)
+    })
 
-      // Wait for the session to be available before querying the DB
-      if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
-        if (!session?.user) {
-          window.location.href = '/'
-          return
-        }
-        await fetchUserRole(session.user)
+    // Listen only for future state changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_OUT') {
+        window.location.href = '/'
+      } else if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+        if (session?.user) fetchUserRole(session.user)
       }
     })
 
