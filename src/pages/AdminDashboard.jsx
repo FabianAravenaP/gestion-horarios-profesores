@@ -870,7 +870,7 @@ function AdminDashboard() {
                           value={newProf.horas_excedentes} 
                           onChange={e => setNewProf({...newProf, horas_excedentes: parseFloat(e.target.value) || 0})} 
                         />
-                        <small style={{ opacity: 0.7 }}>→ ~{Math.floor(newProf.horas_excedentes * 1.33)} blq pedagógicos</small>
+                        <small style={{ opacity: 0.7 }}>→ ~{Math.floor((newProf.horas_excedentes || 0) * 1.33)} blq pedagógicos</small>
                       </div>
                       <div className="form-group">
                         <label>Horas No Lectivas</label>
