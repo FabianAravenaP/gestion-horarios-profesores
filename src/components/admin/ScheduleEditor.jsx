@@ -3,6 +3,8 @@ import * as XLSX from 'xlsx';
 import { BLOQUES, DIAS } from '../../services/constants';
 import { getWeekRange } from '../../services/dateUtils';
 import { getDetailedBudget } from '../../services/budgetUtils';
+import { jsPDF } from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const [selectedTeacherId, setSelectedTeacherId] = useState('');
@@ -14,7 +16,9 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const [isExportOpen, setIsExportOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const exportRef = useRef(null);
   const [editingBlock, setEditingBlock] = useState(null);
   const [newBlock, setNewBlock] = useState({
     asignatura_id: '',
@@ -28,6 +32,9 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
+      }
+      if (exportRef.current && !exportRef.current.contains(event.target)) {
+        setIsExportOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -163,28 +170,98 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
     XLSX.writeFile(wb, `Horario_${prof.nombre}.xlsx`);
   };
 
-  const handleExportAll = async () => {
+  const exportToPDF = (prof, schedule) => {
+    const doc = new jsPDF();
+    const title = "Instituto Comercial Puerto Montt";
+    const subtitle = `Horario Semanal: ${prof.nombre}`;
+    
+    doc.setFontSize(18);
+    doc.setTextColor(40);
+    doc.text(title, 14, 22);
+    
+    doc.setFontSize(12);
+    doc.setTextColor(100);
+    doc.text(subtitle, 14, 30);
+    doc.text(`Fecha de exportación: ${new Date().toLocaleDateString()}`, 14, 37);
+
+    const headers = [["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]];
+    const data = BLOQUES.map(b => {
+      const row = [`${b.id}°\n(${b.inicio})`];
+      DIAS.forEach(d => {
+        const item = schedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0,5) === b.inicio.slice(0,5));
+        if (item) {
+          const typeLabel = item.tipo_bloque === 'clase' ? '' : ` [${item.tipo_bloque.toUpperCase()}]`;
+          row.push(`${item.asignaturas?.nombre || item.tipo_bloque}${item.curso ? `\n(${item.curso})` : ''}${typeLabel}`);
+        } else {
+          row.push('');
+        }
+      });
+      return row;
+    });
+
+    autoTable(doc, {
+      startY: 45,
+      head: headers,
+      body: data,
+      theme: 'grid',
+      headStyles: { fillColor: [59, 130, 246], textColor: 255, fontStyle: 'bold' },
+      styles: { fontSize: 8, cellPadding: 3, valign: 'middle', halign: 'center' },
+      columnStyles: { 0: { fontStyle: 'bold', fillColor: [245, 247, 250] } }
+    });
+
+    doc.save(`Horario_${prof.nombre}.pdf`);
+  };
+
+  const exportAllToPDF = async () => {
     setProcessing(true);
     try {
       const { data: allSchedules, error } = await supabase.from('horarios').select('*, asignaturas(nombre)');
       if (error) throw error;
-      const wb = XLSX.utils.book_new();
-      profesores.forEach(p => {
+      
+      const doc = new jsPDF();
+      const activeProfs = profesores.filter(p => allSchedules.some(s => s.profesor_id === p.id));
+      
+      activeProfs.forEach((p, index) => {
+        if (index > 0) doc.addPage();
+        
         const pSchedule = allSchedules.filter(s => s.profesor_id === p.id);
-        if (pSchedule.length > 0) {
-          const headers = ["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
-          const rows = BLOQUES.map(b => {
-            const row = [`${b.id}°`];
-            DIAS.forEach(d => {
-              const item = pSchedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0,5) === b.inicio.slice(0,5));
-              row.push(item ? `${item.asignaturas?.nombre || item.tipo_bloque}${item.curso ? ` (${item.curso})` : ''}` : '');
-            });
-            return row;
+        const title = "Instituto Comercial Puerto Montt";
+        const subtitle = `Horario Semanal: ${p.nombre}`;
+        
+        doc.setFontSize(18);
+        doc.setTextColor(40);
+        doc.text(title, 14, 22);
+        
+        doc.setFontSize(12);
+        doc.setTextColor(100);
+        doc.text(subtitle, 14, 30);
+        doc.text(`Página ${index + 1} de ${activeProfs.length}`, 160, 30);
+
+        const headers = [["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]];
+        const data = BLOQUES.map(b => {
+          const row = [`${b.id}°`];
+          DIAS.forEach(d => {
+            const item = pSchedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0,5) === b.inicio.slice(0,5));
+            if (item) {
+              row.push(`${item.asignaturas?.nombre || item.tipo_bloque}${item.curso ? `\n(${item.curso})` : ''}`);
+            } else {
+              row.push('');
+            }
           });
-          XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([headers, ...rows]), p.nombre.substring(0,31));
-        }
+          return row;
+        });
+
+        autoTable(doc, {
+          startY: 40,
+          head: headers,
+          body: data,
+          theme: 'grid',
+          headStyles: { fillColor: [59, 130, 246] },
+          styles: { fontSize: 7, cellPadding: 2, halign: 'center' }
+        });
       });
-      XLSX.writeFile(wb, "Horarios_Completos.xlsx");
+      
+      doc.save("Horarios_Completos_Instituto.pdf");
     } catch (err) {
       alert(err.message);
     } finally {
@@ -256,12 +333,28 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
           </div>
         </div>
         <div className="action-buttons" style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
-          <button className="secondary" onClick={() => exportToExcel(profesores.find(p => p.id === selectedTeacherId), teacherSchedule)} disabled={!selectedTeacherId}>
-            📥 Descargar Horario Actual
-          </button>
-          <button className="secondary" onClick={handleExportAll}>
-            📚 Descargar Todos
-          </button>
+          <div className="export-dropdown" ref={exportRef}>
+            <button className="primary" onClick={() => setIsExportOpen(!isExportOpen)}>
+              📥 Descargar...
+            </button>
+            {isExportOpen && (
+              <div className="export-menu">
+                <div className="export-option" onClick={() => { exportToExcel(profesores.find(p => p.id === selectedTeacherId), teacherSchedule); setIsExportOpen(false); }} hidden={!selectedTeacherId}>
+                  <span className="icon">📊</span> Este Horario (Excel)
+                </div>
+                <div className="export-option" onClick={() => { exportToPDF(profesores.find(p => p.id === selectedTeacherId), teacherSchedule); setIsExportOpen(false); }} hidden={!selectedTeacherId}>
+                  <span className="icon">📄</span> Este Horario (PDF)
+                </div>
+                <div style={{ borderTop: '1px solid var(--border)', margin: '0.25rem 0' }} hidden={!selectedTeacherId}></div>
+                <div className="export-option" onClick={() => { handleExportAll(); setIsExportOpen(false); }}>
+                  <span className="icon">📚</span> Todos los Horarios (Excel)
+                </div>
+                <div className="export-option" onClick={() => { exportAllToPDF(); setIsExportOpen(false); }}>
+                  <span className="icon">📂</span> Todos los Horarios (PDF)
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -293,7 +386,12 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
                         >
                           {item ? (
                             <div className="item-content">
-                              <span className="subject">{item.asignaturas?.nombre || item.tipo_bloque}</span>
+                              <span className="subject">
+                                {item.asignaturas?.nombre || 
+                                 (item.tipo_bloque === 'apoderado' ? 'Atención Apoderado' : 
+                                  item.tipo_bloque === 'dupla' ? 'Dupla' : 
+                                  item.tipo_bloque)}
+                              </span>
                               {item.curso && <span className="course">{item.curso}</span>}
                             </div>
                           ) : !isFridayEnd && <span className="available-label">+</span>}
@@ -321,6 +419,8 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
                 <select value={newBlock.tipo_bloque} onChange={e => setNewBlock({...newBlock, tipo_bloque: e.target.value})}>
                   <option value="clase">Clase</option>
                   <option value="tc">TC</option>
+                  <option value="dupla">Dupla</option>
+                  <option value="apoderado">Atención Apoderado</option>
                   <option value="administrativo">Administrativo</option>
                   <option value="bloqueado">Bloqueado</option>
                 </select>

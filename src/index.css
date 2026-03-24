@@ -1409,3 +1409,46 @@ button, select, input, .tab-button {
   opacity: 0.6;
   pointer-events: none;
 }
+
+/* --- Export Dropdown --- */
+.export-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.export-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  min-width: 220px;
+  z-index: 1000;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.export-option {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.export-option:hover {
+  background: var(--bg-soft);
+  color: var(--accent);
+}
+
+.export-option span.icon {
+  font-size: 1.2rem;
+}
