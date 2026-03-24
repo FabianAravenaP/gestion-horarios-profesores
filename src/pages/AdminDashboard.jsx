@@ -69,6 +69,10 @@ function AdminDashboard() {
   // Monitoreo State
   const [activityLogs, setActivityLogs] = useState([])
 
+  // Password Change State
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false)
+  const [passData, setPassData] = useState({ newPass: '', confirmPass: '' })
+
 
 
   useEffect(() => {
@@ -982,6 +986,44 @@ function AdminDashboard() {
     }
   }
 
+  async function handleUpdateOwnPassword(e) {
+    e.preventDefault()
+    if (passData.newPass !== passData.confirmPass) {
+      alert("Las contraseñas no coinciden")
+      return
+    }
+    if (passData.newPass.length < 6) {
+      alert("La contraseña debe tener al menos 6 caracteres")
+      return
+    }
+
+    setProcessing(true)
+    try {
+      const { error } = await supabase.auth.updateUser({
+        password: passData.newPass
+      })
+      if (error) throw error
+
+      // Update flag in public table using current user ID
+      const { data: { user } } = await supabase.auth.getUser()
+      if (user) {
+        await supabase
+          .from('profesores')
+          .update({ cambio_clave_pendiente: false })
+          .eq('id', user.id)
+      }
+
+      alert("Contraseña actualizada con éxito")
+      setIsPasswordModalOpen(false)
+      setPassData({ newPass: '', confirmPass: '' })
+    } catch (error) {
+      alert("Error al actualizar: " + error.message)
+    } finally {
+      setProcessing(false)
+    }
+  }
+
+
 
   return (
     <div className="admin-dashboard">
@@ -994,9 +1036,14 @@ function AdminDashboard() {
             <div className="header-date">{formatLongDate(new Date())}</div>
           </div>
         </div>
-        <button className="logout-button" onClick={() => supabase.auth.signOut()}>
-          Cerrar Sesión
-        </button>
+        <div className="header-actions" style={{ display: 'flex', gap: '0.75rem' }}>
+          <button className="logout-button" onClick={() => setIsPasswordModalOpen(true)}>
+            Cambiar Contraseña
+          </button>
+          <button className="logout-button" onClick={() => supabase.auth.signOut()}>
+            Cerrar Sesión
+          </button>
+        </div>
       </header>
 
       <main>
@@ -1906,8 +1953,63 @@ function AdminDashboard() {
           </div>
         </div>
       )}
+
+      {isPasswordModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal-content" style={{ maxWidth: '400px' }}>
+            <div className="modal-header">
+              <h3>Cambiar mi Contraseña</h3>
+              <button 
+                className="btn-close" 
+                type="button"
+                onClick={() => setIsPasswordModalOpen(false)}
+              >
+                Cerrar
+              </button>
+            </div>
+            <form onSubmit={handleUpdateOwnPassword}>
+              <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem', opacity: 0.8 }}>
+                Ingresa tu nueva contraseña para mayor seguridad.
+              </p>
+              <div className="form-group">
+                <label>Nueva Contraseña</label>
+                <input 
+                  type="password" 
+                  required 
+                  placeholder="Mínimo 6 caracteres"
+                  value={passData.newPass}
+                  onChange={e => setPassData({...passData, newPass: e.target.value})}
+                />
+              </div>
+              <div className="form-group">
+                <label>Confirmar Contraseña</label>
+                <input 
+                  type="password" 
+                  required 
+                  placeholder="Repite la contraseña"
+                  value={passData.confirmPass}
+                  onChange={e => setPassData({...passData, confirmPass: e.target.value})}
+                />
+              </div>
+              <div className="modal-actions">
+                <button 
+                  type="button" 
+                  className="btn-cancel" 
+                  onClick={() => setIsPasswordModalOpen(false)}
+                >
+                  Cancelar
+                </button>
+                <button type="submit" className="btn-save" disabled={processing}>
+                  {processing ? 'Actualizando...' : 'Actualizar Contraseña'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
+
 
 export default AdminDashboard
