@@ -372,8 +372,8 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
                 {BLOQUES.map(b => (
                   <tr key={b.id}>
                     <td className="time-col">
-                      <span className="block-num">{b.id}°</span>
-                      <span className="time-range">{b.inicio}</span>
+                      <span className="block-number">{b.id}°</span>
+                      <span className="block-time">{b.inicio.slice(0, 5)} - {b.fin.slice(0, 5)}</span>
                     </td>
                     {DIAS.map(d => {
                       const item = getTeacherHorarioAt(d.id, b.inicio);
