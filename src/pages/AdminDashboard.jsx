@@ -66,6 +66,10 @@ function AdminDashboard() {
     bloque_id: 1
   })
 
+  // Monitoreo State
+  const [activityLogs, setActivityLogs] = useState([])
+
+
 
   useEffect(() => {
     fetchProfesores()
@@ -86,6 +90,12 @@ function AdminDashboard() {
       fetchPlannedCoverages()
     }
   }, [activeTab, absentTeacherId, selectedDate])
+
+  useEffect(() => {
+    if (activeTab === 'monitoreo') {
+      fetchActivityLogs()
+    }
+  }, [activeTab])
 
   // Real-time Subscriptions
   useEffect(() => {
@@ -954,6 +964,25 @@ function AdminDashboard() {
     }
   }
 
+  async function fetchActivityLogs() {
+    setLoading(true)
+    try {
+      const { data, error } = await supabase
+        .from('actividad_usuarios')
+        .select('*, profes:profesores(nombre)')
+        .order('fecha', { ascending: false })
+        .limit(200)
+      
+      if (error) throw error
+      setActivityLogs(data)
+    } catch (error) {
+      console.error('Error fetching logs:', error.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+
   return (
     <div className="admin-dashboard">
       <header className="dashboard-header">
@@ -998,6 +1027,12 @@ function AdminDashboard() {
             }}
           >
             Gestión de Horarios
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'monitoreo' ? 'active' : ''}`}
+            onClick={() => setActiveTab('monitoreo')}
+          >
+            Monitoreo
           </button>
         </section>
 

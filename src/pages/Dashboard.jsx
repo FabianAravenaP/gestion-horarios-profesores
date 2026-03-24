@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { supabase } from '../services/supabase'
 import AdminDashboard from './AdminDashboard'
 import TeacherDashboard from './TeacherDashboard'
+import { logActivity } from '../services/activity'
 
 function Dashboard() {
   const [role, setRole] = useState('profesor') // Default to 'profesor' for immediate render
@@ -48,6 +49,13 @@ function Dashboard() {
 
     return () => subscription.unsubscribe()
   }, [navigate])
+
+  useEffect(() => {
+    // Log entry once everything is ready
+    if (sessionUser && role && hasChecked) {
+      logActivity(sessionUser.id, 'ingreso_plataforma', { role })
+    }
+  }, [sessionUser?.id, role, hasChecked])
 
   async function fetchUserRole(user) {
     try {
