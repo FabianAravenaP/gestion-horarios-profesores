@@ -159,7 +159,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
               placeholder="Buscar profesor por nombre, email o cargo..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ maxWidth: '400px' }}
+              style={{ maxWidth: '400px', paddingLeft: '3.5rem' }}
             />
           </div>
         </div>
