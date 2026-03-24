@@ -1800,7 +1800,7 @@ function AdminDashboard() {
                   <option value="administrativo">Administrativo</option>
                   <option value="dupla">Dupla Sicosocial</option>
                   <option value="apoderado">Atención Apoderado</option>
-                  <option value="bloqueado">🚫 Bloqueado (Mismo fin que bloqueo)</option>
+                  <option value="bloqueado">🚫 Bloqueado</option>
                 </select>
               </div>
 
