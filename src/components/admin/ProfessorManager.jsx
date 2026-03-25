@@ -75,7 +75,12 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
         // Note: supabase.auth.admin.updateUserById is the right way but needs service role.
         // For now, we use a custom approach or notify user.
         if (password && password.trim() !== '') {
-          alert("La contraseña debe ser cambiada por el usuario o mediante un administrador con permisos de Auth.");
+          const { error: rpcError } = await supabase.rpc('admin_reset_password', {
+            target_user_id: profData.id,
+            new_password: password
+          });
+          if (rpcError) throw rpcError;
+          console.log("Password reset successful for:", profData.email);
         }
       } else {
         // Create new professor (requires auth signup usually, but let's stick to the current logic)
@@ -122,6 +127,25 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
       alert('Profesor eliminado');
     } catch (err) {
       alert('Error al eliminar: ' + err.message);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  const handleResetPasswordDirect = async (id, nombre) => {
+    const newPass = prompt(`Nueva contraseña para ${nombre}:`);
+    if (!newPass || newPass.trim() === '') return;
+    
+    setProcessing(true);
+    try {
+      const { error } = await supabase.rpc('admin_reset_password', {
+        target_user_id: id,
+        new_password: newPass
+      });
+      if (error) throw error;
+      alert(`Contraseña de ${nombre} actualizada correctamente`);
+    } catch (err) {
+      alert('Error: ' + err.message);
     } finally {
       setProcessing(false);
     }
@@ -233,6 +257,25 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
                   onChange={e => setNewProf({...newProf, contrato_horas: parseInt(e.target.value) || 0})} 
                 />
               </div>
+
+              {isEditing && (
+                <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: '#f8fafc', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                  <label style={{ color: 'var(--primary)', fontWeight: 'bold' }}>Seguridad</label>
+                  <div style={{ marginTop: '0.5rem' }}>
+                    <label style={{ fontSize: '0.85rem' }}>Cambiar Contraseña (Solo si es necesario)</label>
+                    <input 
+                      type="password" 
+                      placeholder="Nueva contraseña..."
+                      value={newProf.password} 
+                      onChange={e => setNewProf({...newProf, password: e.target.value})} 
+                      autoComplete="new-password"
+                    />
+                    <small style={{ display: 'block', marginTop: '0.25rem', opacity: 0.7 }}>
+                      Al guardar, se forzará al profesor a cambiar la clave en su próximo inicio.
+                    </small>
+                  </div>
+                </div>
+              )}
               
               <div className="modal-actions">
                 <button type="button" className="btn-cancel" onClick={() => setIsModalOpen(false)}>Cerrar</button>
@@ -286,6 +329,14 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
                       disabled={processing}
                     >
                       Editar
+                    </button>
+                    <button 
+                      className="btn-edit" 
+                      style={{ background: 'var(--text-soft)', marginLeft: '0.25rem' }}
+                      onClick={() => handleResetPasswordDirect(p.id, p.nombre)}
+                      disabled={processing}
+                    >
+                      Clave
                     </button>
                     <button 
                       className="btn-delete" 
