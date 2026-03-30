@@ -10,9 +10,11 @@ export function formatLongDate(date) {
 export function getWeekRange(dateString) {
   const date = new Date(dateString + 'T00:00:00')
   const day = date.getDay()
+  // Adjust to Monday (1). If Sunday (0), go back 6 days.
   const diff = date.getDate() - day + (day === 0 ? -6 : 1)
   const start = new Date(date.setDate(diff))
-  const end = new Date(new Date(start).setDate(start.getDate() + 6))
+  // End should be Friday (start + 4 days)
+  const end = new Date(new Date(start).setDate(start.getDate() + 4))
   
   return {
     start: start.toISOString().split('T')[0],

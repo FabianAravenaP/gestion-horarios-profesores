@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../services/supabase';
 import logo from '../assets/logo.jpg';
-import { formatLongDate } from '../services/dateUtils';
+import { formatLongDate, getWeekRange } from '../services/dateUtils';
 
 // Modular Components
 import ProfessorManager from '../components/admin/ProfessorManager';
@@ -9,6 +9,7 @@ import CoveragePlanner from '../components/admin/CoveragePlanner';
 import LongTermReplacements from '../components/admin/LongTermReplacements';
 import ScheduleEditor from '../components/admin/ScheduleEditor';
 import ActivityMonitor from '../components/admin/ActivityMonitor';
+import WeeklyHistory from '../components/admin/WeeklyHistory';
 
 function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('profesores');
@@ -22,13 +23,20 @@ function AdminDashboard() {
   const [allSchedules, setAllSchedules] = useState([]);
   const [todaySummary, setTodaySummary] = useState([]);
   const [processing, setProcessing] = useState(false);
+  const [weeklyHistory, setWeeklyHistory] = useState([]);
+  const [historyLoading, setHistoryLoading] = useState(false);
 
   // Password Change State
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
   const [passData, setPassData] = useState({ newPass: '', confirmPass: '' });
 
   useEffect(() => {
-    fetchAllData();
+    const initialize = async () => {
+      setLoading(true);
+      await fetchAllData();
+      setLoading(false);
+    };
+    initialize();
   }, []);
 
   useEffect(() => {
@@ -51,7 +59,8 @@ function AdminDashboard() {
       fetchReemplazos(),
       fetchCoverageData(),
       fetchActivityLogs(),
-      fetchAllSchedules()
+      fetchAllSchedules(),
+      fetchWeeklyHistory()
     ]);
     setLoading(false);
   };
@@ -74,7 +83,7 @@ function AdminDashboard() {
   const fetchCoverageData = async () => {
     const today = new Date().toISOString().split('T')[0];
     const [{ data: coverages }, { data: dates }, { data: todayCov }] = await Promise.all([
-      supabase.from('coberturas').select('*, ausente:profesores!profesor_ausente_id(nombre), reemplazo:profesores!profesor_reemplazante_id(nombre), horarios(*)').eq('tipo', 'cobertura').order('fecha', { ascending: false }).limit(50),
+      supabase.from('coberturas').select('*, ausente:profesores!profesor_ausente_id(nombre), reemplazo:profesores!profesor_reemplazante_id(nombre), horarios(*)').eq('tipo', 'cobertura').order('fecha', { ascending: false }).limit(500),
       supabase.from('coberturas').select('fecha').eq('tipo', 'cobertura').neq('estado', 'cancelada'),
       supabase.from('coberturas').select('ausente:profesores!profesor_ausente_id(nombre), reemplazo:profesores!profesor_reemplazante_id(nombre)').eq('fecha', today).eq('tipo', 'cobertura').neq('estado', 'cancelada')
     ]);
@@ -92,13 +101,60 @@ function AdminDashboard() {
   };
 
   const fetchActivityLogs = async () => {
-    const { data } = await supabase.from('actividad_usuarios').select('*, profes:profesores(nombre)').order('fecha', { ascending: false }).limit(200);
-    setActivityLogs(data || []);
+    const { data } = await supabase
+      .from('actividad_usuarios')
+      .select('*, profes:profesores(nombre, rol)')
+      .order('fecha', { ascending: false })
+      .limit(300);
+    
+    // Filter out administrators from the list
+    const filtered = (data || []).filter(log => log.profes?.rol !== 'admin');
+    setActivityLogs(filtered.slice(0, 200));
   };
 
   const fetchAllSchedules = async () => {
     const { data } = await supabase.from('horarios').select('*');
     setAllSchedules(data || []);
+  };
+
+  const fetchWeeklyHistory = async () => {
+    setHistoryLoading(true);
+    try {
+      const { data, error } = await supabase
+        .from('historial_uso_semanal')
+        .select('*, profesores(nombre)')
+        .order('created_at', { ascending: false });
+      
+      if (error) throw error;
+      setWeeklyHistory(data || []);
+    } catch (err) {
+      console.error("Error fetching history:", err);
+    } finally {
+      setHistoryLoading(false);
+    }
+  };
+
+  const handleManualWeeklyReset = async () => {
+    const { start, end } = getWeekRange(new Date().toISOString().split('T')[0]);
+    
+    if (!confirm(`¿Estás seguro de cerrar la semana del ${start} al ${end}? Esto guardará un resumen y reiniciará los contadores de horas para todos los profesores.`)) return;
+
+    setProcessing(true);
+    try {
+      const { data, error } = await supabase.rpc('cerrar_semana_laboral', {
+        p_semana_inicio: start,
+        p_semana_fin: end
+      });
+
+      if (error) throw error;
+
+      alert(`Semana cerrada exitosamente. Se procesaron registros de asistencia.`);
+      await fetchAllData();
+    } catch (err) {
+      alert("Error al cerrar semana: " + err.message);
+    } finally {
+      setProcessing(false);
+    }
   };
 
   const handleUpdateOwnPassword = async (e) => {
@@ -182,10 +238,30 @@ function AdminDashboard() {
             />
           )}
           {activeTab === 'monitoreo' && (
-            <ActivityMonitor 
-              activityLogs={activityLogs} 
-              loading={loading} 
-            />
+            <>
+              <ActivityMonitor 
+                activityLogs={activityLogs} 
+                loading={loading} 
+              />
+
+              <div className="admin-actions-section" style={{ marginTop: '2rem', padding: '1rem', borderTop: '2px dashed var(--border)' }}>
+                <h3>Cierre de Ciclo Semanal</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-soft)', marginBottom: '1rem' }}>
+                  Al finalizar la semana, presiona este botón para guardar el resumen de horas usadas por cada profesor 
+                  y reiniciar los contadores a 0 para la próxima semana.
+                </p>
+                <button 
+                  className="btn-save" 
+                  onClick={handleManualWeeklyReset}
+                  disabled={processing}
+                  style={{ backgroundColor: 'var(--accent)', color: 'white' }}
+                >
+                  {processing ? 'Procesando...' : 'Finalizar y Archivar Semana Actual'}
+                </button>
+
+                <WeeklyHistory history={weeklyHistory} loading={historyLoading} />
+              </div>
+            </>
           )}
         </div>
       </main>

@@ -33,3 +33,6 @@ dist-ssr
 # Build
 dist/
 dist-ssr/
+
+.vercel
+.env*.local

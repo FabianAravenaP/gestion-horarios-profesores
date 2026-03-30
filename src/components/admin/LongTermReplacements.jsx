@@ -44,7 +44,9 @@ const LongTermReplacements = ({ supabase, profesores, reemplazos, onRefresh }) =
         if (dbDay > 5) continue; // Skip weekends
 
         const dateStr = d.toISOString().split('T')[0];
-        const dayBlocks = schedule.filter(h => h.dia_semana === dbDay);
+        const dayBlocks = schedule.filter(h => 
+          h.dia_semana === dbDay && h.tipo_bloque === 'clase'
+        );
         
         for (const block of dayBlocks) {
           coverages.push({

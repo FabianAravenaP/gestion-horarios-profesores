@@ -83,9 +83,8 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
           console.log("Password reset successful for:", profData.email);
         }
       } else {
-        // Create new professor (requires auth signup usually, but let's stick to the current logic)
-        // Simple insert into 'profesores' table for metadata
-        const { error: insertError } = await supabase
+        // Create new professor
+        const { data, error: insertError } = await supabase
           .from('profesores')
           .insert([{
             nombre: profData.nombre,
@@ -96,9 +95,23 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
             horas_no_lectivas: profData.horas_no_lectivas,
             contrato_horas: profData.contrato_horas,
             activo: true
-          }]);
+          }])
+          .select()
+          .single();
         
         if (insertError) throw insertError;
+
+        // If a password was provided, create the auth user
+        // If no password, we should still create one (e.g. "comercial2026") to ensure login works
+        const initialPassword = (password && password.trim() !== '') ? password : 'comercial2026';
+        
+        const { error: rpcError } = await supabase.rpc('admin_reset_password', {
+          target_user_id: data.id,
+          new_password: initialPassword
+        });
+        
+        if (rpcError) throw rpcError;
+        console.log("Auth user created and password set for:", profData.email);
       }
 
       setIsModalOpen(false);
@@ -257,6 +270,23 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
                   onChange={e => setNewProf({...newProf, contrato_horas: parseInt(e.target.value) || 0})} 
                 />
               </div>
+
+              {!isEditing && (
+                <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: '#f0f9ff', borderRadius: '8px', border: '1px solid #bae6fd' }}>
+                  <label style={{ color: 'var(--primary)', fontWeight: 'bold' }}>Configuración Inicial</label>
+                  <label style={{ fontSize: '0.85rem', marginTop: '0.5rem' }}>Contraseña de acceso (opcional)</label>
+                  <input 
+                    type="password" 
+                    placeholder="Si se deja vacío será: comercial2026"
+                    value={newProf.password} 
+                    onChange={e => setNewProf({...newProf, password: e.target.value})} 
+                    autoComplete="new-password"
+                  />
+                  <small style={{ display: 'block', marginTop: '0.25rem', opacity: 0.7 }}>
+                    El profesor deberá cambiarla en su primer ingreso.
+                  </small>
+                </div>
+              )}
 
               {isEditing && (
                 <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: '#f8fafc', borderRadius: '8px', border: '1px solid #e2e8f0' }}>

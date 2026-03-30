@@ -51,8 +51,8 @@ function Dashboard() {
   }, [navigate])
 
   useEffect(() => {
-    // Log entry once everything is ready
-    if (sessionUser && role && hasChecked) {
+    // Log entry once everything is ready - Exclude admins
+    if (sessionUser && role && hasChecked && role !== 'admin') {
       logActivity(sessionUser.id, 'ingreso_plataforma', { role })
     }
   }, [sessionUser?.id, role, hasChecked])

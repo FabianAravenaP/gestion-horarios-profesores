@@ -182,7 +182,8 @@ function TeacherDashboard({ user: initialUser }) {
     c.fecha >= weekStart && 
     c.fecha <= weekEnd && 
     c.estado !== 'cancelada' &&
-    c.tipo === 'cobertura'
+    c.tipo === 'cobertura' &&
+    !c.contabilizada // Added this to be extra safe, though date filter usually handles it
   )
   const horasCubiertas = currentWeekAssignments.length
 
@@ -192,12 +193,16 @@ function TeacherDashboard({ user: initialUser }) {
   const budget = getDetailedBudget(profile?.horas_excedentes, profile?.horas_no_lectivas)
   
   // UNIFIED LOGIC: Use surplus (excedentes) first, then no-teaching
+  // Total Histórico counts everything non-cancelled
   const totalCubiertoTotal = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura').length
+  
+  // Current period usage only counts non-accounted-for coverages
+  const currentPeriodUsage = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura' && !c.contabilizada).length
   const totalCubiertoSemana = currentWeekAssignments.length
 
-  // Stats for the "Pools" (Linear attribution)
-  const usedFromSurplus = Math.min(totalCubiertoTotal, budget.surplus)
-  const usedFromNoLectivas = Math.max(0, totalCubiertoTotal - budget.surplus)
+  // Stats for the "Pools" (Linear attribution) - Based on current period usage
+  const usedFromSurplus = Math.min(currentPeriodUsage, budget.surplus)
+  const usedFromNoLectivas = Math.max(0, currentPeriodUsage - budget.surplus)
   
   const remainingSurplus = budget.surplus - usedFromSurplus
   const remainingNoLectivas = budget.noLectivas - usedFromNoLectivas

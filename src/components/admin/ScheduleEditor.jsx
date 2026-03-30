@@ -11,6 +11,7 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const [teacherSchedule, setTeacherSchedule] = useState([]);
   const [teacherCoverages, setTeacherCoverages] = useState([]);
   const [totalCoverageUsage, setTotalCoverageUsage] = useState(0);
+  const [historicalUsage, setHistoricalUsage] = useState(0);
   const [loading, setLoading] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,25 +66,46 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
         .eq('profesor_reemplazante_id', selectedTeacherId)
         .gte('fecha', start)
         .lte('fecha', end)
+        .eq('tipo', 'cobertura')
         .neq('estado', 'cancelada');
       
       if (cError) throw cError;
       setTeacherCoverages(coverages || []);
 
-      const { count, error: countError } = await supabase
+      const { data: currentPeriodUsage, error: countError } = await supabase
         .from('coberturas')
         .select('*', { count: 'exact', head: true })
         .eq('profesor_reemplazante_id', selectedTeacherId)
+        .eq('tipo', 'cobertura')
+        .eq('contabilizada', false)
         .neq('estado', 'cancelada');
       
       if (countError) throw countError;
-      setTotalCoverageUsage(count || 0);
+      setTotalCoverageUsage(currentPeriodUsage || 0);
+
+      const { count: historicalCount, error: hError } = await supabase
+        .from('coberturas')
+        .select('*', { count: 'exact', head: true })
+        .eq('profesor_reemplazante_id', selectedTeacherId)
+        .eq('tipo', 'cobertura')
+        .neq('estado', 'cancelada');
+      
+      if (hError) throw hError;
+      setHistoricalUsage(historicalCount || 0);
     } catch (err) {
       console.error(err);
     } finally {
       setLoading(false);
     }
   }
+
+  // Calculate Stats (matching TeacherDashboard logic)
+  const selectedProfessor = profesores.find(p => p.id === selectedTeacherId);
+  const budget = selectedProfessor ? getDetailedBudget(selectedProfessor.horas_excedentes, selectedProfessor.horas_no_lectivas) : { surplus: 0, noLectivas: 0, total: 0 };
+  
+  const currentWeekCount = teacherCoverages.length;
+  const usedFromSurplus = Math.min(totalCoverageUsage, budget.surplus);
+  const usedFromNoLectivas = Math.max(0, totalCoverageUsage - budget.surplus);
 
   const getTeacherHorarioAt = (diaId, horaInicio) => {
     const own = teacherSchedule.find(h => h.dia_semana === diaId && h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5));
@@ -154,13 +176,31 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
     }
   };
 
+  const getBlockLabel = (item) => {
+    if (!item) return '';
+    if (item.asignaturas?.nombre) return item.asignaturas.nombre;
+    const typeLabelMap = {
+      'apoderado': 'Atención Apoderados',
+      'dupla': 'Dupla',
+      'tc': 'Trabajo Colaborativo',
+      'administrativo': 'Administrativo',
+      'bloqueado': 'Bloqueado'
+    };
+    return typeLabelMap[item.tipo_bloque] || item.tipo_bloque;
+  };
+
   const exportToExcel = (prof, schedule) => {
     const headers = ["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
     const rows = BLOQUES.map(b => {
-      const row = [`${b.id}° (${b.inicio})`];
+      const row = [`${b.id}° (${b.inicio.slice(0, 5)})`];
       DIAS.forEach(d => {
-        const item = schedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0,5) === b.inicio.slice(0,5));
-        row.push(item ? `${item.asignaturas?.nombre || item.tipo_bloque}${item.curso ? ` (${item.curso})` : ''}` : '');
+        const item = schedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0, 5) === b.inicio.slice(0, 5));
+        if (item) {
+          const label = getBlockLabel(item);
+          row.push(`${label}${item.curso ? ` (${item.curso})` : ''}`);
+        } else {
+          row.push('');
+        }
       });
       return row;
     });
@@ -171,27 +211,23 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   };
 
   const exportToPDF = (prof, schedule) => {
-    const doc = new jsPDF();
-    const title = "Instituto Comercial Puerto Montt";
-    const subtitle = `Horario Semanal: ${prof.nombre}`;
-    
-    doc.setFontSize(18);
-    doc.setTextColor(40);
-    doc.text(title, 14, 22);
+    const doc = new jsPDF('landscape');
+    doc.setFontSize(16);
+    doc.setTextColor(44, 62, 80);
+    doc.text("Instituto Comercial Puerto Montt", 14, 15);
     
     doc.setFontSize(12);
-    doc.setTextColor(100);
-    doc.text(subtitle, 14, 30);
-    doc.text(`Fecha de exportación: ${new Date().toLocaleDateString()}`, 14, 37);
+    doc.setTextColor(52, 73, 94);
+    doc.text(`Horario Semanal: ${prof.nombre}`, 14, 22);
 
     const headers = [["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]];
     const data = BLOQUES.map(b => {
-      const row = [`${b.id}°\n(${b.inicio})`];
+      const row = [`${b.id}° (${b.inicio.slice(0, 5)})`];
       DIAS.forEach(d => {
-        const item = schedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0,5) === b.inicio.slice(0,5));
+        const item = schedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0, 5) === b.inicio.slice(0, 5));
         if (item) {
-          const typeLabel = item.tipo_bloque === 'clase' ? '' : ` [${item.tipo_bloque.toUpperCase()}]`;
-          row.push(`${item.asignaturas?.nombre || item.tipo_bloque}${item.curso ? `\n(${item.curso})` : ''}${typeLabel}`);
+          const label = getBlockLabel(item);
+          row.push(`${label}${item.curso ? `\n(${item.curso})` : ''}`);
         } else {
           row.push('');
         }
@@ -200,50 +236,100 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
     });
 
     autoTable(doc, {
-      startY: 45,
+      startY: 28,
       head: headers,
       body: data,
       theme: 'grid',
-      headStyles: { fillColor: [59, 130, 246], textColor: 255, fontStyle: 'bold' },
-      styles: { fontSize: 8, cellPadding: 3, valign: 'middle', halign: 'center' },
-      columnStyles: { 0: { fontStyle: 'bold', fillColor: [245, 247, 250] } }
+      headStyles: { fillColor: [59, 130, 246], textColor: 255, halign: 'center' },
+      styles: { fontSize: 8, cellPadding: 2, halign: 'center', valign: 'middle' },
+      columnStyles: { 0: { fontStyle: 'bold', fillColor: [240, 244, 248] } }
     });
 
     doc.save(`Horario_${prof.nombre}.pdf`);
   };
 
+  const handleExportAll = async () => {
+    setProcessing(true);
+    try {
+      const { data: allSchedules, error } = await supabase
+        .from('horarios')
+        .select('*, asignaturas(nombre)');
+      if (error) throw error;
+      
+      const wb = XLSX.utils.book_new();
+      const activeProfs = profesores.filter(p => allSchedules.some(s => s.profesor_id === p.id));
+      
+      if (activeProfs.length === 0) {
+        alert("No hay horarios registrados para exportar.");
+        return;
+      }
+
+      activeProfs.forEach(p => {
+        const pSchedule = allSchedules.filter(s => s.profesor_id === p.id);
+        const headers = ["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+        const rows = BLOQUES.map(b => {
+          const row = [`${b.id}° (${b.inicio.slice(0, 5)})`];
+          DIAS.forEach(d => {
+            const item = pSchedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0, 5) === b.inicio.slice(0, 5));
+            if (item) {
+              const label = getBlockLabel(item);
+              row.push(`${label}${item.curso ? ` (${item.curso})` : ''}`);
+            } else {
+              row.push('');
+            }
+          });
+          return row;
+        });
+        const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
+        const sheetName = p.nombre.replace(/[\\/?*[\]]/g, '').substring(0, 31);
+        XLSX.utils.book_append_sheet(wb, ws, sheetName || `Profesor ${p.id.slice(0,4)}`);
+      });
+      
+      XLSX.writeFile(wb, "Horarios_Completos_Instituto.xlsx");
+    } catch (err) {
+      console.error("Error Excel:", err);
+      alert("Error al exportar Excel: " + err.message);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
   const exportAllToPDF = async () => {
     setProcessing(true);
     try {
-      const { data: allSchedules, error } = await supabase.from('horarios').select('*, asignaturas(nombre)');
+      const { data: allSchedules, error } = await supabase
+        .from('horarios')
+        .select('*, asignaturas(nombre)');
       if (error) throw error;
       
-      const doc = new jsPDF();
+      const doc = new jsPDF('landscape');
       const activeProfs = profesores.filter(p => allSchedules.some(s => s.profesor_id === p.id));
       
+      if (activeProfs.length === 0) {
+        alert("No hay horarios activos para exportar.");
+        return;
+      }
+
       activeProfs.forEach((p, index) => {
         if (index > 0) doc.addPage();
-        
         const pSchedule = allSchedules.filter(s => s.profesor_id === p.id);
-        const title = "Instituto Comercial Puerto Montt";
-        const subtitle = `Horario Semanal: ${p.nombre}`;
-        
-        doc.setFontSize(18);
-        doc.setTextColor(40);
-        doc.text(title, 14, 22);
-        
+        doc.setFontSize(16);
+        doc.setTextColor(44, 62, 80);
+        doc.text("Instituto Comercial Puerto Montt", 14, 15);
         doc.setFontSize(12);
-        doc.setTextColor(100);
-        doc.text(subtitle, 14, 30);
-        doc.text(`Página ${index + 1} de ${activeProfs.length}`, 160, 30);
+        doc.setTextColor(52, 73, 94);
+        doc.text(`Horario Semanal: ${p.nombre}`, 14, 22);
+        doc.setFontSize(10);
+        doc.text(`Página ${index + 1} de ${activeProfs.length}`, 260, 22, { align: 'right' });
 
         const headers = [["Bloque", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]];
         const data = BLOQUES.map(b => {
-          const row = [`${b.id}°`];
+          const row = [`${b.id}° (${b.inicio.slice(0, 5)})`];
           DIAS.forEach(d => {
-            const item = pSchedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0,5) === b.inicio.slice(0,5));
+            const item = pSchedule.find(h => h.dia_semana === d.id && h.hora_inicio.slice(0, 5) === b.inicio.slice(0, 5));
             if (item) {
-              row.push(`${item.asignaturas?.nombre || item.tipo_bloque}${item.curso ? `\n(${item.curso})` : ''}`);
+              const label = getBlockLabel(item);
+              row.push(`${label}${item.curso ? `\n(${item.curso})` : ''}`);
             } else {
               row.push('');
             }
@@ -252,18 +338,20 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
         });
 
         autoTable(doc, {
-          startY: 40,
+          startY: 28,
           head: headers,
           body: data,
           theme: 'grid',
-          headStyles: { fillColor: [59, 130, 246] },
-          styles: { fontSize: 7, cellPadding: 2, halign: 'center' }
+          headStyles: { fillColor: [59, 130, 246], textColor: 255, halign: 'center' },
+          styles: { fontSize: 8, cellPadding: 2, halign: 'center', valign: 'middle' },
+          columnStyles: { 0: { fontStyle: 'bold', fillColor: [240, 244, 248] } }
         });
       });
       
       doc.save("Horarios_Completos_Instituto.pdf");
     } catch (err) {
-      alert(err.message);
+      console.error("Error PDF:", err);
+      alert("Error al exportar PDF: " + err.message);
     } finally {
       setProcessing(false);
     }
@@ -360,6 +448,24 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
 
       {selectedTeacherId && (
         <div className="schedule-container">
+          <div className="teacher-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+            <div className="stat-card" style={{ padding: '1rem', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '0.9rem', opacity: 0.7, marginBottom: '0.5rem' }}>Excedentes Usadas</h3>
+              <p style={{ fontSize: '1.5rem', fontWeight: '800', color: 'var(--accent)' }}>{usedFromSurplus} / {budget.surplus}</p>
+            </div>
+            <div className="stat-card" style={{ padding: '1rem', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '0.9rem', opacity: 0.7, marginBottom: '0.5rem' }}>No Lectivas Usadas</h3>
+              <p style={{ fontSize: '1.5rem', fontWeight: '800', color: usedFromNoLectivas > budget.noLectivas ? '#ef4444' : 'inherit' }}>{usedFromNoLectivas} / {budget.noLectivas}</p>
+            </div>
+            <div className="stat-card" style={{ padding: '1rem', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '0.9rem', opacity: 0.7, marginBottom: '0.5rem' }}>Total Histórico</h3>
+              <p style={{ fontSize: '1.5rem', fontWeight: '800' }}>{historicalUsage} blq</p>
+            </div>
+            <div className="stat-card" style={{ padding: '1rem', textAlign: 'center', border: '2px solid var(--accent)' }}>
+              <h3 style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: 'bold', marginBottom: '0.5rem' }}>Esta Semana</h3>
+              <p style={{ fontSize: '1.5rem', fontWeight: '800', color: 'var(--accent)' }}>{currentWeekCount} blq</p>
+            </div>
+          </div>
           <div className="grid-wrapper">
             <table className="schedule-grid">
               <thead>
@@ -387,10 +493,7 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
                           {item ? (
                             <div className="item-content">
                               <span className="subject">
-                                {item.asignaturas?.nombre || 
-                                 (item.tipo_bloque === 'apoderado' ? 'Atención Apoderado' : 
-                                  item.tipo_bloque === 'dupla' ? 'Dupla' : 
-                                  item.tipo_bloque)}
+                                {getBlockLabel(item)}
                               </span>
                               {item.curso && <span className="course">{item.curso}</span>}
                             </div>

@@ -54,7 +54,8 @@ const CoveragePlanner = ({
         if (!block) return false;
         if (diaSemana === 5 && block.id > 6) return false;
         if (block.id === 10) return false;
-        return true;
+        // Strict filter: only 'clase' blocks are coverable
+        return s.tipo_bloque === 'clase';
       });
 
       setAbsentSchedule(filtered);
@@ -71,7 +72,9 @@ const CoveragePlanner = ({
       .filter(s => {
         const d = DIAS.find(day => day.id === s.dia_semana);
         const selectedDayShort = new Date(selectedDate + 'T00:00:00').toLocaleDateString('es-ES', {weekday: 'short'}).toUpperCase().slice(0,2);
-        return d?.corto === selectedDayShort && s.hora_inicio === horaInicio;
+        return d?.corto === selectedDayShort && 
+               s.hora_inicio === horaInicio && 
+               s.tipo_bloque === 'clase';
       })
       .map(s => s.profesor_id);
 
@@ -202,6 +205,57 @@ const CoveragePlanner = ({
             <button className="btn-save" style={{ width: '100%', marginTop: '0.5rem' }} onClick={fetchDailySummary}>
               Ver Coberturas del Día
             </button>
+          </div>
+
+          <div className="stat-card" style={{ width: '100%', marginTop: '1.5rem', padding: '1rem' }}>
+            <h3 style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>📊</span> Resumen Semanal
+            </h3>
+            <div className="weekly-ranking" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+                <thead>
+                  <tr style={{ textAlign: 'left', borderBottom: '2px solid var(--border)', color: 'var(--text-soft)' }}>
+                    <th style={{ padding: '0.5rem 0' }}>Profesor</th>
+                    <th style={{ padding: '0.5rem 0', textAlign: 'right' }}>Blq</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(() => {
+                    const { start, end } = getWeekRange(selectedDate);
+                    const summary = profesores
+                      .filter(p => p.rol === 'profesor')
+                      .map(p => {
+                        const count = plannedCoverages.filter(c => 
+                          c.profesor_reemplazante_id === p.id && 
+                          c.estado !== 'cancelada' &&
+                          c.fecha >= start && 
+                          c.fecha <= end &&
+                          c.tipo === 'cobertura'
+                        ).length;
+                        return { nombre: p.nombre, count };
+                      })
+                      .filter(p => p.count > 0)
+                      .sort((a, b) => b.count - a.count);
+
+                    if (summary.length === 0) return (
+                      <tr>
+                        <td colSpan="2" style={{ padding: '1rem 0', textAlign: 'center', opacity: 0.6 }}>No hay coberturas esta semana</td>
+                      </tr>
+                    );
+
+                    return summary.map((p, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                        <td style={{ padding: '0.6rem 0', color: 'var(--text)', fontWeight: '500' }}>{p.nombre}</td>
+                        <td style={{ padding: '0.6rem 0', textAlign: 'right', fontWeight: '800', color: 'var(--accent)' }}>{p.count}</td>
+                      </tr>
+                    ));
+                  })()}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', opacity: 0.6, fontStyle: 'italic' }}>
+              * Solo incluye coberturas agendadas.
+            </p>
           </div>
         </aside>
 
