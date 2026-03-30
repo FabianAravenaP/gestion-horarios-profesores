@@ -239,12 +239,7 @@ function AdminDashboard() {
           )}
           {activeTab === 'monitoreo' && (
             <>
-              <ActivityMonitor 
-                activityLogs={activityLogs} 
-                loading={loading} 
-              />
-
-              <div className="admin-actions-section" style={{ marginTop: '2rem', padding: '1rem', borderTop: '2px dashed var(--border)' }}>
+              <div className="admin-actions-section" style={{ marginBottom: '2rem', padding: '1rem', borderBottom: '2px dashed var(--border)' }}>
                 <h3>Cierre de Ciclo Semanal</h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-soft)', marginBottom: '1rem' }}>
                   Al finalizar la semana, presiona este botón para guardar el resumen de horas usadas por cada profesor 
@@ -261,6 +256,11 @@ function AdminDashboard() {
 
                 <WeeklyHistory history={weeklyHistory} loading={historyLoading} />
               </div>
+
+              <ActivityMonitor 
+                activityLogs={activityLogs} 
+                loading={loading} 
+              />
             </>
           )}
         </div>
