@@ -21,6 +21,8 @@ const CoveragePlanner = ({
   const [plannerLoading, setPlannerLoading] = useState(false);
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
   const [summaryCoverages, setSummaryCoverages] = useState([]);
+  const [sendNotifications, setSendNotifications] = useState(true);
+  const [notifResult, setNotifResult] = useState(null);
 
   useEffect(() => {
     if (absentTeacherId) {
@@ -121,15 +123,39 @@ const CoveragePlanner = ({
     if (entries.length === 0) return alert('No hay asignaciones.');
 
     setProcessing(true);
+    setNotifResult(null);
     try {
       const ids = entries.map(e => e.horario_id);
       await supabase.from('coberturas').delete().eq('fecha', selectedDate).eq('profesor_ausente_id', absentTeacherId).in('horario_id', ids);
-      const { error } = await supabase.from('coberturas').insert(entries);
+      const { data: inserted, error } = await supabase.from('coberturas').insert(entries).select('id');
       if (error) throw error;
-      
-      alert('Planificación guardada');
+
+      // Send email notifications if enabled
+      if (sendNotifications && inserted?.length > 0) {
+        const coberturaIds = inserted.map(c => c.id);
+        try {
+          const { data: { session } } = await supabase.auth.getSession();
+          const res = await fetch(
+            `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-coverage-email`,
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${session?.access_token}`,
+              },
+              body: JSON.stringify({ coberturaIds }),
+            }
+          );
+          const result = await res.json();
+          setNotifResult(result);
+        } catch (notifErr) {
+          console.error('Notification error:', notifErr);
+          setNotifResult({ sent: 0, errors: ['No se pudo conectar con el servicio de notificaciones'] });
+        }
+      }
+
       setAssignments({});
-      onRefresh(); // Refresh parent lists
+      onRefresh();
     } catch (err) {
       alert('Error: ' + err.message);
     } finally {
@@ -272,9 +298,35 @@ const CoveragePlanner = ({
               <label>Fecha</label>
               <input type="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} />
             </div>
-            <button className="btn-save" onClick={handleSaveCoverages} disabled={processing || !absentTeacherId || absentSchedule.length === 0}>
-              {processing ? 'Guardando...' : 'Guardar Planificación'}
-            </button>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <button className="btn-save" onClick={handleSaveCoverages} disabled={processing || !absentTeacherId || absentSchedule.length === 0}>
+                {processing ? 'Guardando...' : 'Guardar Planificación'}
+              </button>
+              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.82rem', cursor: 'pointer', opacity: 0.8 }}>
+                <input
+                  type="checkbox"
+                  checked={sendNotifications}
+                  onChange={e => setSendNotifications(e.target.checked)}
+                  style={{ width: '14px', height: '14px' }}
+                />
+                📧 Notificar por correo a los profesores asignados
+              </label>
+              {notifResult && (
+                <div style={{ 
+                  marginTop: '0.25rem', 
+                  padding: '0.6rem 0.75rem', 
+                  borderRadius: '6px',
+                  fontSize: '0.8rem',
+                  background: notifResult.errors?.length > 0 ? '#fef3c7' : '#dcfce7',
+                  color: notifResult.errors?.length > 0 ? '#92400e' : '#166534',
+                  border: `1px solid ${notifResult.errors?.length > 0 ? '#fcd34d' : '#86efac'}`
+                }}>
+                  {notifResult.sent > 0 && <div>✅ {notifResult.sent} notificación(es) enviada(s)</div>}
+                  {notifResult.skipped > 0 && <div>⚠️ {notifResult.skipped} sin correo registrado</div>}
+                  {notifResult.errors?.length > 0 && <div>❌ Error: {notifResult.errors[0]}</div>}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="planner-content" style={{ marginTop: '2rem' }}>
