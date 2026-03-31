@@ -135,8 +135,9 @@ const CoveragePlanner = ({
         const coberturaIds = inserted.map(c => c.id);
         try {
           const { data: { session } } = await supabase.auth.getSession();
+          const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://vjwnpsqthjolemycytxt.supabase.co';
           const res = await fetch(
-            `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-coverage-email`,
+            `${supabaseUrl}/functions/v1/send-coverage-email`,
             {
               method: 'POST',
               headers: {
