@@ -1,0 +1,359 @@
+BEGIN;
+
+-- Borrar horario actual de Paulina
+DELETE FROM public.horarios WHERE profesor_id = 'c346be94-a3ff-4bfc-b227-87c4f70fed29';
+
+INSERT INTO public.horarios (profesor_id, asignatura_id, dia_semana, hora_inicio, hora_fin, curso, tipo_bloque, es_disponible_cobertura)
+VALUES
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '10:00:00',
+    '10:45:00',
+    '3B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '10:45:00',
+    '11:30:00',
+    '3B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    5,
+    '10:00:00',
+    '10:45:00',
+    '3B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '10:00:00',
+    '10:45:00',
+    '3C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '10:45:00',
+    '11:30:00',
+    '3C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '9:00:00',
+    '9:45:00',
+    '3C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '8:15:00',
+    '9:00:00',
+    '3D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '9:00:00',
+    '9:45:00',
+    '3D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '13:55:00',
+    '14:40:00',
+    '3D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    2,
+    '8:15:00',
+    '9:00:00',
+    '3E',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    2,
+    '9:00:00',
+    '9:45:00',
+    '3E',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    5,
+    '10:45:00',
+    '11:30:00',
+    '3E',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '5d30f611-d540-465a-87a5-97735fdbd450',
+    5,
+    '12:25:00',
+    '13:10:00',
+    '3C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '13:55:00',
+    '14:40:00',
+    '3F',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '14:40:00',
+    '15:25:00',
+    '3F',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '15:25:00',
+    '16:10:00',
+    '3F',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    5,
+    '8:15:00',
+    '9:00:00',
+    '1B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    5,
+    '9:00:00',
+    '9:45:00',
+    '1B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '15:25:00',
+    '16:10:00',
+    '1B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    2,
+    '15:25:00',
+    '16:10:00',
+    '1B',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '10:00:00',
+    '10:45:00',
+    '1A',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    4,
+    '10:45:00',
+    '11:30:00',
+    '1A',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    2,
+    '11:40:00',
+    '12:25:00',
+    '1C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    2,
+    '12:25:00',
+    '13:10:00',
+    '1C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    2,
+    '13:55:00',
+    '14:40:00',
+    '1C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '15:25:00',
+    '16:10:00',
+    '1C',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '9:00:00',
+    '9:45:00',
+    '1A',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '8:15:00',
+    '9:00:00',
+    '1A',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '14:40:00',
+    '15:25:00',
+    '1D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    1,
+    '13:55:00',
+    '14:40:00',
+    '1D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '11:40:00',
+    '12:25:00',
+    '1D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '8f46d83d-3960-4b3a-8f35-ae2ce91e76ad',
+    3,
+    '12:25:00',
+    '13:10:00',
+    '1D',
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '9e485561-bda2-48a9-90dd-895fcd57c3c5',
+    1,
+    '11:40:00',
+    '12:25:00',
+    NULL,
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    '2a13ce0a-fec1-4ce2-a324-3ac0425d60f8',
+    2,
+    '14:40:00',
+    '15:25:00',
+    NULL,
+    'clase',
+    false
+  ),
+(
+    'c346be94-a3ff-4bfc-b227-87c4f70fed29',
+    'a1b221bf-bed9-4109-9151-d898738abebc',
+    2,
+    '10:45:00',
+    '11:30:00',
+    NULL,
+    'clase',
+    false
+  );
+
+COMMIT;

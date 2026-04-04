@@ -1,0 +1,7571 @@
+[
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2A",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2A",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3B",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3D",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3D",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4E",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "FILOSOF�A",
+    "curso": "4E",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4D",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4D",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "4E",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3F",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4B",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1C",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1C",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2C",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2C",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4C",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4C",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1B",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1B",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2A",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2A",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1B",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1B",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2C",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2C",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3B",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3E",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3A",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3A",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3B",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3B",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3C",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3C",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sergio Vera",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2B",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2B",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1A",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1A",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ARTES",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ARTES",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ARTES",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ARTES",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "M�SICA",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3E",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3E",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3C",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3D",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3D",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3C",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3D",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3F",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3C",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3C",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3E",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3D",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3D",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N Y M�TODOS DE TRABAJO EN LA OFICINA",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3E",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3F",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N DE CLIENTES",
+    "curso": "3F",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3B",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3F",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "APLICACIONES INFORM�TICAS PARA LA GESTI�N ADMINISTRATIVA",
+    "curso": "3F",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4D",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4D",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE IMPUESTOS",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4D",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N DE OFICINAS",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N DE OFICINAS",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N DE OFICINAS",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORGANIZACI�N DE OFICINAS",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4B",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4B",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "EMPRENDIMIENTO Y EMPLEABILIDAD",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "UTILIZACI�N DE INFORMACI�N CONTABLE",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "GESTI�N COMERCIAL Y TRIBUTARIA",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3A",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3A",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3A",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3A",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3B",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESOS ADMINISTRATIVOS�",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4A",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4A",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "LEGISLACI�N LABORAL",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4A",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4A",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DOTACI�N DE PERSONAL",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "1A",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "3E",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "4B",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "3C",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marcelo Barr�a",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "1C",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "4C",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "3B",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "3A",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "FERNANDA CAVERO",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sof�a Carvajal",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Patricia Aguayo",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Estefan�a Igor",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1C",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1C",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1C",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1A",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1A",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "C�LCULO Y REGISTRO DE REMUNERACIONES",
+    "curso": "3F",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4E",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4E",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3C",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3C",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3F",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "CONTABILIZACI�N DE OPERACIONES COMERCIALES",
+    "curso": "3F",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1B",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1C",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1C",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4A",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4A",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4A",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4B",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4B",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juana Zurita",
+    "asignatura_nombre": "DESARROLLO Y BIENESTAR DEL PERSONAL",
+    "curso": "4B",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4B",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4B",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "C�LCULO DE REMUNERACI�N, FINIQUITOS Y OBLIGACIONES LABORALES",
+    "curso": "4B",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1B",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1B",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1C",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2B",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2B",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4C",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4C",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "REGISTRO DE OPERACIONES DE COMERCIO NACIONAL E INTERNACIONAL",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1D",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1D",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1D",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "F�SICA",
+    "curso": "1D",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "TALLER  INFORMATICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "QU�MICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "ARTES",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "ARTES",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marco Urzua",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3B",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3B",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3B",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3C",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "EDUCACI�N  CIUDADANA",
+    "curso": "3E",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "TALLER DEPORTE/RELIGION",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "3A",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "3A",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "3F",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "CIENCIAS PARA LA CIUDADAN�A",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TALLER JEC",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ARTES",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ARTES",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ELABORACI�N DE INFORMES CONTABLES",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "CONTROL Y PROCESAMIENTO DE INFORMACI�N CONTABLE",
+    "curso": "3D",
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3A",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1C",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1B",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "AULA TP",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "INGLES",
+    "curso": "1D",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4E",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2B",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2D",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4E",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2C",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4D",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4D",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "INGLES",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4C",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4C",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4C",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4D",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4D",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4D",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "HISTORIA",
+    "curso": "1A",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3E",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3E",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3E",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1A",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4E",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4E",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "PROCESAMIENTO DE INFORMACI�N CONTABLE - FINANCIERA",
+    "curso": "4E",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "BIOLOG�A",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2D",
+    "dia_semana": 5,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "2D",
+    "dia_semana": 5,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1B",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1D",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "TECNOLOG�A",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1B",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "ELECTIVO HISTORIA/ARTE/RELIGI�N",
+    "curso": "4A",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "EDUCACION FISICA",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "1D",
+    "dia_semana": 5,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3D",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "3D",
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cinthya Maldonado",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marcelo Barr�a",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marco Urzua",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Soledad Dreau",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Manuel Laines",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 5,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Carolina Campos",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alejandra Mu�oz",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Luis Hermosilla",
+    "asignatura_nombre": "ATENCI�N APODERADOS",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gonzalo Alcayaga",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gladys Arevalo",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Rafael Beltr�n",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Fredy C�rcamo",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Romina Mendez",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alejandra Mu�oz",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Seguel",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marco Urzua",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Bilma Vargas",
+    "asignatura_nombre": "PIE - PROF DIFRENCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Alfredo Vivar",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Christian Meli�n",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Cristian Torres",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Elisa Neira",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Estefan�a Igor",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "16:10:00",
+    "hora_fin": "17:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "FERNANDA CAVERO",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Juan Pablo",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Julieta D�az",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Leonardo Narvaez",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marcelo Barr�a",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Marco Urzua",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Mauricio Toledo",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "16:10:00",
+    "hora_fin": "17:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Patricia Aguayo",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 3,
+    "hora_inicio": "16:10:00",
+    "hora_fin": "17:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Paulina Beroiza",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Ren� Gutierrez",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sof�a Carvajal",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Tamara Marilic�n",
+    "asignatura_nombre": "DUPLA PSICOSCIAL",
+    "curso": null,
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4A",
+    "dia_semana": 4,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4A",
+    "dia_semana": 1,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4C",
+    "dia_semana": 4,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": null,
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "4C",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "ORIENTACI�N",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 5,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 5,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2D",
+    "dia_semana": 2,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "13:55:00",
+    "hora_fin": "14:40:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2D",
+    "dia_semana": 3,
+    "hora_inicio": "14:40:00",
+    "hora_fin": "15:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Gabriela Torres",
+    "asignatura_nombre": "LENGUAJE",
+    "curso": "2D",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 3,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2A",
+    "dia_semana": 2,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "11:40:00",
+    "hora_fin": "12:25:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 4,
+    "hora_inicio": "12:25:00",
+    "hora_fin": "13:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "10:00:00",
+    "hora_fin": "10:45:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 3,
+    "hora_inicio": "10:45:00",
+    "hora_fin": "11:30:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Olga Montecinos",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2B",
+    "dia_semana": 1,
+    "hora_inicio": "15:25:00",
+    "hora_fin": "16:10:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "8:15:00",
+    "hora_fin": "9:00:00",
+    "tipo_bloque": "clase"
+  },
+  {
+    "profesor_nombre": "Sebasti�n Ayanc�n",
+    "asignatura_nombre": "MATEMATICA",
+    "curso": "2C",
+    "dia_semana": 4,
+    "hora_inicio": "9:00:00",
+    "hora_fin": "9:45:00",
+    "tipo_bloque": "clase"
+  }
+]

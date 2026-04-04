@@ -4,6 +4,9 @@ import logo from '../assets/logo.jpg'
 import { formatLongDate, getWeekRange } from '../services/dateUtils'
 import { BLOQUES, DIAS, DURACION_BLOQUE_H } from '../services/constants'
 import { getDetailedBudget, formatUsage } from '../services/budgetUtils'
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css'
+import './CalendarOverrides.css' // We'll create this
 
 function TeacherDashboard({ user: initialUser }) {
   const [user, setUser] = useState(initialUser)
@@ -16,6 +19,12 @@ function TeacherDashboard({ user: initialUser }) {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [passwordProcessing, setPasswordProcessing] = useState(false)
+  const [permisos, setPermisos] = useState([])
+  const [isPermitModalOpen, setIsPermitModalOpen] = useState(false)
+  const [selectedDate, setSelectedDate] = useState(new Date())
+  const [tipoDia, setTipoDia] = useState('completo')
+  const [motivo, setMotivo] = useState('')
+  const [isSubmittingPermit, setIsSubmittingPermit] = useState(false)
 
   useEffect(() => {
     if (initialUser) setUser(initialUser)
@@ -87,6 +96,16 @@ function TeacherDashboard({ user: initialUser }) {
       if (coverageError) throw coverageError
       setCoberturas(coverageData)
 
+      // 6. Fetch Administrative Permits
+      const { data: permitData, error: permitError } = await supabase
+        .from('permisos_administrativos')
+        .select('*')
+        .eq('profesor_id', profile.id)
+        .order('fecha', { ascending: false })
+      
+      if (permitError) throw permitError
+      setPermisos(permitData)
+
     } catch (error) {
       console.error('Error fetching teacher data:', error.message)
     } finally {
@@ -114,6 +133,9 @@ function TeacherDashboard({ user: initialUser }) {
         if (payload.new && payload.new.id === profile?.id) {
           fetchUserData()
         }
+      })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'permisos_administrativos' }, () => {
+        fetchUserData()
       })
       .subscribe()
 
@@ -174,6 +196,89 @@ function TeacherDashboard({ user: initialUser }) {
       alert('Error al cambiar contraseña: ' + error.message)
     } finally {
       setPasswordProcessing(false)
+    }
+  }
+
+  const handleRequestPermit = async (e) => {
+    e.preventDefault()
+    
+    // VALIDATIONS
+    const today = new Date()
+    today.setHours(0,0,0,0)
+    const fortyEightHoursLater = new Date(today)
+    fortyEightHoursLater.setDate(today.getDate() + 2)
+
+    const reqDate = new Date(selectedDate)
+    reqDate.setHours(0,0,0,0)
+
+    // 1. 48 hours notice
+    if (reqDate < fortyEightHoursLater) {
+      alert('La solicitud debe realizarse con al menos 48 horas de antelación.')
+      return
+    }
+
+    // 2. Annual quota (6 days)
+    const currentYear = new Date().getFullYear()
+    const usedThisYear = permisos
+      .filter(p => new Date(p.fecha).getFullYear() === currentYear && p.estado !== 'rechazado')
+      .reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)
+    
+    const newVal = tipoDia === 'completo' ? 1.0 : 0.5
+    if (usedThisYear + newVal > 6) {
+      alert(`Has excedido tu cupo anual (6 días). Llevas ${usedThisYear} días usados/pendientes.`)
+      return
+    }
+
+    // 3. 3 Consecutive full days
+    if (tipoDia === 'completo') {
+      const isDateMatch = (d1, d2) => d1.toISOString().split('T')[0] === d2.toISOString().split('T')[0]
+      
+      const prev1 = new Date(reqDate); prev1.setDate(reqDate.getDate() - 1)
+      const prev2 = new Date(reqDate); prev2.setDate(reqDate.getDate() - 2)
+      const next1 = new Date(reqDate); next1.setDate(reqDate.getDate() + 1)
+      const next2 = new Date(reqDate); next2.setDate(reqDate.getDate() + 2)
+
+      const isFull = (date) => permisos.some(p => p.tipo_dia === 'completo' && p.estado !== 'rechazado' && isDateMatch(new Date(p.fecha + 'T00:00:00'), date))
+
+      const sequenceLeft = isFull(prev1) && isFull(prev2)
+      const sequenceRight = isFull(next1) && isFull(next2)
+      const sequenceMiddle = isFull(prev1) && isFull(next1)
+
+      if (sequenceLeft || sequenceRight || sequenceMiddle) {
+        alert('No se pueden solicitar 3 días completos administrativos de forma consecutiva.')
+        return
+      }
+    }
+
+    setIsSubmittingPermit(true)
+    try {
+      const { error } = await supabase
+        .from('permisos_administrativos')
+        .insert({
+          profesor_id: profile.id,
+          fecha: selectedDate.toISOString().split('T')[0],
+          tipo_dia: tipoDia,
+          valor_dia: tipoDia === 'completo' ? 1.0 : 0.5,
+          motivo: motivo,
+          estado: 'pendiente'
+        })
+      
+      if (error) throw error
+      alert('Solicitud enviada correctamente.')
+      setIsPermitModalOpen(false)
+      setMotivo('')
+    } catch (err) {
+      alert('Error: ' + err.message)
+    } finally {
+      setIsSubmittingPermit(false)
+    }
+  }
+
+  const getStatusBadge = (estado) => {
+    switch (estado) {
+      case 'aprobado': return <span className="badge badge-success">Aprobado</span>
+      case 'rechazado': return <span className="badge badge-danger">Rechazado</span>
+      default: return <span className="badge badge-warning">Pendiente</span>
     }
   }
 
@@ -280,6 +385,13 @@ function TeacherDashboard({ user: initialUser }) {
               {totalCubiertoSemana} blq
             </p>
             <small style={{ opacity: 0.7 }}>coberturas actuales</small>
+          </div>
+          <div className="stat-card" style={{ cursor: 'pointer', border: '2px solid var(--accent)' }} onClick={() => setIsPermitModalOpen(true)}>
+            <h3>Permisos Adm.</h3>
+            <p style={{ fontSize: '1.5rem', color: 'var(--accent)', fontWeight: 800 }}>
+              {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado !== 'rechazado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6
+            </p>
+            <small style={{ color: 'var(--accent)', fontWeight: 700 }}>+ Solicitar Día</small>
           </div>
         </section>
 
@@ -443,6 +555,57 @@ function TeacherDashboard({ user: initialUser }) {
           </div>
         </section>
 
+        <section className="permits-history" style={{ marginTop: '2.5rem' }}>
+          <div className="section-header">
+            <h2 style={{ marginBottom: '1.5rem' }}>Mis Solicitudes de Permiso</h2>
+          </div>
+          <div className="card-content" style={{ 
+            background: 'var(--card-bg)', 
+            borderRadius: '1rem', 
+            boxShadow: 'var(--shadow)',
+            overflow: 'hidden'
+          }}>
+            {permisos.length === 0 ? (
+              <p style={{ opacity: 0.6, padding: '2rem', textAlign: 'center' }}>No tienes solicitudes registradas.</p>
+            ) : (
+              <div style={{ overflowX: 'auto' }}>
+                <table className="admin-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ background: 'var(--bg-soft)', textAlign: 'left' }}>
+                      <th style={{ padding: '1rem' }}>Fecha</th>
+                      <th style={{ padding: '1rem' }}>Jornada</th>
+                      <th style={{ padding: '1rem' }}>Motivo</th>
+                      <th style={{ padding: '1rem' }}>Estado</th>
+                      <th style={{ padding: '1rem' }}>Admin</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {permisos.map(p => (
+                      <tr key={p.id} style={{ borderTop: '1px solid var(--border)' }}>
+                        <td style={{ padding: '1rem', fontWeight: 600 }}>{p.fecha}</td>
+                        <td style={{ padding: '1rem' }}>
+                          <span style={{ 
+                            background: 'var(--bg-soft)', 
+                            padding: '0.2rem 0.5rem', 
+                            borderRadius: '0.4rem',
+                            fontSize: '0.8rem',
+                            fontWeight: 700
+                          }}>
+                            {p.tipo_dia === 'completo' ? 'DÍA COMPLETO' : p.tipo_dia.toUpperCase()}
+                          </span>
+                        </td>
+                        <td style={{ padding: '1rem', fontSize: '0.9rem', opacity: 0.8 }}>{p.motivo || '-'}</td>
+                        <td style={{ padding: '1rem' }}>{getStatusBadge(p.estado)}</td>
+                        <td style={{ padding: '1rem', fontSize: '0.85rem' }}>{p.comentario_admin || '-'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        </section>
+
         {isPasswordModalOpen && (
           <div className="modal-overlay">
             <div className="modal-content">
@@ -473,6 +636,67 @@ function TeacherDashboard({ user: initialUser }) {
                   <button type="button" className="btn-cancel" onClick={() => setIsPasswordModalOpen(false)}>Cerrar</button>
                   <button type="submit" className="btn-save" disabled={passwordProcessing}>
                     {passwordProcessing ? 'Cambiando...' : 'Cambiar Contraseña'}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {isPermitModalOpen && (
+          <div className="modal-overlay">
+            <div className="modal-content" style={{ maxWidth: '600px' }}>
+              <div className="modal-header">
+                <h3>Solicitar Permiso Administrativo</h3>
+                <button className="btn-close" type="button" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
+              </div>
+              <form onSubmit={handleRequestPermit}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+                  <div className="calendar-container">
+                    <label style={{ marginBottom: '0.5rem', display: 'block' }}>Seleccionar Fecha</label>
+                    <Calendar 
+                      onChange={setSelectedDate} 
+                      value={selectedDate}
+                      minDate={new Date(new Date().setDate(new Date().getDate() + 2))} // 48h restriction
+                      tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6} // No weekends
+                    />
+                  </div>
+                  <div className="form-details">
+                    <div className="form-group">
+                      <label>Tipo de Jornada</label>
+                      <select value={tipoDia} onChange={e => setTipoDia(e.target.value)} required>
+                        <option value="completo">Día Completo (1.0)</option>
+                        <option value="am">Mañana / AM (0.5)</option>
+                        <option value="pm">Tarde / PM (0.5)</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <label>Motivo (opcional)</label>
+                      <textarea 
+                        rows="4" 
+                        value={motivo} 
+                        onChange={e => setMotivo(e.target.value)}
+                        placeholder="Ej. Trámites personales, médico, etc."
+                      />
+                    </div>
+                    <div className="quota-info" style={{ 
+                      background: 'var(--bg-soft)', 
+                      padding: '1rem', 
+                      borderRadius: '0.5rem',
+                      fontSize: '0.85rem',
+                      marginTop: '1rem'
+                    }}>
+                      <strong>Información de Cupo:</strong>
+                      <p style={{ margin: '0.25rem 0' }}>Has usado: {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado !== 'rechazado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6 días</p>
+                      <small style={{ opacity: 0.7 }}>* Los permisos AM/PM cuentan como 0.5 días.</small>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="modal-actions">
+                  <button type="button" className="btn-cancel" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
+                  <button type="submit" className="btn-save" disabled={isSubmittingPermit}>
+                    {isSubmittingPermit ? 'Enviando...' : 'Enviar Solicitud'}
                   </button>
                 </div>
               </form>

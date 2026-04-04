@@ -1,0 +1,42 @@
+/* Minimal overrides for react-calendar to fit the dashboard theme */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: inherit !important;
+  background: white !important;
+  border-radius: 0.75rem !important;
+}
+
+.react-calendar__tile--now {
+  background: #f0fdf4 !important;
+  color: #166534 !important;
+  font-weight: 700 !important;
+}
+
+.react-calendar__tile--active {
+  background: var(--accent) !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f8fafc !important;
+  border-radius: 0.5rem !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #f1f5f9 !important;
+}
+
+.react-calendar__month-view__weekdays {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  font-size: 0.7rem !important;
+  opacity: 0.6 !important;
+}
+
+.react-calendar__tile--disabled {
+  background-color: #f1f5f9 !important;
+  color: #cbd5e1 !important;
+}

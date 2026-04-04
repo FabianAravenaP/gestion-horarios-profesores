@@ -1,0 +1,2344 @@
+{
+  "Sheet1": [
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Jeronimo Gomez",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Sergio Vera",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Soledad Dreau",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Alejandra Muñoz",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Luis Hermosilla",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Fernanda Cavero",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "1",
+      "Horario": "8:15 - 9:00"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "2",
+      "Horario": "9:00 - 9:45"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "Recreo",
+      "Horario": "9:45 - 10:00"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "3",
+      "Horario": "10:00 - 10:45"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "4",
+      "Horario": "10:45 - 11:30"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "Recreo",
+      "Horario": "11:30 - 11:40"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "5",
+      "Horario": "11:40 - 12:25"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "6",
+      "Horario": "12:25 - 13:10"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "Almuerzo",
+      "Horario": "13:10 - 13:55"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "7",
+      "Horario": "13:55 - 14:40"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "8",
+      "Horario": "14:40 - 15:25"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "9",
+      "Horario": "15:25 - 16:10"
+    },
+    {
+      "Profesor": "NN MATE NN MATE",
+      "Bloque": "10",
+      "Horario": "16:15 - 17:00"
+    }
+  ]
+}

@@ -1,0 +1,4036 @@
+{
+  "Sheet1": [
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "1B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "1B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "1D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "1D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "1C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "1C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "1A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "1B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "1B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "1A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "1A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "1A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "1C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "1C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "1D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "1D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Alfredo Vivar",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "1A",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "2B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "3A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "2A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "2A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "4D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "2D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "4E",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "4E",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "4B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "4B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "2B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "2B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "2C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "2A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "4C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "4C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "4A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "4A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "2C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "2D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "4A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "4C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "2C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "2C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "2D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "2D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "2A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "4B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "2B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "3A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "3A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "4E",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "4D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Bilma Vargas",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "4D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "1C",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "1C",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "2B",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "2B",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "1B",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "1B",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "2A",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "2A",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "2C",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "2C",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "1B",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "1B",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "1A",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Carolina Campos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "1A",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "3B",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "3B",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "3B",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "3B",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "3B",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "3A",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "3A",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "3A",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "3A",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "3A",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Christian Melián",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "3A",
+      "Asignatura": "PROCESOS ADMINISTRATIVOS "
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "2A",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "2A",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "2D",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "2D",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "1C",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "1C",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "2B",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "2B",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "1A",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "1A",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "1D",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "1D",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "2C",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "2C",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "1B",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cinthya Maldonado",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "1B",
+      "Asignatura": "FÍSICA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "2C",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "2C",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "1A",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "1A",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "1C",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "1C",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "1D",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "1D",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "2D",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "2D",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "2B",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "2B",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "2A",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "2A",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "1B",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Seguel",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "1B",
+      "Asignatura": "BIOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "1A",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "1D",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "2D",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "1C",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "1C",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "1D",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "1D",
+      "Asignatura": "ARTES"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "1D",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "1A",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "2D",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Cristian Torres",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "2D",
+      "Asignatura": "TECNOLOGÍA"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "4A",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "4A",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "3A",
+      "Asignatura": "ORGANIZACIÓN DE OFICINAS"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "3A",
+      "Asignatura": "ORGANIZACIÓN DE OFICINAS"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "3B",
+      "Asignatura": "ORGANIZACIÓN DE OFICINAS"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "3B",
+      "Asignatura": "ORGANIZACIÓN DE OFICINAS"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "3B",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "4A",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Elisa Neira",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "4A",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Estefanía Igor",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "2B",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "FERNANDA CAVERO",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "1B",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "4C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "4C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "4C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "2C",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "2C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fabián Aravena,Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "2D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "4B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "4B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "1D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "1D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "4A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "3A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "3A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "1D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "1D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "4C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "4C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "4A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "4A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "4C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "1D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "1D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "4B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Fredy Cárcamo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "3A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "1C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "1C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "1B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "1B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "2D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "2D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "1B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "1B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "2D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "2D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "1A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "1A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "2C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "2C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "2C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "2C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "1B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "1B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "2D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "2D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "1A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "1A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "1C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "1C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "2C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "2C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "1A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "1A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "1C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gabriela Torres",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "1C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "1A",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "1A",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "1B",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "1B",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "2B",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "2B",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "2A",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "2A",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "1D",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "1D",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "2D",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "2D",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "2C",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "2C",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "1C",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gladys Arevalo",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "1C",
+      "Asignatura": "QUÍMICA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "2C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "2C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "2B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "2B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "2D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "2D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "2A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "2A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "2C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "2C",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "2B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "2B",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "2A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "2A",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "2D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Gonzalo Alcayaga",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "2D",
+      "Asignatura": "HISTORIA"
+    },
+    {
+      "Profesor": "Juan Pablo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "3D",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "4B",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "4B",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "4B",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Juana Zurita",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "4B",
+      "Asignatura": "DOTACIÓN DE PERSONAL"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "3E",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "3E",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "2A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "2A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "2B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "2B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "3C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "3F",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "3F",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "2B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "2B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "3C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "3C",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "3E",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "3B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "3B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "2B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "2B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "3D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "3F",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "2A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "2A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "3D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "3D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "3E",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "3B",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "2A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Julieta Díaz",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "2A",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "4A",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "4A",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "4B",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "4B",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "4B",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "4B",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "4A",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "4A",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Leonardo Narvaez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "4A",
+      "Asignatura": "LEGISLACIÓN LABORAL"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "1A",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "1A",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "1A",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "1A",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "1A",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Manuel Laines",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "1A",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marcelo Barría",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "1C",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "3C,3D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "3C,3D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "1A,1B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "1A,1B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "3E,3F",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "3E,3F",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "3A,3B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "3A,3B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marco Urzua",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "1D",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "2D",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "2D",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "1B",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "2B",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "1B",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "2B",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "2C",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "2C",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "1D",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "2A",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "2C",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "1D",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "2A",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "2C",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "2D",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "2D",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "2A",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "2A",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "2D",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "2D",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "2C",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "2C",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "1C",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "1D",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "1C",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "1D",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "1B",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "1C",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "1B",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "1C",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "1C",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "2A",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "1C",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "2A",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "1B",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "1B",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "1D",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "1D",
+      "Asignatura": "TALLER DEPORTE-RELIGION"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "2B",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "2B",
+      "Asignatura": "TALLER  INFORMATICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "2B",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Alejandra Muñoz,Luis Hermosilla",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "2B",
+      "Asignatura": "TALLER JEC"
+    },
+    {
+      "Profesor": "Marco Urzua,Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "4C,4D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "4C,4D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "1C,1D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Marcelo Barría,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "1C,1D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "4A,4B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Marco Urzua,Soledad Dreau",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "4A,4B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Mauricio Toledo",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "4C",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "3A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "3A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "3A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "4B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "4B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "4D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "4D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "3B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "4D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "2A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "2B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "1C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "3B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "3B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "4B",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Olga Montecinos",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "4B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Patricia Aguayo",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "2A",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "1A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "1A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "3C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "3C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "1D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "1D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "1C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "3E",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "3E",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "1C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "1C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "1C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "1B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "3C",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "3B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "3B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "1D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "1D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "3D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "3D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "1B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "3D",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "1A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "1A",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "3F",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "3F",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "3F",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "1B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "1B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "3B",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "3E",
+      "Asignatura": "INGLES"
+    },
+    {
+      "Profesor": "Paulina Beroiza",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "3C",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "4A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "4A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "3E",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "1",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "2",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "4E",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "3C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "4A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "4E",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "4E",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "3F",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "3F",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "3C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "3C",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "7",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "1B",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "3E",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "3E",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "3F",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Rafael Beltrán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "1A",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "4C",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "4C",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "3F",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "3F",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "4B",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "4B",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "4E",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "9",
+      "Curso": "4E",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "3D",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "3D",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "3A",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "3A",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "4D",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "8",
+      "Curso": "4D",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "3E",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "3E",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "7",
+      "Curso": "4E",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "3B",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "3B",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "4A",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "4A",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "3C",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "3C",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "4D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "1",
+      "Curso": "4D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "2",
+      "Curso": "4D",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "4E",
+      "Asignatura": "LENGUAJE"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "4E",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "René Gutierrez",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "4E",
+      "Asignatura": "FILOSOFÍA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "1D",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "1D",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "3",
+      "Curso": "2D",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "4",
+      "Curso": "2D",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "7",
+      "Curso": "1C",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "8",
+      "Curso": "1C",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "3",
+      "Curso": "1A",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "4",
+      "Curso": "1A",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "1B",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "1B",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "3",
+      "Curso": "2D",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "4",
+      "Curso": "2D",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "5",
+      "Curso": "2C",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "6",
+      "Curso": "2C",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "8",
+      "Curso": "2A",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "9",
+      "Curso": "2A",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "2B",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "2",
+      "Curso": "2B",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "3",
+      "Curso": "2B",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "4",
+      "Curso": "2B",
+      "Asignatura": "MÚSICA"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "2C",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "2C",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "8",
+      "Curso": "2A",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Romina Mendez",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "9",
+      "Curso": "2A",
+      "Asignatura": "AULA TP"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "5",
+      "Curso": "3D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "6",
+      "Curso": "3D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "5",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "6",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "1",
+      "Curso": "3D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "5",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Jueves",
+      "Bloque": "6",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sebastián Ayancán",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "1D",
+      "Asignatura": "MATEMATICA"
+    },
+    {
+      "Profesor": "Sofía Carvajal",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "7",
+      "Curso": "3F",
+      "Asignatura": "ORIENTACIÓN"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marcelo Barría",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "3",
+      "Curso": "2A,2B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marcelo Barría",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "4",
+      "Curso": "2A,2B",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marcelo Barría",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "5",
+      "Curso": "2C,2D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marcelo Barría",
+      "Acción": "AGREGAR",
+      "Día": "Viernes",
+      "Bloque": "6",
+      "Curso": "2C,2D",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marco Urzua",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "1",
+      "Curso": "4E",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marco Urzua",
+      "Acción": "AGREGAR",
+      "Día": "Lunes",
+      "Bloque": "2",
+      "Curso": "4E",
+      "Asignatura": "EDUCACION FISICA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marco Urzua",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "1",
+      "Curso": "4E",
+      "Asignatura": "EDUCACIÓN  CIUDADANA"
+    },
+    {
+      "Profesor": "Soledad Dreau,Marco Urzua",
+      "Acción": "AGREGAR",
+      "Día": "Miércoles",
+      "Bloque": "2",
+      "Curso": "4E",
+      "Asignatura": "EDUCACIÓN  CIUDADANA"
+    },
+    {
+      "Profesor": "Tamara Marilicán",
+      "Acción": "AGREGAR",
+      "Día": "Martes",
+      "Bloque": "9",
+      "Curso": "4D",
+      "Asignatura": "ORIENTACIÓN"
+    }
+  ]
+}
