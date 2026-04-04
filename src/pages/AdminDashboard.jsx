@@ -202,7 +202,7 @@ function AdminDashboard() {
           <button className={`tab-button ${activeTab === 'coberturas' ? 'active' : ''}`} onClick={() => setActiveTab('coberturas')}>Coberturas</button>
           <button className={`tab-button ${activeTab === 'reemplazos' ? 'active' : ''}`} onClick={() => setActiveTab('reemplazos')}>Reemplazos</button>
           <button className={`tab-button ${activeTab === 'horarios' ? 'active' : ''}`} onClick={() => setActiveTab('horarios')}>Horarios</button>
-          <button className={`tab-button ${activeTab === 'permisos' ? 'active' : ''}`} onClick={() => setActiveTab('permisos')}>Permisos</button>
+          <button className={`tab-button ${activeTab === 'permisos' ? 'active' : ''}`} onClick={() => setActiveTab('permisos')}>Días Administrativos</button>
           <button className={`tab-button ${activeTab === 'monitoreo' ? 'active' : ''}`} onClick={() => setActiveTab('monitoreo')}>Monitoreo</button>
         </section>
 
