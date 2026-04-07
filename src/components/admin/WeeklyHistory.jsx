@@ -7,17 +7,17 @@ const WeeklyHistory = ({ history, loading }) => {
   const grouped = React.useMemo(() => {
     return history.reduce((acc, curr) => {
       const key = `${curr.semana_inicio} - ${curr.semana_fin}`;
-      if (!acc[key]) acc[key] = { 
-        semana: key, 
-        fecha: curr.created_at, 
-        total: 0, 
+      if (!acc[key]) acc[key] = {
+        semana: key,
+        fecha: curr.created_at,
+        total: 0,
         count: 0,
         profesores: []
       };
       acc[key].total += curr.total_bloques_semana;
       acc[key].count += 1;
       acc[key].profesores.push({
-        nombre: curr.profesores?.nombre || 'Desconocido', 
+        nombre: curr.profesores?.nombre || 'Desconocido',
         bloques: curr.total_bloques_semana
       });
       return acc;
@@ -50,9 +50,9 @@ const WeeklyHistory = ({ history, loading }) => {
                 <tr key={i}>
                   <td data-label="Semana" style={{ fontWeight: '600' }}>{week.semana}</td>
                   <td data-label="Cierre">
-                    {new Date(week.fecha).toLocaleDateString('es-ES', { 
-                      day: '2-digit', 
-                      month: '2-digit', 
+                    {new Date(week.fecha).toLocaleDateString('es-ES', {
+                      day: '2-digit',
+                      month: '2-digit',
                       year: 'numeric',
                       hour: '2-digit',
                       minute: '2-digit'
@@ -65,8 +65,8 @@ const WeeklyHistory = ({ history, loading }) => {
                     {week.count} docentes procesados
                   </td>
                   <td data-label="Acción" style={{ textAlign: 'center' }}>
-                    <button 
-                      className="btn-edit" 
+                    <button
+                      className="btn-edit"
                       onClick={() => setSelectedWeek(week)}
                     >
                       Ver Detalle
@@ -87,7 +87,7 @@ const WeeklyHistory = ({ history, loading }) => {
               <button className="btn-close" onClick={() => setSelectedWeek(null)}>Cerrar</button>
             </div>
             <p className="modal-subtitle">Período: {selectedWeek.semana}</p>
-            
+
             <table className="responsive-table" style={{ marginTop: '1rem' }}>
               <thead>
                 <tr>
@@ -96,7 +96,7 @@ const WeeklyHistory = ({ history, loading }) => {
                 </tr>
               </thead>
               <tbody>
-                {selectedWeek.profesores.sort((a,b) => b.bloques - a.bloques).map((p, i) => (
+                {selectedWeek.profesores.sort((a, b) => b.bloques - a.bloques).map((p, i) => (
                   <tr key={i}>
                     <td data-label="Profesor" style={{ fontWeight: '600', textAlign: 'left' }}>{p.nombre}</td>
                     <td data-label="Bloques" style={{ textAlign: 'right', color: 'var(--accent)', fontWeight: 'bold' }}>

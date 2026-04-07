@@ -272,8 +272,8 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
               </div>
 
               {!isEditing && (
-                <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: '#f0f9ff', borderRadius: '8px', border: '1px solid #bae6fd' }}>
-                  <label style={{ color: 'var(--primary)', fontWeight: 'bold' }}>Configuración Inicial</label>
+                <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: 'var(--bg-soft)', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                  <label style={{ color: 'var(--accent)', fontWeight: 'bold' }}>Configuración Inicial</label>
                   <label style={{ fontSize: '0.85rem', marginTop: '0.5rem' }}>Contraseña de acceso (opcional)</label>
                   <input 
                     type="password" 
@@ -289,8 +289,8 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
               )}
 
               {isEditing && (
-                <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: '#f8fafc', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                  <label style={{ color: 'var(--primary)', fontWeight: 'bold' }}>Seguridad</label>
+                <div className="form-group" style={{ marginTop: '1rem', padding: '1rem', background: 'var(--bg-soft)', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                  <label style={{ color: 'var(--accent)', fontWeight: 'bold' }}>Seguridad</label>
                   <div style={{ marginTop: '0.5rem' }}>
                     <label style={{ fontSize: '0.85rem' }}>Cambiar Contraseña (Solo si es necesario)</label>
                     <input 
