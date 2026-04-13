@@ -57,59 +57,61 @@ const CoverageSummary = ({ coverages, profesores, loading }) => {
         ) : summary.length === 0 ? (
           <div className="empty-state"><p>No hay coberturas asignadas aún.</p></div>
         ) : (
-          <div className="grid-wrapper">
-            <table className="responsive-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Profesor</th>
-                  <th style={{ textAlign: 'center' }}>Esta semana</th>
-                  <th style={{ textAlign: 'center' }}>Total</th>
-                  <th>Uso de presupuesto</th>
-                </tr>
-              </thead>
-              <tbody>
-                {summary.map((prof, i) => (
-                  <tr key={prof.nombre}>
-                    <td style={{ fontWeight: '700', opacity: 0.5, width: '2rem' }}>
-                      {i + 1}
-                    </td>
-                    <td style={{ fontWeight: '600' }}>{prof.nombre}</td>
-                    <td data-label="Esta semana" style={{ textAlign: 'center' }}>
-                      <span className="badge info">{prof.semana}</span>
-                    </td>
-                    <td data-label="Total" style={{ textAlign: 'center' }}>
-                      <span className="badge success">{prof.total}</span>
-                    </td>
-                    <td data-label="Presupuesto" style={{ minWidth: '160px' }}>
-                      {prof.presupuesto > 0 ? (
-                        <div>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', marginBottom: '3px' }}>
-                            <span style={{ opacity: 0.7 }}>
-                              ~{prof.uso.toFixed(1)}h de {prof.presupuesto}h
-                            </span>
-                            <span style={{ fontWeight: '600', color: getBadgeColor(prof.pct) }}>
-                              {Math.round(prof.pct)}%
-                            </span>
-                          </div>
-                          <div style={{ background: 'var(--border)', borderRadius: '4px', height: '6px', overflow: 'hidden' }}>
-                            <div style={{
-                              width: `${prof.pct}%`,
-                              height: '100%',
-                              background: getBadgeColor(prof.pct),
-                              borderRadius: '4px',
-                              transition: 'width 0.4s ease'
-                            }} />
-                          </div>
-                        </div>
-                      ) : (
-                        <span style={{ opacity: 0.4, fontSize: '0.8rem' }}>Sin presupuesto</span>
-                      )}
-                    </td>
+          <div className="max-h-scroll">
+            <div className="grid-wrapper">
+              <table className="responsive-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Profesor</th>
+                    <th style={{ textAlign: 'center' }}>Esta semana</th>
+                    <th style={{ textAlign: 'center' }}>Total</th>
+                    <th>Uso de presupuesto</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {summary.map((prof, i) => (
+                    <tr key={prof.nombre}>
+                      <td style={{ fontWeight: '700', opacity: 0.5, width: '2rem' }}>
+                        {i + 1}
+                      </td>
+                      <td style={{ fontWeight: '600' }}>{prof.nombre}</td>
+                      <td data-label="Esta semana" style={{ textAlign: 'center' }}>
+                        <span className="badge info">{prof.semana}</span>
+                      </td>
+                      <td data-label="Total" style={{ textAlign: 'center' }}>
+                        <span className="badge success">{prof.total}</span>
+                      </td>
+                      <td data-label="Presupuesto" style={{ minWidth: '160px' }}>
+                        {prof.presupuesto > 0 ? (
+                          <div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', marginBottom: '3px' }}>
+                              <span style={{ opacity: 0.7 }}>
+                                ~{prof.uso.toFixed(1)}h de {prof.presupuesto}h
+                              </span>
+                              <span style={{ fontWeight: '600', color: getBadgeColor(prof.pct) }}>
+                                {Math.round(prof.pct)}%
+                              </span>
+                            </div>
+                            <div style={{ background: 'var(--border)', borderRadius: '4px', height: '6px', overflow: 'hidden' }}>
+                              <div style={{
+                                width: `${prof.pct}%`,
+                                height: '100%',
+                                background: getBadgeColor(prof.pct),
+                                borderRadius: '4px',
+                                transition: 'width 0.4s ease'
+                              }} />
+                            </div>
+                          </div>
+                        ) : (
+                          <span style={{ opacity: 0.4, fontSize: '0.8rem' }}>Sin presupuesto</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
       </div>

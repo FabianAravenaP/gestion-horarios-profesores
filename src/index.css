@@ -557,6 +557,31 @@ main {
   overflow-x: auto;
 }
 
+.max-h-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  padding-right: 4px; /* Space for scrollbar */
+}
+
+.max-h-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.max-h-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.max-h-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.max-h-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
 .schedule-grid {
   width: 100%;
   border-collapse: collapse;
