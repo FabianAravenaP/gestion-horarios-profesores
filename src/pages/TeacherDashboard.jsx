@@ -25,6 +25,7 @@ function TeacherDashboard({ user: initialUser }) {
   const [tipoDia, setTipoDia] = useState('completo')
   const [motivo, setMotivo] = useState('')
   const [isSubmittingPermit, setIsSubmittingPermit] = useState(false)
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
 
   useEffect(() => {
     if (initialUser) setUser(initialUser)
@@ -274,6 +275,25 @@ function TeacherDashboard({ user: initialUser }) {
     }
   }
 
+  const handleMarkNotificationsAsRead = async () => {
+    const unreadIds = unreadCoverages.map(c => c.id)
+    if (unreadIds.length === 0) return
+
+    try {
+      const { error } = await supabase
+        .from('coberturas')
+        .update({ vista_por_profesor: true })
+        .in('id', unreadIds)
+
+      if (error) throw error
+
+      setCoberturas(prev => prev.map(c => unreadIds.includes(c.id) ? { ...c, vista_por_profesor: true } : c))
+      setIsNotificationsOpen(false)
+    } catch (err) {
+      console.error('Error marking notifications as read:', err)
+    }
+  }
+
   const getStatusBadge = (estado) => {
     switch (estado) {
       case 'aprobado': return <span className="badge badge-success">Aprobado</span>
@@ -291,6 +311,12 @@ function TeacherDashboard({ user: initialUser }) {
     !c.contabilizada // Added this to be extra safe, though date filter usually handles it
   )
   const horasCubiertas = currentWeekAssignments.length
+  
+  const unreadCoverages = coberturas.filter(c => 
+    !c.vista_por_profesor && 
+    c.tipo === 'cobertura' && 
+    c.estado !== 'cancelada'
+  )
 
   const uniqueSubjects = Array.from(new Set(horarios.filter(h => h.asignaturas?.nombre).map(h => h.asignaturas.nombre)))
   const clasesCount = horarios.filter(h => h.tipo_bloque === 'clase').length
@@ -326,6 +352,50 @@ function TeacherDashboard({ user: initialUser }) {
           </div>
         </div>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <div className="notification-bell-container">
+            <button 
+              className="notification-bell" 
+              onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
+            >
+              🔔
+              {unreadCoverages.length > 0 && (
+                <span className="notification-badge">{unreadCoverages.length}</span>
+              )}
+            </button>
+
+            {isNotificationsOpen && (
+              <div className="notifications-dropdown">
+                <div className="notifications-header">
+                  <h4>Notificaciones</h4>
+                  {unreadCoverages.length > 0 && (
+                    <button className="mark-read-btn" onClick={handleMarkNotificationsAsRead}>
+                      Marcar todo como leído
+                    </button>
+                  )}
+                </div>
+                <div className="notifications-list">
+                  {unreadCoverages.length === 0 ? (
+                    <div className="empty-notifications">
+                      No tienes notificaciones nuevas.
+                    </div>
+                  ) : (
+                    unreadCoverages.slice(0, 15).map(c => (
+                      <div key={c.id} className="notification-item unread">
+                        <span className="notification-title">
+                          Nueva cobertura asignada
+                        </span>
+                        <span className="notification-meta" style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                          <span>📅 {new Date(c.fecha + 'T00:00:00').toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' })} • Bloque {BLOQUES.find(b => b.inicio.slice(0, 5) === c.horarios?.hora_inicio?.slice(0, 5))?.id || '?'}°</span>
+                          <span>📚 {c.horarios?.asignaturas?.nombre || 'Administrativo'} en {c.horarios?.curso || '-'}</span>
+                        </span>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
           {profile?.cambio_clave_pendiente && (
             <button className="btn-edit" onClick={() => setIsPasswordModalOpen(true)}>
               Cambiar Clave
