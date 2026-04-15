@@ -74,14 +74,44 @@ const CoveragePlanner = ({
       .filter(s => {
         const d = DIAS.find(day => day.id === s.dia_semana);
         const selectedDayShort = new Date(selectedDate + 'T00:00:00').toLocaleDateString('es-ES', {weekday: 'short'}).toUpperCase().slice(0,2);
-        return d?.corto === selectedDayShort && 
-               s.hora_inicio === horaInicio && 
-               s.tipo_bloque === 'clase';
+        if (d?.corto === selectedDayShort && s.hora_inicio === horaInicio) {
+          const isApoderadoAsignatura = s.asignaturas?.nombre?.toLowerCase().includes('apoderado');
+          if (s.tipo_bloque === 'apoderado' || isApoderadoAsignatura) {
+             return false;
+          }
+          return ['clase', 'tc', 'dupla', 'administrativo', 'bloqueado'].includes(s.tipo_bloque);
+        }
+        return false;
       })
       .map(s => s.profesor_id);
 
+    // Also exclude teachers already assigned to another absence at the same time slot today
+    const alreadyAssignedIds = Object.entries(assignments)
+      .filter(([horarioId, teacherId]) => {
+        if (!teacherId) return false;
+        const block = absentSchedule.find(b => String(b.id) === String(horarioId));
+        // Same hora_inicio means conflict — teacher already covering something at this hour
+        return block && block.hora_inicio === horaInicio;
+      })
+      .map(([, teacherId]) => teacherId);
+
+    // Find all horario IDs that share the same hora_inicio (same time block across all teachers)
+    // Use allSchedules (which is fully loaded) instead of relying on the nested join in plannedCoverages
+    const sameTimeHorarioIds = allSchedules
+      .filter(s => s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5))
+      .map(s => s.id);
+
+    // Exclude teachers already saved in DB as covering someone else at the same date+time
+    const savedBusyIds = plannedCoverages
+      .filter(c =>
+        c.estado !== 'cancelada' &&
+        c.fecha === selectedDate &&
+        sameTimeHorarioIds.includes(c.horario_id)
+      )
+      .map(c => c.profesor_reemplazante_id);
+
     return profesores
-      .filter(p => p.activo && p.rol === 'profesor' && !busyIds.includes(p.id))
+      .filter(p => p.activo && p.rol === 'profesor' && !busyIds.includes(p.id) && !alreadyAssignedIds.includes(p.id) && !savedBusyIds.includes(p.id))
       .map(p => {
         const { start, end } = getWeekRange(selectedDate);
         const weekCount = plannedCoverages.filter(c => 

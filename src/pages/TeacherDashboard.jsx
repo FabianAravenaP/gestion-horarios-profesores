@@ -4,9 +4,7 @@ import logo from '../assets/logo.jpg'
 import { formatLongDate, getWeekRange } from '../services/dateUtils'
 import { BLOQUES, DIAS, DURACION_BLOQUE_H } from '../services/constants'
 import { getDetailedBudget, formatUsage } from '../services/budgetUtils'
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css'
-import './CalendarOverrides.css' // We'll create this
+
 
 function TeacherDashboard({ user: initialUser }) {
   const [user, setUser] = useState(initialUser)
@@ -21,10 +19,6 @@ function TeacherDashboard({ user: initialUser }) {
   const [passwordProcessing, setPasswordProcessing] = useState(false)
   const [permisos, setPermisos] = useState([])
   const [isPermitModalOpen, setIsPermitModalOpen] = useState(false)
-  const [selectedDate, setSelectedDate] = useState(new Date())
-  const [tipoDia, setTipoDia] = useState('completo')
-  const [motivo, setMotivo] = useState('')
-  const [isSubmittingPermit, setIsSubmittingPermit] = useState(false)
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
 
   useEffect(() => {
@@ -45,7 +39,7 @@ function TeacherDashboard({ user: initialUser }) {
         .select('*')
         .ilike('email', targetUser.email)
         .maybeSingle()
-      
+
       if (profileError) throw profileError
       setProfile(profile)
 
@@ -53,7 +47,7 @@ function TeacherDashboard({ user: initialUser }) {
         .from('horarios')
         .select('*, asignaturas(nombre)')
         .eq('profesor_id', profile.id)
-      
+
       if (scheduleError) throw scheduleError
       setHorarios(scheduleData)
 
@@ -73,9 +67,9 @@ function TeacherDashboard({ user: initialUser }) {
           .from('horarios')
           .select('*, asignaturas(nombre)')
           .in('profesor_id', ausenteIds)
-        
+
         if (inError) throw inError
-        
+
         // Tag them with the ausente name for the UI
         const taggedInherited = inheritedData.map(h => ({
           ...h,
@@ -93,7 +87,7 @@ function TeacherDashboard({ user: initialUser }) {
         .select('*, ausente:profesores!profesor_ausente_id(nombre), horarios(*, asignaturas(nombre))')
         .eq('profesor_reemplazante_id', profile.id)
         .order('fecha', { ascending: true })
-      
+
       if (coverageError) throw coverageError
       setCoberturas(coverageData)
 
@@ -103,7 +97,7 @@ function TeacherDashboard({ user: initialUser }) {
         .select('*')
         .eq('profesor_id', profile.id)
         .order('fecha', { ascending: false })
-      
+
       if (permitError) throw permitError
       setPermisos(permitData)
 
@@ -147,15 +141,15 @@ function TeacherDashboard({ user: initialUser }) {
 
   const getHorarioAt = (diaId, horaInicio) => {
     // Check own schedule first
-    const own = horarios.find(h => 
-      h.dia_semana === diaId && 
+    const own = horarios.find(h =>
+      h.dia_semana === diaId &&
       (h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5))
     )
     if (own) return own
 
     // Check inherited schedules
-    const inherited = inheritedHorarios.find(h => 
-      h.dia_semana === diaId && 
+    const inherited = inheritedHorarios.find(h =>
+      h.dia_semana === diaId &&
       (h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5))
     )
     if (inherited) return inherited
@@ -184,7 +178,7 @@ function TeacherDashboard({ user: initialUser }) {
         .from('profesores')
         .update({ cambio_clave_pendiente: false })
         .eq('id', profile.id)
-      
+
       if (pError) throw pError
 
       alert('Contraseña actualizada con éxito.')
@@ -200,80 +194,6 @@ function TeacherDashboard({ user: initialUser }) {
     }
   }
 
-  const handleRequestPermit = async (e) => {
-    e.preventDefault()
-    
-    // VALIDATIONS
-    const today = new Date()
-    today.setHours(0,0,0,0)
-    const fortyEightHoursLater = new Date(today)
-    fortyEightHoursLater.setDate(today.getDate() + 2)
-
-    const reqDate = new Date(selectedDate)
-    reqDate.setHours(0,0,0,0)
-
-    // 1. 48 hours notice
-    if (reqDate < fortyEightHoursLater) {
-      alert('La solicitud debe realizarse con al menos 48 horas de antelación.')
-      return
-    }
-
-    // 2. Annual quota (6 days)
-    const currentYear = new Date().getFullYear()
-    const usedThisYear = permisos
-      .filter(p => new Date(p.fecha).getFullYear() === currentYear && p.estado !== 'rechazado')
-      .reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)
-    
-    const newVal = tipoDia === 'completo' ? 1.0 : 0.5
-    if (usedThisYear + newVal > 6) {
-      alert(`Has excedido tu cupo anual (6 días). Llevas ${usedThisYear} días usados/pendientes.`)
-      return
-    }
-
-    // 3. 3 Consecutive full days
-    if (tipoDia === 'completo') {
-      const isDateMatch = (d1, d2) => d1.toISOString().split('T')[0] === d2.toISOString().split('T')[0]
-      
-      const prev1 = new Date(reqDate); prev1.setDate(reqDate.getDate() - 1)
-      const prev2 = new Date(reqDate); prev2.setDate(reqDate.getDate() - 2)
-      const next1 = new Date(reqDate); next1.setDate(reqDate.getDate() + 1)
-      const next2 = new Date(reqDate); next2.setDate(reqDate.getDate() + 2)
-
-      const isFull = (date) => permisos.some(p => p.tipo_dia === 'completo' && p.estado !== 'rechazado' && isDateMatch(new Date(p.fecha + 'T00:00:00'), date))
-
-      const sequenceLeft = isFull(prev1) && isFull(prev2)
-      const sequenceRight = isFull(next1) && isFull(next2)
-      const sequenceMiddle = isFull(prev1) && isFull(next1)
-
-      if (sequenceLeft || sequenceRight || sequenceMiddle) {
-        alert('No se pueden solicitar 3 días completos administrativos de forma consecutiva.')
-        return
-      }
-    }
-
-    setIsSubmittingPermit(true)
-    try {
-      const { error } = await supabase
-        .from('permisos_administrativos')
-        .insert({
-          profesor_id: profile.id,
-          fecha: selectedDate.toISOString().split('T')[0],
-          tipo_dia: tipoDia,
-          valor_dia: tipoDia === 'completo' ? 1.0 : 0.5,
-          motivo: motivo,
-          estado: 'pendiente'
-        })
-      
-      if (error) throw error
-      alert('Solicitud enviada correctamente.')
-      setIsPermitModalOpen(false)
-      setMotivo('')
-    } catch (err) {
-      alert('Error: ' + err.message)
-    } finally {
-      setIsSubmittingPermit(false)
-    }
-  }
 
   const handleMarkNotificationsAsRead = async () => {
     const unreadIds = unreadCoverages.map(c => c.id)
@@ -303,18 +223,18 @@ function TeacherDashboard({ user: initialUser }) {
   }
 
   const { start: weekStart, end: weekEnd } = getWeekRange(new Date().toISOString().split('T')[0])
-  const currentWeekAssignments = coberturas.filter(c => 
-    c.fecha >= weekStart && 
-    c.fecha <= weekEnd && 
+  const currentWeekAssignments = coberturas.filter(c =>
+    c.fecha >= weekStart &&
+    c.fecha <= weekEnd &&
     c.estado !== 'cancelada' &&
     c.tipo === 'cobertura' &&
     !c.contabilizada // Added this to be extra safe, though date filter usually handles it
   )
   const horasCubiertas = currentWeekAssignments.length
-  
-  const unreadCoverages = coberturas.filter(c => 
-    !c.vista_por_profesor && 
-    c.tipo === 'cobertura' && 
+
+  const unreadCoverages = coberturas.filter(c =>
+    !c.vista_por_profesor &&
+    c.tipo === 'cobertura' &&
     c.estado !== 'cancelada'
   )
 
@@ -322,11 +242,11 @@ function TeacherDashboard({ user: initialUser }) {
   const clasesCount = horarios.filter(h => h.tipo_bloque === 'clase').length
 
   const budget = getDetailedBudget(profile?.horas_excedentes, profile?.horas_no_lectivas)
-  
+
   // UNIFIED LOGIC: Use surplus (excedentes) first, then no-teaching
   // Total Histórico counts everything non-cancelled
   const totalCubiertoTotal = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura').length
-  
+
   // Current period usage only counts non-accounted-for coverages
   const currentPeriodUsage = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura' && !c.contabilizada).length
   const totalCubiertoSemana = currentWeekAssignments.length
@@ -334,7 +254,7 @@ function TeacherDashboard({ user: initialUser }) {
   // Stats for the "Pools" (Linear attribution) - Based on current period usage
   const usedFromSurplus = Math.min(currentPeriodUsage, budget.surplus)
   const usedFromNoLectivas = Math.max(0, currentPeriodUsage - budget.surplus)
-  
+
   const remainingSurplus = budget.surplus - usedFromSurplus
   const remainingNoLectivas = budget.noLectivas - usedFromNoLectivas
 
@@ -353,8 +273,8 @@ function TeacherDashboard({ user: initialUser }) {
         </div>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <div className="notification-bell-container">
-            <button 
-              className="notification-bell" 
+            <button
+              className="notification-bell"
               onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
             >
               🔔
@@ -409,11 +329,11 @@ function TeacherDashboard({ user: initialUser }) {
 
       <main>
         {profile?.cambio_clave_pendiente && (
-          <div className="warning-banner" style={{ 
-            background: '#fffbeb', 
-            color: '#92400e', 
-            padding: '1rem', 
-            borderRadius: '1rem', 
+          <div className="warning-banner" style={{
+            background: '#fffbeb',
+            color: '#92400e',
+            padding: '1rem',
+            borderRadius: '1rem',
             marginBottom: '1.5rem',
             border: '1px solid #fef3c7',
             display: 'flex',
@@ -456,12 +376,17 @@ function TeacherDashboard({ user: initialUser }) {
             </p>
             <small style={{ opacity: 0.7 }}>coberturas actuales</small>
           </div>
-          <div className="stat-card" style={{ cursor: 'pointer', border: '2px solid var(--accent)' }} onClick={() => setIsPermitModalOpen(true)}>
-            <h3>Permisos Adm.</h3>
+          <div
+            className="stat-card"
+            style={{ border: '2px solid var(--accent)', cursor: 'pointer', transition: 'transform 0.15s' }}
+            onClick={() => setIsPermitModalOpen(true)}
+            title="Ver mis días administrativos"
+          >
+            <h3>Días Administrativos</h3>
             <p style={{ fontSize: '1.5rem', color: 'var(--accent)', fontWeight: 800 }}>
-              {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado !== 'rechazado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6
+              {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado === 'aprobado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6
             </p>
-            <small style={{ color: 'var(--accent)', fontWeight: 700 }}>+ Solicitar Día</small>
+            <small style={{ color: 'var(--accent)', fontWeight: 600 }}>Ver detalle →</small>
           </div>
         </section>
 
@@ -473,20 +398,20 @@ function TeacherDashboard({ user: initialUser }) {
                 Reemplazos asignados por la administración.
               </p>
             </div>
-            <div className="coverage-cards" style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-              gap: '1.25rem' 
+            <div className="coverage-cards" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+              gap: '1.25rem'
             }}>
               {coberturas.filter(c => c.estado === 'pendiente').map(c => (
-                <div key={c.id} className="stat-card" style={{ 
-                  textAlign: 'left', 
+                <div key={c.id} className="stat-card" style={{
+                  textAlign: 'left',
                   borderLeft: '4px solid var(--accent)',
                   padding: '1.25rem'
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem', alignItems: 'center' }}>
-                    <span style={{ 
-                      fontWeight: 700, 
+                    <span style={{
+                      fontWeight: 700,
                       color: 'var(--accent)',
                       fontSize: '0.9rem',
                       background: 'var(--bg-soft)',
@@ -504,7 +429,7 @@ function TeacherDashboard({ user: initialUser }) {
                       <span style={{ background: 'var(--bg-soft)', padding: '0.1rem 0.4rem', borderRadius: '0.3rem', fontSize: '0.75rem' }}>{c.horarios?.curso}</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: 0.7 }}>
-                      <span>🕒 {c.horarios?.hora_inicio?.slice(0,5)} - {c.horarios?.hora_fin?.slice(0,5)}</span>
+                      <span>🕒 {c.horarios?.hora_inicio?.slice(0, 5)} - {c.horarios?.hora_fin?.slice(0, 5)}</span>
                     </div>
                   </div>
                 </div>
@@ -526,7 +451,7 @@ function TeacherDashboard({ user: initialUser }) {
               <span className="legend-item" style={{ background: '#f1f5f9', color: '#64748b', border: '1px solid #cbd5e1' }}>🚫 Bloqueado</span>
             </div>
           </div>
-          
+
           <div className="grid-wrapper">
             <table className="schedule-grid">
               <thead>
@@ -553,12 +478,12 @@ function TeacherDashboard({ user: initialUser }) {
                       const isBloqueado = type === 'bloqueado'
                       const isClass = item && !isTC && !isDupla && !isApoderado && !isBloqueado
                       const isFridayEnd = d.id === 5 && b.id > 6
-                      
+
                       // Check for coverage in the current week
                       const { start, end } = getWeekRange(new Date().toISOString().split('T')[0])
-                      const dayCoverage = coberturas.find(c => 
-                        c.fecha >= start && 
-                        c.fecha <= end && 
+                      const dayCoverage = coberturas.find(c =>
+                        c.fecha >= start &&
+                        c.fecha <= end &&
                         c.horarios?.hora_inicio?.startsWith(b.inicio) &&
                         new Date(c.fecha + 'T00:00:00').getDay() === (d.id === 7 ? 0 : d.id) &&
                         c.estado !== 'cancelada'
@@ -625,56 +550,204 @@ function TeacherDashboard({ user: initialUser }) {
           </div>
         </section>
 
-        <section className="permits-history" style={{ marginTop: '2.5rem' }}>
-          <div className="section-header">
-            <h2 style={{ marginBottom: '1.5rem' }}>Mis Solicitudes de Permiso</h2>
-          </div>
-          <div className="card-content" style={{ 
-            background: 'var(--card-bg)', 
-            borderRadius: '1rem', 
-            boxShadow: 'var(--shadow)',
-            overflow: 'hidden'
-          }}>
-            {permisos.length === 0 ? (
-              <p style={{ opacity: 0.6, padding: '2rem', textAlign: 'center' }}>No tienes solicitudes registradas.</p>
-            ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table className="admin-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr style={{ background: 'var(--bg-soft)', textAlign: 'left' }}>
-                      <th style={{ padding: '1rem' }}>Fecha</th>
-                      <th style={{ padding: '1rem' }}>Jornada</th>
-                      <th style={{ padding: '1rem' }}>Motivo</th>
-                      <th style={{ padding: '1rem' }}>Estado</th>
-                      <th style={{ padding: '1rem' }}>Admin</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {permisos.map(p => (
-                      <tr key={p.id} style={{ borderTop: '1px solid var(--border)' }}>
-                        <td style={{ padding: '1rem', fontWeight: 600 }}>{p.fecha}</td>
-                        <td style={{ padding: '1rem' }}>
-                          <span style={{ 
-                            background: 'var(--bg-soft)', 
-                            padding: '0.2rem 0.5rem', 
-                            borderRadius: '0.4rem',
-                            fontSize: '0.8rem',
-                            fontWeight: 700
-                          }}>
-                            {p.tipo_dia === 'completo' ? 'DÍA COMPLETO' : p.tipo_dia.toUpperCase()}
-                          </span>
-                        </td>
-                        <td style={{ padding: '1rem', fontSize: '0.9rem', opacity: 0.8 }}>{p.motivo || '-'}</td>
-                        <td style={{ padding: '1rem' }}>{getStatusBadge(p.estado)}</td>
-                        <td style={{ padding: '1rem', fontSize: '0.85rem' }}>{p.comentario_admin || '-'}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+
+        {/* === HORAS NO LECTIVAS UTILIZADAS === */}
+        {usedFromNoLectivas > 0 && (
+          <section style={{ marginTop: '2.5rem' }}>
+            <div className="section-header">
+              <h2 style={{ marginBottom: '0.5rem' }}>📋 Horas No Lectivas Utilizadas para Cobertura</h2>
+              <p style={{ opacity: 0.7, fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                Registro de los bloques que cubriste usando tu tiempo no lectivo. Puedes presentar este historial para solicitar la devolución de estas horas.
+              </p>
+            </div>
+            <div style={{
+              background: 'var(--card-bg)',
+              borderRadius: '1rem',
+              boxShadow: 'var(--shadow)',
+              overflow: 'hidden'
+            }}>
+              {/* Summary banner */}
+              <div style={{
+                background: 'linear-gradient(135deg, #1e3a5f 0%, #0f2340 100%)',
+                padding: '1.25rem 1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1rem',
+                flexWrap: 'wrap'
+              }}>
+                <div>
+                  <p style={{ color: '#94a3b8', fontSize: '0.8rem', margin: '0 0 0.25rem 0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Total horas no lectivas usadas</p>
+                  <p style={{ color: '#60a5fa', fontSize: '2rem', fontWeight: 900, margin: 0 }}>{usedFromNoLectivas} <span style={{ fontSize: '1rem', fontWeight: 400 }}>/ {budget.noLectivas} bloques</span></p>
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                  <p style={{ color: '#94a3b8', fontSize: '0.8rem', margin: '0 0 0.25rem 0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Disponibles</p>
+                  <p style={{ color: remainingNoLectivas < 0 ? '#ef4444' : '#34d399', fontSize: '1.5rem', fontWeight: 900, margin: 0 }}>
+                    {Math.max(0, remainingNoLectivas)} bloques
+                  </p>
+                </div>
               </div>
-            )}
+
+              {/* Coverage rows that drew from No Lectivas pool */}
+              {(() => {
+                // Coberturas ordenadas por fecha, las primeras 'budget.surplus' son de excedentes
+                const allActiveCoverages = coberturas
+                  .filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura' && !c.contabilizada)
+                  .sort((a, b) => new Date(a.fecha) - new Date(b.fecha))
+                const noLectivasCoverages = allActiveCoverages.slice(budget.surplus)
+                
+                if (noLectivasCoverages.length === 0) return null
+
+                return (
+                  <div style={{ overflowX: 'auto' }}>
+                    <table className="admin-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
+                      <thead>
+                        <tr style={{ background: 'var(--bg-soft)', textAlign: 'left' }}>
+                          <th style={{ padding: '0.85rem 1rem', fontSize: '0.8rem', textTransform: 'uppercase', opacity: 0.7 }}>Fecha</th>
+                          <th style={{ padding: '0.85rem 1rem', fontSize: '0.8rem', textTransform: 'uppercase', opacity: 0.7 }}>Bloque</th>
+                          <th style={{ padding: '0.85rem 1rem', fontSize: '0.8rem', textTransform: 'uppercase', opacity: 0.7 }}>Profesor Ausente</th>
+                          <th style={{ padding: '0.85rem 1rem', fontSize: '0.8rem', textTransform: 'uppercase', opacity: 0.7 }}>Asignatura</th>
+                          <th style={{ padding: '0.85rem 1rem', fontSize: '0.8rem', textTransform: 'uppercase', opacity: 0.7 }}>Curso</th>
+                          <th style={{ padding: '0.85rem 1rem', fontSize: '0.8rem', textTransform: 'uppercase', opacity: 0.7 }}>Horario</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {noLectivasCoverages.map((c, idx) => {
+                          const bloqueNum = BLOQUES.find(b => b.inicio.slice(0,5) === c.horarios?.hora_inicio?.slice(0,5))?.id
+                          const fechaFormatted = new Date(c.fecha + 'T00:00:00').toLocaleDateString('es-ES', { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
+                          return (
+                            <tr key={c.id} style={{ borderTop: '1px solid var(--border)' }}>
+                              <td style={{ padding: '0.85rem 1rem', fontWeight: 600, whiteSpace: 'nowrap' }}>{fechaFormatted}</td>
+                              <td style={{ padding: '0.85rem 1rem', textAlign: 'center' }}>
+                                <span style={{
+                                  background: '#1e3a5f',
+                                  color: '#60a5fa',
+                                  padding: '0.2rem 0.6rem',
+                                  borderRadius: '0.4rem',
+                                  fontWeight: 800,
+                                  fontSize: '0.9rem'
+                                }}>
+                                  {bloqueNum ? `${bloqueNum}°` : '—'}
+                                </span>
+                              </td>
+                              <td style={{ padding: '0.85rem 1rem', fontWeight: 500 }}>{c.ausente?.nombre || '—'}</td>
+                              <td style={{ padding: '0.85rem 1rem', fontSize: '0.9rem', opacity: 0.85 }}>{c.horarios?.asignaturas?.nombre || '—'}</td>
+                              <td style={{ padding: '0.85rem 1rem' }}>
+                                <span style={{
+                                  background: 'var(--bg-soft)',
+                                  padding: '0.15rem 0.4rem',
+                                  borderRadius: '0.3rem',
+                                  fontSize: '0.8rem'
+                                }}>{c.horarios?.curso || '—'}</span>
+                              </td>
+                              <td style={{ padding: '0.85rem 1rem', fontSize: '0.85rem', opacity: 0.7, whiteSpace: 'nowrap' }}>
+                                {c.horarios?.hora_inicio?.slice(0,5)} – {c.horarios?.hora_fin?.slice(0,5)}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                    <div style={{ padding: '1rem 1.5rem', background: 'var(--bg-soft)', fontSize: '0.82rem', opacity: 0.7, fontStyle: 'italic' }}>
+                      * Solo se muestran coberturas del período actual (no contabilizadas). Los bloques cubiertos con excedentes no aparecen aquí.
+                    </div>
+                  </div>
+                )
+              })()}
+            </div>
+          </section>
+        )}
+
+        {isPermitModalOpen && (
+          <div className="modal-overlay" onClick={() => setIsPermitModalOpen(false)}>
+            <div className="modal-content" style={{ maxWidth: '560px' }} onClick={e => e.stopPropagation()}>
+              <div className="modal-header">
+                <h3>📅 Mis Días Administrativos</h3>
+                <button className="btn-close" type="button" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
+              </div>
+
+              {/* Summary row */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', margin: '1.25rem 0' }}>
+                {[
+                  { label: 'Aprobados', estado: 'aprobado', color: '#22c55e' },
+                  { label: 'Rechazados', estado: 'rechazado', color: '#ef4444' },
+                  { label: 'Pendientes', estado: 'pendiente', color: '#f59e0b' },
+                ].map(({ label, estado, color }) => {
+                  const dias = permisos
+                    .filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado === estado)
+                    .reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)
+                  return (
+                    <div key={estado} style={{
+                      background: 'var(--bg-soft)',
+                      borderRadius: '0.75rem',
+                      padding: '1rem',
+                      textAlign: 'center',
+                      borderTop: `3px solid ${color}`
+                    }}>
+                      <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', opacity: 0.6, margin: '0 0 0.25rem 0' }}>{label}</p>
+                      <p style={{ fontSize: '1.75rem', fontWeight: 900, color, margin: 0 }}>{dias}</p>
+                      <small style={{ opacity: 0.5 }}>días</small>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Total bar */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                background: 'var(--bg-soft)',
+                borderRadius: '0.75rem',
+                padding: '0.75rem 1.25rem',
+                marginBottom: '1.25rem',
+                fontSize: '0.95rem'
+              }}>
+                <span style={{ opacity: 0.7 }}>Total aprobados este año</span>
+                <strong style={{ fontSize: '1.1rem' }}>
+                  {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado === 'aprobado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6 días
+                </strong>
+              </div>
+
+              {/* Record list */}
+              {permisos.length === 0 ? (
+                <div style={{ padding: '2rem', textAlign: 'center', opacity: 0.5 }}>
+                  <p style={{ marginBottom: '0.5rem' }}>Sin registros aún</p>
+                  <small>La administración cargará tus días cuando corresponda.</small>
+                </div>
+              ) : (
+                <div style={{ maxHeight: '300px', overflowY: 'auto', borderRadius: '0.5rem', border: '1px solid var(--border)' }}>
+                  {permisos.map(p => (
+                    <div key={p.id} style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      padding: '0.75rem 1rem',
+                      borderBottom: '1px solid var(--border)',
+                      gap: '0.75rem',
+                      flexWrap: 'wrap'
+                    }}>
+                      <div>
+                        <p style={{ fontWeight: 600, margin: '0 0 0.2rem 0', fontSize: '0.95rem' }}>
+                          {new Date(p.fecha + 'T00:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: '2-digit', month: 'long' })}
+                        </p>
+                        <small style={{ opacity: 0.6 }}>
+                          {p.tipo_dia === 'completo' ? 'Día Completo' : p.tipo_dia === 'am' ? 'Media Jornada AM' : 'Media Jornada PM'}
+                          {p.motivo && ` • ${p.motivo}`}
+                        </small>
+                      </div>
+                      {getStatusBadge(p.estado)}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div className="modal-actions" style={{ marginTop: '1.25rem' }}>
+                <button className="btn-cancel" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
+              </div>
+            </div>
           </div>
-        </section>
+        )}
 
         {isPasswordModalOpen && (
           <div className="modal-overlay">
@@ -686,18 +759,18 @@ function TeacherDashboard({ user: initialUser }) {
               <form onSubmit={handleChangePassword}>
                 <div className="form-group">
                   <label>Nueva Contraseña</label>
-                  <input 
-                    type="password" 
-                    required 
+                  <input
+                    type="password"
+                    required
                     value={newPassword}
                     onChange={e => setNewPassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
                   <label>Confirmar Contraseña</label>
-                  <input 
-                    type="password" 
-                    required 
+                  <input
+                    type="password"
+                    required
                     value={confirmPassword}
                     onChange={e => setConfirmPassword(e.target.value)}
                   />
@@ -713,66 +786,7 @@ function TeacherDashboard({ user: initialUser }) {
           </div>
         )}
 
-        {isPermitModalOpen && (
-          <div className="modal-overlay">
-            <div className="modal-content" style={{ maxWidth: '600px' }}>
-              <div className="modal-header">
-                <h3>Solicitar Permiso Administrativo</h3>
-                <button className="btn-close" type="button" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
-              </div>
-              <form onSubmit={handleRequestPermit}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
-                  <div className="calendar-container">
-                    <label style={{ marginBottom: '0.5rem', display: 'block' }}>Seleccionar Fecha</label>
-                    <Calendar 
-                      onChange={setSelectedDate} 
-                      value={selectedDate}
-                      minDate={new Date(new Date().setDate(new Date().getDate() + 2))} // 48h restriction
-                      tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6} // No weekends
-                    />
-                  </div>
-                  <div className="form-details">
-                    <div className="form-group">
-                      <label>Tipo de Jornada</label>
-                      <select value={tipoDia} onChange={e => setTipoDia(e.target.value)} required>
-                        <option value="completo">Día Completo (1.0)</option>
-                        <option value="am">Mañana / AM (0.5)</option>
-                        <option value="pm">Tarde / PM (0.5)</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <label>Motivo (opcional)</label>
-                      <textarea 
-                        rows="4" 
-                        value={motivo} 
-                        onChange={e => setMotivo(e.target.value)}
-                        placeholder="Ej. Trámites personales, médico, etc."
-                      />
-                    </div>
-                    <div className="quota-info" style={{ 
-                      background: 'var(--bg-soft)', 
-                      padding: '1rem', 
-                      borderRadius: '0.5rem',
-                      fontSize: '0.85rem',
-                      marginTop: '1rem'
-                    }}>
-                      <strong>Información de Cupo:</strong>
-                      <p style={{ margin: '0.25rem 0' }}>Has usado: {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado !== 'rechazado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6 días</p>
-                      <small style={{ opacity: 0.7 }}>* Los permisos AM/PM cuentan como 0.5 días.</small>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="modal-actions">
-                  <button type="button" className="btn-cancel" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
-                  <button type="submit" className="btn-save" disabled={isSubmittingPermit}>
-                    {isSubmittingPermit ? 'Enviando...' : 'Enviar Solicitud'}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        )}
+
       </main>
     </div>
   )

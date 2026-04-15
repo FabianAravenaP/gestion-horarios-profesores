@@ -108,9 +108,6 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const usedFromNoLectivas = Math.max(0, totalCoverageUsage - budget.surplus);
 
   const getTeacherHorarioAt = (diaId, horaInicio) => {
-    const own = teacherSchedule.find(h => h.dia_semana === diaId && h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5));
-    if (own) return own;
-
     const coverage = teacherCoverages.find(c => {
       const cDate = new Date(c.fecha + 'T00:00:00');
       const cDay = cDate.getDay() || 7;
@@ -125,6 +122,10 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
         ausenteNombre: coverage.ausente?.nombre
       };
     }
+
+    const own = teacherSchedule.find(h => h.dia_semana === diaId && h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5));
+    if (own) return own;
+
     return null;
   };
 

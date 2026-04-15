@@ -116,7 +116,7 @@ function AdminDashboard() {
   };
 
   const fetchAllSchedules = async () => {
-    const { data } = await supabase.from('horarios').select('*');
+    const { data } = await supabase.from('horarios').select('*, asignaturas(nombre)');
     setAllSchedules(data || []);
   };
 
