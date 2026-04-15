@@ -19,6 +19,7 @@ function TeacherDashboard({ user: initialUser }) {
   const [passwordProcessing, setPasswordProcessing] = useState(false)
   const [permisos, setPermisos] = useState([])
   const [isPermitModalOpen, setIsPermitModalOpen] = useState(false)
+  const [isCoverageHistoryModalOpen, setIsCoverageHistoryModalOpen] = useState(false)
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
 
   useEffect(() => {
@@ -243,9 +244,44 @@ function TeacherDashboard({ user: initialUser }) {
 
   const budget = getDetailedBudget(profile?.horas_excedentes, profile?.horas_no_lectivas)
 
-  // UNIFIED LOGIC: Use surplus (excedentes) first, then no-teaching
-  // Total Histórico counts everything non-cancelled
-  const totalCubiertoTotal = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura').length
+  // Period-independent coverage history builder for absolute chronological history tracking
+  const allCoveragesHistory = (() => {
+    const historical = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura')
+    const groupedByWeek = {}
+
+    // Group coverages by week
+    historical.forEach(c => {
+      const { start } = getWeekRange(c.fecha)
+      if (!groupedByWeek[start]) groupedByWeek[start] = []
+      groupedByWeek[start].push(c)
+    })
+
+    const processed = []
+    Object.keys(groupedByWeek).forEach(week => {
+      // Sort chronologically within the week to simulate real-time linear attribution
+      groupedByWeek[week].sort((a, b) => {
+        const timeA = new Date(`${a.fecha}T${a.horarios?.hora_inicio || '00:00:00'}`)
+        const timeB = new Date(`${b.fecha}T${b.horarios?.hora_inicio || '00:00:00'}`)
+        return timeA - timeB
+      })
+
+      // The first N (up to surplus limit) blocks in each week went to Excedentes; subsequent to No Lectivas
+      groupedByWeek[week].forEach((c, idx) => {
+        c.assignedPool = idx < budget.surplus ? 'excedente' : 'no_lectiva'
+        processed.push(c)
+      })
+    })
+
+    // Return the total unified history sorted newest to oldest
+    return processed.sort((a, b) => {
+      const timeA = new Date(`${a.fecha}T${a.horarios?.hora_inicio || '00:00:00'}`)
+      const timeB = new Date(`${b.fecha}T${b.horarios?.hora_inicio || '00:00:00'}`)
+      return timeB - timeA
+    })
+  })()
+
+  // Update totalCubiertoTotal to reflect unified history logic properly
+  const totalCubiertoTotal = allCoveragesHistory.length
 
   // Current period usage only counts non-accounted-for coverages
   const currentPeriodUsage = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura' && !c.contabilizada).length
@@ -362,12 +398,19 @@ function TeacherDashboard({ user: initialUser }) {
             </p>
             <small style={{ opacity: 0.7 }}>bloques totales</small>
           </div>
-          <div className="stat-card">
+          <div 
+            className="stat-card"
+            style={{ cursor: 'pointer', transition: 'transform 0.15s', border: '1px solid transparent', outline: 'max(1px, 0.1rem) solid transparent' }} 
+            onMouseOver={e => e.currentTarget.style.borderColor = 'var(--accent)'}
+            onMouseOut={e => e.currentTarget.style.borderColor = 'transparent'}
+            onClick={() => setIsCoverageHistoryModalOpen(true)}
+            title="Ver historial de coberturas"
+          >
             <h3>Total Cubierto</h3>
             <p style={{ fontSize: '1.5rem', color: 'var(--accent)', fontWeight: 800 }}>
               {totalCubiertoTotal} blq
             </p>
-            <small style={{ opacity: 0.7 }}>historial acumulado</small>
+            <small style={{ color: 'var(--accent)', fontWeight: 600 }}>Ver detalle →</small>
           </div>
           <div className="stat-card">
             <h3>Esta Semana</h3>
@@ -744,6 +787,86 @@ function TeacherDashboard({ user: initialUser }) {
 
               <div className="modal-actions" style={{ marginTop: '1.25rem' }}>
                 <button className="btn-cancel" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {isCoverageHistoryModalOpen && (
+          <div className="modal-overlay" onClick={() => setIsCoverageHistoryModalOpen(false)}>
+            <div className="modal-content" style={{ maxWidth: '800px', width: '95%' }} onClick={e => e.stopPropagation()}>
+              <div className="modal-header">
+                <h3>📜 Historial Acumulado de Coberturas</h3>
+                <button className="btn-close" type="button" onClick={() => setIsCoverageHistoryModalOpen(false)}>Cerrar</button>
+              </div>
+
+              <div style={{ padding: '0.5rem 0', opacity: 0.8, fontSize: '0.9rem', marginBottom: '1rem' }}>
+                Registro completo de todos los bloques cubiertos que figuran en tu cuenta, indicando si fueron asignados consumiendo Excedentes o tiempo No Lectivo.
+              </div>
+
+              {allCoveragesHistory.length === 0 ? (
+                <div style={{ padding: '2rem', textAlign: 'center', opacity: 0.5 }}>
+                  <p style={{ marginBottom: '0.5rem' }}>Sin registros aún</p>
+                  <small>No hay coberturas registradas en el historial.</small>
+                </div>
+              ) : (
+                <div style={{ maxHeight: '450px', overflowY: 'auto', borderRadius: '0.5rem', border: '1px solid var(--border)' }}>
+                  <table className="admin-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+                    <thead>
+                      <tr style={{ background: 'var(--bg-soft)', textAlign: 'left', position: 'sticky', top: 0, zIndex: 1 }}>
+                        <th style={{ padding: '0.8rem' }}>Fecha</th>
+                        <th style={{ padding: '0.8rem', textAlign: 'center' }}>Bloque / Horario</th>
+                        <th style={{ padding: '0.8rem' }}>Profesor Ausente</th>
+                        <th style={{ padding: '0.8rem' }}>Asignatura / Curso</th>
+                        <th style={{ padding: '0.8rem', textAlign: 'center' }}>Modalidad</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {allCoveragesHistory.map(c => {
+                        const isExcedente = c.assignedPool === 'excedente'
+                        const bloqueNum = BLOQUES.find(b => b.inicio.slice(0, 5) === c.horarios?.hora_inicio?.slice(0, 5))?.id
+                        const fechaFormatted = new Date(c.fecha + 'T00:00:00').toLocaleDateString('es-ES', { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
+
+                        return (
+                          <tr key={c.id} style={{ borderBottom: '1px solid var(--border)', background: 'var(--card-bg)' }}>
+                            <td style={{ padding: '0.8rem', fontWeight: 600, whiteSpace: 'nowrap' }}>{fechaFormatted}</td>
+                            <td style={{ padding: '0.8rem', textAlign: 'center' }}>
+                              <span style={{ fontWeight: 800 }}>{bloqueNum ? `${bloqueNum}°` : '—'}</span><br/>
+                              <small style={{ opacity: 0.7 }}>{c.horarios?.hora_inicio?.slice(0,5)} – {c.horarios?.hora_fin?.slice(0,5)}</small>
+                            </td>
+                            <td style={{ padding: '0.8rem', fontWeight: 500 }}>{c.ausente?.nombre || '—'}</td>
+                            <td style={{ padding: '0.8rem' }}>
+                              <span>{c.horarios?.asignaturas?.nombre || '—'}</span><br/>
+                              <small style={{ 
+                                background: 'var(--bg-soft)', 
+                                padding: '0.1rem 0.3rem', 
+                                borderRadius: '0.2rem' 
+                              }}>{c.horarios?.curso || '—'}</small>
+                            </td>
+                            <td style={{ padding: '0.8rem', textAlign: 'center' }}>
+                              <span style={{
+                                display: 'inline-block',
+                                background: isExcedente ? 'rgba(52, 211, 153, 0.1)' : 'rgba(239, 68, 68, 0.1)',
+                                color: isExcedente ? '#34d399' : '#ef4444',
+                                padding: '0.2rem 0.6rem',
+                                borderRadius: '0.4rem',
+                                fontWeight: 700,
+                                fontSize: '0.75rem',
+                                border: `1px solid ${isExcedente ? 'rgba(52, 211, 153, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`
+                              }}>
+                                {isExcedente ? 'EXCEDENTE' : 'NO LECTIVA'}
+                              </span>
+                            </td>
+                          </tr>
+                        )
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              <div className="modal-actions" style={{ marginTop: '1.25rem' }}>
+                <button className="btn-cancel" onClick={() => setIsCoverageHistoryModalOpen(false)}>Cerrar</button>
               </div>
             </div>
           </div>
