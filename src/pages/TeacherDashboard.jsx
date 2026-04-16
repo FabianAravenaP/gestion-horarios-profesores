@@ -265,9 +265,30 @@ function TeacherDashboard({ user: initialUser }) {
         return timeA - timeB
       })
 
+      let excedentesUsed = 0;
+
       // The first N (up to surplus limit) blocks in each week went to Excedentes; subsequent to No Lectivas
-      groupedByWeek[week].forEach((c, idx) => {
-        c.assignedPool = idx < budget.surplus ? 'excedente' : 'no_lectiva'
+      // EXCEPT if the coverage happens during an 'Atención Apoderado' block, which is inherently No Lectiva
+      groupedByWeek[week].forEach((c) => {
+        const dateObj = new Date(c.fecha + 'T00:00:00')
+        const dayOfWeek = dateObj.getDay() === 0 ? 7 : dateObj.getDay()
+        
+        const baseBlock = horarios.find(h => 
+           h.dia_semana === dayOfWeek && 
+           h.hora_inicio?.slice(0, 5) === c.horarios?.hora_inicio?.slice(0, 5)
+        )
+        const isApoderado = baseBlock && (baseBlock.tipo_bloque === 'apoderado' || baseBlock.asignaturas?.nombre?.toLowerCase().includes('apoderado'))
+
+        if (isApoderado) {
+           c.assignedPool = 'no_lectiva'
+        } else {
+           if (excedentesUsed < budget.surplus) {
+              c.assignedPool = 'excedente'
+              excedentesUsed++
+           } else {
+              c.assignedPool = 'no_lectiva'
+           }
+        }
         processed.push(c)
       })
     })
@@ -284,12 +305,12 @@ function TeacherDashboard({ user: initialUser }) {
   const totalCubiertoTotal = allCoveragesHistory.length
 
   // Current period usage only counts non-accounted-for coverages
-  const currentPeriodUsage = coberturas.filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura' && !c.contabilizada).length
+  const currentPeriodCoverages = allCoveragesHistory.filter(c => !c.contabilizada)
   const totalCubiertoSemana = currentWeekAssignments.length
 
-  // Stats for the "Pools" (Linear attribution) - Based on current period usage
-  const usedFromSurplus = Math.min(currentPeriodUsage, budget.surplus)
-  const usedFromNoLectivas = Math.max(0, currentPeriodUsage - budget.surplus)
+  // Stats for the "Pools" (Linear attribution + Apoderado mapping)
+  const usedFromSurplus = currentPeriodCoverages.filter(c => c.assignedPool === 'excedente').length
+  const usedFromNoLectivas = currentPeriodCoverages.filter(c => c.assignedPool === 'no_lectiva').length
 
   const remainingSurplus = budget.surplus - usedFromSurplus
   const remainingNoLectivas = budget.noLectivas - usedFromNoLectivas
@@ -633,11 +654,8 @@ function TeacherDashboard({ user: initialUser }) {
 
               {/* Coverage rows that drew from No Lectivas pool */}
               {(() => {
-                // Coberturas ordenadas por fecha, las primeras 'budget.surplus' son de excedentes
-                const allActiveCoverages = coberturas
-                  .filter(c => c.estado !== 'cancelada' && c.tipo === 'cobertura' && !c.contabilizada)
-                  .sort((a, b) => new Date(a.fecha) - new Date(b.fecha))
-                const noLectivasCoverages = allActiveCoverages.slice(budget.surplus)
+                // Usamos la lista pre-calculada arriba que ya respeta la lógica de Apoderados
+                const noLectivasCoverages = currentPeriodCoverages.filter(c => c.assignedPool === 'no_lectiva')
                 
                 if (noLectivasCoverages.length === 0) return null
 
