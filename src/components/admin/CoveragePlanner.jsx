@@ -25,8 +25,38 @@ const CoveragePlanner = ({
   useEffect(() => {
     if (absentTeacherId) {
       fetchAbsentTeacherSchedule();
+    } else {
+      setAbsentSchedule([]);
     }
   }, [absentTeacherId, selectedDate]);
+
+  useEffect(() => {
+    if (!absentTeacherId || absentSchedule.length === 0) {
+      setAssignments({});
+      return;
+    }
+    const newAssignments = {};
+    absentSchedule.forEach(block => {
+      const existing = plannedCoverages.find(c => 
+        c.estado !== 'cancelada' &&
+        c.fecha === selectedDate &&
+        c.profesor_ausente_id === absentTeacherId &&
+        String(c.horario_id) === String(block.id)
+      );
+      newAssignments[block.id] = existing ? existing.profesor_reemplazante_id : '';
+    });
+
+    setAssignments(prev => {
+      let isDifferent = false;
+      for (const key of absentSchedule.map(b => b.id)) {
+        if (prev[key] !== newAssignments[key]) {
+          isDifferent = true; 
+          break;
+        }
+      }
+      return isDifferent ? { ...prev, ...newAssignments } : prev;
+    });
+  }, [absentSchedule, plannedCoverages, selectedDate, absentTeacherId]);
 
   async function fetchAbsentTeacherSchedule() {
     setPlannerLoading(true);
@@ -59,7 +89,6 @@ const CoveragePlanner = ({
       });
 
       setAbsentSchedule(filtered);
-      setAssignments({});
     } catch (err) {
       console.error(err);
     } finally {
@@ -83,16 +112,6 @@ const CoveragePlanner = ({
       })
       .map(s => s.profesor_id);
 
-    // Also exclude teachers already assigned to another absence at the same time slot today
-    const alreadyAssignedIds = Object.entries(assignments)
-      .filter(([horarioId, teacherId]) => {
-        if (!teacherId) return false;
-        const block = absentSchedule.find(b => String(b.id) === String(horarioId));
-        // Same hora_inicio means conflict — teacher already covering something at this hour
-        return block && block.hora_inicio === horaInicio;
-      })
-      .map(([, teacherId]) => teacherId);
-
     // Find all horario IDs that share the same hora_inicio (same time block across all teachers)
     // Use allSchedules (which is fully loaded) instead of relying on the nested join in plannedCoverages
     const sameTimeHorarioIds = allSchedules
@@ -104,12 +123,13 @@ const CoveragePlanner = ({
       .filter(c =>
         c.estado !== 'cancelada' &&
         c.fecha === selectedDate &&
-        sameTimeHorarioIds.includes(c.horario_id)
+        sameTimeHorarioIds.includes(c.horario_id) &&
+        c.profesor_ausente_id !== absentTeacherId
       )
       .map(c => c.profesor_reemplazante_id);
 
     return profesores
-      .filter(p => p.activo && p.rol === 'profesor' && !busyIds.includes(p.id) && !alreadyAssignedIds.includes(p.id) && !savedBusyIds.includes(p.id))
+      .filter(p => p.activo && p.rol === 'profesor' && !busyIds.includes(p.id) && !savedBusyIds.includes(p.id))
       .map(p => {
         const { start, end } = getWeekRange(selectedDate);
         const weekCount = plannedCoverages.filter(c => 
@@ -128,10 +148,16 @@ const CoveragePlanner = ({
   const handleSaveCoverages = async () => {
     const entries = [];
     const overBudget = [];
+    const managedHorarioIds = absentSchedule.map(b => b.id);
 
     for (const [horarioId, subId] of Object.entries(assignments)) {
       if (!subId) continue;
-      const teacher = getAvailableTeachers('').find(p => p.id === subId);
+      const block = absentSchedule.find(b => String(b.id) === String(horarioId));
+      if (!block) continue;
+
+      const available = getAvailableTeachers(block.hora_inicio);
+      const teacher = available.find(p => p.id === subId);
+      
       if (teacher && teacher.remaining < 1) overBudget.push(teacher.nombre);
 
       entries.push({
@@ -145,19 +171,26 @@ const CoveragePlanner = ({
     }
 
     if (overBudget.length > 0) {
-      if (!confirm(`Advertencia: ${overBudget.join(', ')} superarán su presupuesto semanal. ¿Continuar?`)) return;
+      const uniqueNames = [...new Set(overBudget)];
+      if (!confirm(`Advertencia: ${uniqueNames.join(', ')} superará(n) su presupuesto semanal. ¿Continuar?`)) return;
     }
-
-    if (entries.length === 0) return alert('No hay asignaciones.');
 
     setProcessing(true);
     try {
-      const ids = entries.map(e => e.horario_id);
-      await supabase.from('coberturas').delete().eq('fecha', selectedDate).eq('profesor_ausente_id', absentTeacherId).in('horario_id', ids);
-      const { data: inserted, error } = await supabase.from('coberturas').insert(entries).select('id');
-      if (error) throw error;
+      if (managedHorarioIds.length > 0) {
+        await supabase
+          .from('coberturas')
+          .delete()
+          .eq('fecha', selectedDate)
+          .eq('profesor_ausente_id', absentTeacherId)
+          .in('horario_id', managedHorarioIds);
+      }
+      
+      if (entries.length > 0) {
+        const { error } = await supabase.from('coberturas').insert(entries);
+        if (error) throw error;
+      }
 
-      setAssignments({});
       onRefresh();
     } catch (err) {
       alert('Error: ' + err.message);

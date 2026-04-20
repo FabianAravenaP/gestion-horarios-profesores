@@ -13,7 +13,7 @@ const CoverageSummary = ({ coverages, profesores, loading }) => {
       const semana = assigned.filter(c => !c.contabilizada).length;
       const total = assigned.length;
       const presupuesto = parseFloat(prof.horas_excedentes || 0) + parseFloat(prof.horas_no_lectivas || 0);
-      const uso = total * 0.75; // each block ≈ 0.75 hrs
+      const uso = semana * 0.75; // each block ≈ 0.75 hrs
       const pct = presupuesto > 0 ? Math.min((uso / presupuesto) * 100, 100) : 0;
       return { nombre: prof.nombre, semana, total, presupuesto, uso, pct };
     })
