@@ -100,6 +100,7 @@ const CoveragePlanner = ({
     const dateObj = new Date(selectedDate + 'T00:00:00');
     const diaSemana = dateObj.getDay() || 7;
     const teachersWorkingToday = new Set(allSchedules.filter(s => s.dia_semana === diaSemana).map(s => s.profesor_id));
+    const teachersWithAnySchedule = new Set(allSchedules.map(s => s.profesor_id));
 
     const busyIds = allSchedules
       .filter(s => {
@@ -133,7 +134,13 @@ const CoveragePlanner = ({
       .map(c => c.profesor_reemplazante_id);
 
     return profesores
-      .filter(p => p.activo && p.rol === 'profesor' && teachersWorkingToday.has(p.id) && !busyIds.includes(p.id) && !savedBusyIds.includes(p.id))
+      .filter(p => 
+        p.activo && 
+        p.rol === 'profesor' && 
+        (teachersWorkingToday.has(p.id) || !teachersWithAnySchedule.has(p.id)) && 
+        !busyIds.includes(p.id) && 
+        !savedBusyIds.includes(p.id)
+      )
       .map(p => {
         const { start, end } = getWeekRange(selectedDate);
         const weekCount = plannedCoverages.filter(c => 
