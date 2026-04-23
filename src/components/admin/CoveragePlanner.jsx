@@ -133,6 +133,8 @@ const CoveragePlanner = ({
       )
       .map(c => c.profesor_reemplazante_id);
 
+    const selectedDayShort = new Date(selectedDate + 'T00:00:00').toLocaleDateString('es-ES', {weekday: 'short'}).toUpperCase().slice(0,2);
+
     return profesores
       .filter(p => 
         p.activo && 
@@ -152,7 +154,19 @@ const CoveragePlanner = ({
 
         const budget = getDetailedBudget(p.horas_excedentes, p.horas_no_lectivas);
         const remaining = budget.total - weekCount;
-        return { ...p, weekCount, budget, remaining, isOverSurplus: weekCount >= budget.surplus };
+
+        const hasApoderado = allSchedules.some(s => {
+          const d = DIAS.find(day => day.id === s.dia_semana);
+          const isApoderadoAsignatura = s.asignaturas?.nombre?.toLowerCase().includes('apoderado');
+          return d?.corto === selectedDayShort && 
+                 s.hora_inicio === horaInicio && 
+                 s.profesor_id === p.id && 
+                 (s.tipo_bloque === 'apoderado' || isApoderadoAsignatura);
+        });
+
+        const statusLabel = hasApoderado ? 'Atención de apoderados' : 'Libre';
+
+        return { ...p, weekCount, budget, remaining, isOverSurplus: weekCount >= budget.surplus, statusLabel };
       });
   };
 
@@ -376,7 +390,7 @@ const CoveragePlanner = ({
                         <option value="">Sin reemplazo</option>
                         {available.map(p => (
                           <option key={p.id} value={p.id} style={{ color: p.isOverSurplus ? 'red' : 'inherit' }}>
-                            {p.nombre} ({p.remaining} blq)
+                            {p.nombre} ({p.statusLabel}) ({p.remaining} blq)
                           </option>
                         ))}
                       </select>
