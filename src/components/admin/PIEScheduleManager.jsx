@@ -5,7 +5,6 @@ import { BLOQUES, DIAS } from '../../services/constants';
 const PIE_BLOCK_TYPES = [
   { value: 'pie_aula',         label: '🏫 En Aula (puede cubrir al titular)', color: '#10b981' },
   { value: 'pie_aula_recursos',label: '🏠 Aula de Recursos',                  color: '#06b6d4' },
-  { value: 'pie_recursos',     label: '📚 Sala de Recursos / Retiro',         color: '#6366f1' },
   { value: 'pie_tc',           label: '🤝 Trabajo Colaborativo (T.C.)',        color: '#f97316' },
   { value: 'pie_coordinacion', label: '📋 Planificación / Registro LIRMI',    color: '#f59e0b' },
   { value: 'apoderado',        label: '👨‍👩‍👧 Atención de Apoderados',             color: '#8b5cf6' },
@@ -15,7 +14,6 @@ const PIE_BLOCK_TYPES = [
 const BLOCK_COLOR_MAP = {
   'pie_aula':          { bg: 'rgba(16, 185, 129, 0.15)', border: '#10b981', text: '#10b981' },
   'pie_aula_recursos': { bg: 'rgba(6, 182, 212, 0.15)',  border: '#06b6d4', text: '#0891b2' },
-  'pie_recursos':      { bg: 'rgba(99, 102, 241, 0.15)', border: '#6366f1', text: '#6366f1' },
   'pie_tc':            { bg: 'rgba(249, 115, 22, 0.15)', border: '#f97316', text: '#c2410c' },
   'pie_coordinacion':  { bg: 'rgba(245, 158, 11, 0.15)', border: '#f59e0b', text: '#b45309' },
   'apoderado':         { bg: 'rgba(139, 92, 246, 0.15)', border: '#8b5cf6', text: '#7c3aed' },
@@ -32,7 +30,6 @@ const getBlockShortLabel = (block) => {
   switch (block.tipo_bloque) {
     case 'pie_aula':          return block.curso ? `En Aula\n${block.curso}` : 'En Aula';
     case 'pie_aula_recursos': return block.curso ? `Aula Rec.\n${block.curso}` : 'Aula Rec.';
-    case 'pie_recursos':      return 'Sala Rec.';
     case 'pie_tc':            return block.curso ? `T.C.\n${block.curso}` : 'T.C.';
     case 'pie_coordinacion':  return 'Coordinación';
     case 'apoderado':         return 'Apoderados';
