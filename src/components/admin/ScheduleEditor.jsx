@@ -5,8 +5,10 @@ import { getWeekRange } from '../../services/dateUtils';
 import { getDetailedBudget } from '../../services/budgetUtils';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import PIEScheduleManager from './PIEScheduleManager';
 
 const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
+  const [activeSubTab, setActiveSubTab] = useState('docentes');
   const [selectedTeacherId, setSelectedTeacherId] = useState('');
   const [teacherSchedule, setTeacherSchedule] = useState([]);
   const [teacherCoverages, setTeacherCoverages] = useState([]);
@@ -373,9 +375,51 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   return (
     <section className="horarios-section">
       <div className="planner-header">
-        <h2>Gestión de Horarios Docentes</h2>
-        <p>Visualiza y modifica la carga horaria semanal de cualquier profesor.</p>
+        <h2>Gestión de Horarios</h2>
+        <p>Visualiza y modifica la carga horaria semanal de los profesores y el equipo PIE.</p>
       </div>
+
+      {/* Sub-tabs */}
+      <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2rem', borderBottom: '2px solid var(--border)', paddingBottom: '0' }}>
+        <button
+          onClick={() => setActiveSubTab('docentes')}
+          style={{
+            padding: '0.6rem 1.25rem',
+            borderRadius: '0.5rem 0.5rem 0 0',
+            border: 'none',
+            cursor: 'pointer',
+            fontWeight: 600,
+            fontSize: '0.9rem',
+            background: activeSubTab === 'docentes' ? 'var(--accent)' : 'var(--bg-soft)',
+            color: activeSubTab === 'docentes' ? 'white' : 'var(--text-soft)',
+            transition: 'all 0.2s ease',
+          }}
+        >
+          📅 Horarios Docentes
+        </button>
+        <button
+          onClick={() => setActiveSubTab('pie')}
+          style={{
+            padding: '0.6rem 1.25rem',
+            borderRadius: '0.5rem 0.5rem 0 0',
+            border: 'none',
+            cursor: 'pointer',
+            fontWeight: 600,
+            fontSize: '0.9rem',
+            background: activeSubTab === 'pie' ? 'var(--accent)' : 'var(--bg-soft)',
+            color: activeSubTab === 'pie' ? 'white' : 'var(--text-soft)',
+            transition: 'all 0.2s ease',
+          }}
+        >
+          🧩 Horarios PIE
+        </button>
+      </div>
+
+      {activeSubTab === 'pie' && (
+        <PIEScheduleManager supabase={supabase} />
+      )}
+
+      {activeSubTab === 'docentes' && (<>
 
       <div className="planner-controls" style={{ background: 'var(--bg-soft)', padding: '1.5rem', borderRadius: '1.5rem', marginBottom: '2.5rem' }}>
         <div className="form-group" style={{ maxWidth: '400px' }}>
@@ -509,6 +553,7 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
           </div>
         </div>
       )}
+      </>)}
 
       {isModalOpen && (
         <div className="modal-overlay">

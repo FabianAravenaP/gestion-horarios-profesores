@@ -84,8 +84,8 @@ const CoveragePlanner = ({
         if (!block) return false;
         if (diaSemana === 5 && block.id > 6) return false;
         if (block.id === 10) return false;
-        // Strict filter: only 'clase' blocks are coverable
-        return s.tipo_bloque === 'clase';
+        // Strict filter: only 'clase' or PIE 'orientacion' blocks are coverable
+        return s.tipo_bloque === 'clase' || s.tipo_bloque === 'orientacion';
       });
 
       setAbsentSchedule(filtered);
@@ -135,20 +135,22 @@ const CoveragePlanner = ({
 
     const selectedDayShort = new Date(selectedDate + 'T00:00:00').toLocaleDateString('es-ES', {weekday: 'short'}).toUpperCase().slice(0,2);
 
-    return profesores
-      .filter(p => 
-        p.activo && 
-        p.rol === 'profesor' && 
-        (teachersWorkingToday.has(p.id) || !teachersWithAnySchedule.has(p.id)) && 
-        !busyIds.includes(p.id) && 
+    // ── Regular teachers ──────────────────────────────────────────────────────
+    const regularTeachers = profesores
+      .filter(p =>
+        p.activo &&
+        p.rol === 'profesor' &&
+        p.cargo !== 'Profesora Diferencial' && // PIE handled separately
+        (teachersWorkingToday.has(p.id) || !teachersWithAnySchedule.has(p.id)) &&
+        !busyIds.includes(p.id) &&
         !savedBusyIds.includes(p.id)
       )
       .map(p => {
         const { start, end } = getWeekRange(selectedDate);
-        const weekCount = plannedCoverages.filter(c => 
-          c.profesor_reemplazante_id === p.id && 
+        const weekCount = plannedCoverages.filter(c =>
+          c.profesor_reemplazante_id === p.id &&
           c.estado !== 'cancelada' &&
-          c.fecha >= start && 
+          c.fecha >= start &&
           c.fecha <= end
         ).length;
 
@@ -158,16 +160,55 @@ const CoveragePlanner = ({
         const hasApoderado = allSchedules.some(s => {
           const d = DIAS.find(day => day.id === s.dia_semana);
           const isApoderadoAsignatura = s.asignaturas?.nombre?.toLowerCase().includes('apoderado');
-          return d?.corto === selectedDayShort && 
-                 s.hora_inicio === horaInicio && 
-                 s.profesor_id === p.id && 
+          return d?.corto === selectedDayShort &&
+                 s.hora_inicio === horaInicio &&
+                 s.profesor_id === p.id &&
                  (s.tipo_bloque === 'apoderado' || isApoderadoAsignatura);
         });
 
         const statusLabel = hasApoderado ? 'Atención de apoderados' : 'Libre';
 
-        return { ...p, weekCount, budget, remaining, isOverSurplus: weekCount >= budget.surplus, statusLabel };
+        return { ...p, weekCount, budget, remaining, isOverSurplus: weekCount >= budget.surplus, statusLabel, isPIE: false };
       });
+
+    // ── PIE teachers available at this time slot (pie_aula blocks only) ───────
+    const pieTeachers = profesores
+      .filter(p =>
+        p.activo &&
+        p.cargo === 'Profesora Diferencial' &&
+        p.id !== absentTeacherId &&
+        !savedBusyIds.includes(p.id)
+      )
+      .filter(p => {
+        // Only include if they have a pie_aula block at this exact time on this day
+        return allSchedules.some(s =>
+          s.profesor_id === p.id &&
+          s.dia_semana === diaSemana &&
+          s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5) &&
+          s.tipo_bloque === 'pie_aula'
+        );
+      })
+      .map(p => {
+        // Find the course they're supporting in this block
+        const pieBlock = allSchedules.find(s =>
+          s.profesor_id === p.id &&
+          s.dia_semana === diaSemana &&
+          s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5) &&
+          s.tipo_bloque === 'pie_aula'
+        );
+        const cursoLabel = pieBlock?.curso ? ` (${pieBlock.curso})` : '';
+        return {
+          ...p,
+          weekCount: 0,
+          budget: { surplus: 0, noLectivas: 0, total: 999 },
+          remaining: 999,
+          isOverSurplus: false,
+          statusLabel: `PIE en Aula${cursoLabel}`,
+          isPIE: true,
+        };
+      });
+
+    return [...regularTeachers, ...pieTeachers];
   };
 
   const handleSaveCoverages = async () => {
@@ -263,7 +304,7 @@ const CoveragePlanner = ({
         'Bloque': `${blockId}°`,
         'Ausente': cov.ausente?.nombre,
         'Reemplazo': cov.reemplazo?.nombre,
-        'Asignatura': cov.horarios?.asignaturas?.nombre || 'Administrativo',
+        'Asignatura': cov.horarios?.tipo_bloque === 'orientacion' ? 'Orientación (PIE)' : (cov.horarios?.asignaturas?.nombre || 'Administrativo'),
         'Curso': cov.horarios?.curso || '-'
       };
     });
@@ -380,7 +421,7 @@ const CoveragePlanner = ({
                         <span className="block-time">{block.hora_inicio.slice(0,5)}</span>
                       </div>
                       <div className="class-info">
-                        <h4>{block.asignaturas?.nombre || 'Administrativo'}</h4>
+                        <h4>{block.tipo_bloque === 'orientacion' ? 'Orientación (PIE)' : (block.asignaturas?.nombre || 'Administrativo')}</h4>
                         <p>{block.curso || '-'}</p>
                       </div>
                       <select 
@@ -388,11 +429,24 @@ const CoveragePlanner = ({
                         onChange={e => setAssignments({...assignments, [block.id]: e.target.value})}
                       >
                         <option value="">Sin reemplazo</option>
-                        {available.map(p => (
-                          <option key={p.id} value={p.id} style={{ color: p.isOverSurplus ? 'red' : 'inherit' }}>
-                            {p.nombre} ({p.statusLabel}) ({p.remaining} blq)
-                          </option>
-                        ))}
+                        {available.filter(p => !p.isPIE).length > 0 && (
+                          <optgroup label="── Profesores Regulares ──">
+                            {available.filter(p => !p.isPIE).map(p => (
+                              <option key={p.id} value={p.id} style={{ color: p.isOverSurplus ? 'red' : 'inherit' }}>
+                                {p.nombre} ({p.statusLabel}) ({p.remaining} blq)
+                              </option>
+                            ))}
+                          </optgroup>
+                        )}
+                        {available.filter(p => p.isPIE).length > 0 && (
+                          <optgroup label="── Profesoras PIE en Aula ──">
+                            {available.filter(p => p.isPIE).map(p => (
+                              <option key={p.id} value={p.id} style={{ color: '#10b981' }}>
+                                ⭐ {p.nombre} — {p.statusLabel}
+                              </option>
+                            ))}
+                          </optgroup>
+                        )}
                       </select>
                     </div>
                   );
@@ -438,7 +492,7 @@ const CoveragePlanner = ({
                       <td>{blockId}°</td>
                       <td>{c.ausente?.nombre}</td>
                       <td>{c.reemplazo?.nombre}</td>
-                      <td>{c.horarios?.asignaturas?.nombre}</td>
+                      <td>{c.horarios?.tipo_bloque === 'orientacion' ? 'Orientación (PIE)' : c.horarios?.asignaturas?.nombre}</td>
                       <td>{c.horarios?.curso || '-'}</td>
                       <td>
                         <button className="btn-delete" onClick={() => handleDeleteCoverage(c)}>Eliminar</button>
