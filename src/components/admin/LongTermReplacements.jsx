@@ -106,7 +106,7 @@ const LongTermReplacements = ({ supabase, profesores, reemplazos, onRefresh }) =
             <label>Reemplazante</label>
             <select required value={newReemplazo.profesor_reemplazante_id} onChange={e => setNewReemplazo({...newReemplazo, profesor_reemplazante_id: e.target.value})}>
               <option value="">Seleccionar...</option>
-              {profesores.filter(p => p.rol === 'profesor' && p.id !== newReemplazo.profesor_ausente_id).map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}
+              {profesores.filter(p => p.rol === 'profesor' && p.cargo !== 'Coordinador TP' && p.id !== newReemplazo.profesor_ausente_id).map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}
             </select>
           </div>
           <div className="form-group">

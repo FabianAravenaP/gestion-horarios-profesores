@@ -4,6 +4,8 @@ import { getWeekRange, formatLongDate } from '../../services/dateUtils';
 import { getDetailedBudget } from '../../services/budgetUtils';
 import { MiniCalendar } from '../MiniCalendar';
 import * as XLSX from 'xlsx';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
 
 const CoveragePlanner = ({ 
   supabase, 
@@ -96,7 +98,7 @@ const CoveragePlanner = ({
     }
   }
 
-  const getAvailableTeachers = (horaInicio) => {
+  const getAvailableTeachers = (horaInicio, cursoAusente) => {
     const dateObj = new Date(selectedDate + 'T00:00:00');
     const diaSemana = dateObj.getDay() || 7;
     const teachersWorkingToday = new Set(allSchedules.filter(s => s.dia_semana === diaSemana).map(s => s.profesor_id));
@@ -117,10 +119,10 @@ const CoveragePlanner = ({
       })
       .map(s => s.profesor_id);
 
-    // Find all horario IDs that share the same hora_inicio (same time block across all teachers)
+    // Find all horario IDs that share the same hora_inicio and dia_semana across all teachers
     // Use allSchedules (which is fully loaded) instead of relying on the nested join in plannedCoverages
     const sameTimeHorarioIds = allSchedules
-      .filter(s => s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5))
+      .filter(s => s.dia_semana === diaSemana && s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5))
       .map(s => s.id);
 
     // Exclude teachers already saved in DB as covering someone else at the same date+time
@@ -141,6 +143,7 @@ const CoveragePlanner = ({
         p.activo &&
         p.rol === 'profesor' &&
         p.cargo !== 'Profesora Diferencial' && // PIE handled separately
+        p.cargo !== 'Coordinador TP' && // Coordinadores no realizan coberturas
         (teachersWorkingToday.has(p.id) || !teachersWithAnySchedule.has(p.id)) &&
         !busyIds.includes(p.id) &&
         !savedBusyIds.includes(p.id)
@@ -181,12 +184,17 @@ const CoveragePlanner = ({
       )
       .filter(p => {
         // Only include if they have a pie_aula block at this exact time on this day
-        return allSchedules.some(s =>
-          s.profesor_id === p.id &&
-          s.dia_semana === diaSemana &&
-          s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5) &&
-          s.tipo_bloque === 'pie_aula'
-        );
+        // AND in the exact same course
+        return allSchedules.some(s => {
+          if (s.profesor_id !== p.id) return false;
+          if (s.dia_semana !== diaSemana) return false;
+          if (s.hora_inicio?.slice(0, 5) !== horaInicio?.slice(0, 5)) return false;
+          if (s.tipo_bloque !== 'pie_aula') return false;
+
+          const sCurso = (s.curso || '').replace(/\s+/g, '').toUpperCase();
+          const aCurso = (cursoAusente || '').replace(/\s+/g, '').toUpperCase();
+          return sCurso === aCurso;
+        });
       })
       .map(p => {
         // Find the course they're supporting in this block
@@ -221,7 +229,7 @@ const CoveragePlanner = ({
       const block = absentSchedule.find(b => String(b.id) === String(horarioId));
       if (!block) continue;
 
-      const available = getAvailableTeachers(block.hora_inicio);
+      const available = getAvailableTeachers(block.hora_inicio, block.curso);
       const teacher = available.find(p => p.id === subId);
       
       if (teacher && teacher.remaining < 1) overBudget.push(teacher.nombre);
@@ -312,6 +320,32 @@ const CoveragePlanner = ({
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Coberturas");
     XLSX.writeFile(wb, `Coberturas_${selectedDate}.xlsx`);
+  };
+
+  const handleDownloadPDF = () => {
+    const doc = new jsPDF();
+    const data = summaryCoverages.map(cov => {
+      const blockId = BLOQUES.find(b => b.inicio.startsWith(cov.horarios?.hora_inicio?.slice(0,5)))?.id || cov.horarios?.bloque_id;
+      return [
+        `${blockId}°`,
+        cov.ausente?.nombre || '-',
+        cov.reemplazo?.nombre || '-',
+        cov.horarios?.tipo_bloque === 'orientacion' ? 'Orientación (PIE)' : (cov.horarios?.asignaturas?.nombre || 'Administrativo'),
+        cov.horarios?.curso || '-'
+      ];
+    });
+
+    doc.text(`Coberturas para el día ${selectedDate}`, 14, 15);
+    
+    doc.autoTable({
+      head: [['Bloque', 'Ausente', 'Reemplazo', 'Asignatura', 'Curso']],
+      body: data,
+      startY: 20,
+      theme: 'grid',
+      headStyles: { fillColor: [59, 130, 246] }
+    });
+
+    doc.save(`Coberturas_${selectedDate}.pdf`);
   };
 
   return (
@@ -413,7 +447,7 @@ const CoveragePlanner = ({
             ) : absentTeacherId && absentSchedule.length > 0 ? (
               <div className="planner-blocks">
                 {absentSchedule.map(block => {
-                  const available = getAvailableTeachers(block.hora_inicio);
+                  const available = getAvailableTeachers(block.hora_inicio, block.curso);
                   return (
                     <div key={block.id} className="block-assignment-card">
                       <div className="block-info">
@@ -468,9 +502,12 @@ const CoveragePlanner = ({
               <h3>Coberturas para {selectedDate}</h3>
               <button className="btn-close" onClick={() => setIsSummaryModalOpen(false)}>Cerrar</button>
             </div>
-            <div style={{ marginBottom: '1rem' }}>
+            <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.5rem' }}>
               <button className="btn-edit" onClick={handleDownloadExcel} disabled={summaryCoverages.length === 0}>
                 Descargar Excel
+              </button>
+              <button className="btn-edit" style={{ background: '#ef4444', color: 'white', border: 'none' }} onClick={handleDownloadPDF} disabled={summaryCoverages.length === 0}>
+                Descargar PDF
               </button>
             </div>
             <table className="responsive-table">

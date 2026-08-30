@@ -4,7 +4,8 @@ import logo from '../assets/logo.jpg'
 import { formatLongDate, getWeekRange } from '../services/dateUtils'
 import { BLOQUES, DIAS, DURACION_BLOQUE_H } from '../services/constants'
 import { getDetailedBudget, formatUsage } from '../services/budgetUtils'
-
+import PermitModal from '../components/shared/PermitModal'
+import { EfemerideWidget } from '../components/shared/EfemerideWidget'
 
 function TeacherDashboard({ user: initialUser }) {
   const [user, setUser] = useState(initialUser)
@@ -319,13 +320,20 @@ function TeacherDashboard({ user: initialUser }) {
     <div className="teacher-dashboard">
       <header className="dashboard-header">
         <div className="header-info">
-          <img src={logo} alt="IC Logo" className="logo-header" />
+          <img 
+            src={logo} 
+            alt="IC Logo" 
+            className="logo-header" 
+            onClick={() => window.location.href = '/dashboard'}
+            style={{ cursor: 'pointer' }}
+          />
           <div className="header-text">
-            <h1>{profile?.nombre || 'Mi Perfil Docente'}</h1>
+            <h1>Portal del Colaborador</h1>
             <p className="header-subtitle">
-              {uniqueSubjects.join(', ')} {uniqueSubjects.length > 0 && '•'} {clasesCount} Bloques de Clase
+              {profile ? `${profile.nombre} - ${profile.cargo}` : 'Cargando...'}
             </p>
             <div className="header-date">{formatLongDate(new Date())}</div>
+            <EfemerideWidget />
           </div>
         </div>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -581,7 +589,17 @@ function TeacherDashboard({ user: initialUser }) {
                               ) : isClass ? (
                                 <>
                                   {item?.isInherited && <span className="type-tag" style={{ background: '#f59e0b' }}>REEMPLAZO</span>}
-                                  <span className="subject">{item.asignaturas?.nombre}</span>
+                                  <span className="subject">
+                                    {item.asignaturas?.nombre || (
+                                      {
+                                        'pie_aula': 'PIE: En Aula',
+                                        'pie_aula_recursos': 'PIE: Aula Recursos',
+                                        'pie_tc': 'PIE: Trabajo Colab.',
+                                        'pie_coordinacion': 'PIE: Coordinación',
+                                        'orientacion': 'Orientación'
+                                      }[item.tipo_bloque] || item.tipo_bloque
+                                    )}
+                                  </span>
                                   <span className="course">{item.curso} {item?.isInherited && `(${item.ausenteNombre})`}</span>
                                 </>
                               ) : isTC ? (
@@ -720,94 +738,13 @@ function TeacherDashboard({ user: initialUser }) {
         )}
 
         {isPermitModalOpen && (
-          <div className="modal-overlay" onClick={() => setIsPermitModalOpen(false)}>
-            <div className="modal-content" style={{ maxWidth: '560px' }} onClick={e => e.stopPropagation()}>
-              <div className="modal-header">
-                <h3>📅 Mis Días Administrativos</h3>
-                <button className="btn-close" type="button" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
-              </div>
-
-              {/* Summary row */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', margin: '1.25rem 0' }}>
-                {[
-                  { label: 'Aprobados', estado: 'aprobado', color: '#22c55e' },
-                  { label: 'Rechazados', estado: 'rechazado', color: '#ef4444' },
-                  { label: 'Pendientes', estado: 'pendiente', color: '#f59e0b' },
-                ].map(({ label, estado, color }) => {
-                  const dias = permisos
-                    .filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado === estado)
-                    .reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)
-                  return (
-                    <div key={estado} style={{
-                      background: 'var(--bg-soft)',
-                      borderRadius: '0.75rem',
-                      padding: '1rem',
-                      textAlign: 'center',
-                      borderTop: `3px solid ${color}`
-                    }}>
-                      <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', opacity: 0.6, margin: '0 0 0.25rem 0' }}>{label}</p>
-                      <p style={{ fontSize: '1.75rem', fontWeight: 900, color, margin: 0 }}>{dias}</p>
-                      <small style={{ opacity: 0.5 }}>días</small>
-                    </div>
-                  )
-                })}
-              </div>
-
-              {/* Total bar */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                background: 'var(--bg-soft)',
-                borderRadius: '0.75rem',
-                padding: '0.75rem 1.25rem',
-                marginBottom: '1.25rem',
-                fontSize: '0.95rem'
-              }}>
-                <span style={{ opacity: 0.7 }}>Total aprobados este año</span>
-                <strong style={{ fontSize: '1.1rem' }}>
-                  {permisos.filter(p => new Date(p.fecha).getFullYear() === new Date().getFullYear() && p.estado === 'aprobado').reduce((sum, p) => sum + parseFloat(p.valor_dia), 0)} / 6 días
-                </strong>
-              </div>
-
-              {/* Record list */}
-              {permisos.length === 0 ? (
-                <div style={{ padding: '2rem', textAlign: 'center', opacity: 0.5 }}>
-                  <p style={{ marginBottom: '0.5rem' }}>Sin registros aún</p>
-                  <small>La administración cargará tus días cuando corresponda.</small>
-                </div>
-              ) : (
-                <div style={{ maxHeight: '300px', overflowY: 'auto', borderRadius: '0.5rem', border: '1px solid var(--border)' }}>
-                  {permisos.map(p => (
-                    <div key={p.id} style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      padding: '0.75rem 1rem',
-                      borderBottom: '1px solid var(--border)',
-                      gap: '0.75rem',
-                      flexWrap: 'wrap'
-                    }}>
-                      <div>
-                        <p style={{ fontWeight: 600, margin: '0 0 0.2rem 0', fontSize: '0.95rem' }}>
-                          {new Date(p.fecha + 'T00:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: '2-digit', month: 'long' })}
-                        </p>
-                        <small style={{ opacity: 0.6 }}>
-                          {p.tipo_dia === 'completo' ? 'Día Completo' : p.tipo_dia === 'am' ? 'Media Jornada AM' : 'Media Jornada PM'}
-                          {p.motivo && ` • ${p.motivo}`}
-                        </small>
-                      </div>
-                      {getStatusBadge(p.estado)}
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              <div className="modal-actions" style={{ marginTop: '1.25rem' }}>
-                <button className="btn-cancel" onClick={() => setIsPermitModalOpen(false)}>Cerrar</button>
-              </div>
-            </div>
-          </div>
+          <PermitModal 
+            supabase={supabase} 
+            profile={profile} 
+            permisos={permisos} 
+            onClose={() => setIsPermitModalOpen(false)}
+            onRefresh={() => fetchUserData()}
+          />
         )}
 
         {isCoverageHistoryModalOpen && (

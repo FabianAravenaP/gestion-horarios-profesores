@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../services/supabase';
 import logo from '../assets/logo.jpg';
 import { formatLongDate, getWeekRange } from '../services/dateUtils';
+import { EfemerideWidget } from '../components/shared/EfemerideWidget';
 
 // Modular Components
 import ProfessorManager from '../components/admin/ProfessorManager';
@@ -183,11 +184,18 @@ function AdminDashboard() {
     <div className="admin-dashboard">
       <header className="dashboard-header">
         <div className="header-info">
-          <img src={logo} alt="IC Logo" className="logo-header" />
+          <img 
+            src={logo} 
+            alt="IC Logo" 
+            className="logo-header" 
+            onClick={() => window.location.href = '/dashboard'}
+            style={{ cursor: 'pointer' }}
+          />
           <div className="header-text">
             <h1>Panel de Administración</h1>
             <p className="header-subtitle">Instituto Comercial Puerto Montt</p>
             <div className="header-date">{formatLongDate(new Date())}</div>
+            <EfemerideWidget />
           </div>
         </div>
         <div className="header-actions" style={{ display: 'flex', gap: '0.75rem' }}>
@@ -198,7 +206,7 @@ function AdminDashboard() {
 
       <main>
         <section className="admin-tabs">
-          <button className={`tab-button ${activeTab === 'profesores' ? 'active' : ''}`} onClick={() => setActiveTab('profesores')}>Profesores</button>
+          <button className={`tab-button ${activeTab === 'profesores' ? 'active' : ''}`} onClick={() => setActiveTab('profesores')}>Colaboradores</button>
           <button className={`tab-button ${activeTab === 'coberturas' ? 'active' : ''}`} onClick={() => setActiveTab('coberturas')}>Coberturas</button>
           <button className={`tab-button ${activeTab === 'reemplazos' ? 'active' : ''}`} onClick={() => setActiveTab('reemplazos')}>Reemplazos</button>
           <button className={`tab-button ${activeTab === 'horarios' ? 'active' : ''}`} onClick={() => setActiveTab('horarios')}>Horarios</button>
@@ -219,7 +227,7 @@ function AdminDashboard() {
           {activeTab === 'coberturas' && (
             <CoveragePlanner 
               supabase={supabase} 
-              profesores={profesores} 
+              profesores={profesores.filter(p => p.rol === 'profesor' || p.rol === 'admin')} 
               allSchedules={allSchedules}
               plannedCoverages={plannedCoverages}
               activeCoverageDates={activeCoverageDates}
@@ -229,7 +237,7 @@ function AdminDashboard() {
           {activeTab === 'reemplazos' && (
             <LongTermReplacements 
               supabase={supabase} 
-              profesores={profesores} 
+              profesores={profesores.filter(p => p.rol === 'profesor' || p.rol === 'admin')} 
               reemplazos={reemplazos} 
               onRefresh={fetchReemplazos} 
             />
@@ -237,7 +245,7 @@ function AdminDashboard() {
           {activeTab === 'horarios' && (
             <ScheduleEditor 
               supabase={supabase} 
-              profesores={profesores} 
+              profesores={profesores.filter(p => p.rol === 'profesor' || p.rol === 'admin')} 
               asignaturas={asignaturas} 
             />
           )}

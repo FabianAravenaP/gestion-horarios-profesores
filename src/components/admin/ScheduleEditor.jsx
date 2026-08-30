@@ -10,6 +10,9 @@ import PIEScheduleManager from './PIEScheduleManager';
 const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const [activeSubTab, setActiveSubTab] = useState('docentes');
   const [selectedTeacherId, setSelectedTeacherId] = useState('');
+  const [selectedCourse, setSelectedCourse] = useState('');
+  const [cursos, setCursos] = useState([]);
+  const [courseSchedule, setCourseSchedule] = useState([]);
   const [teacherSchedule, setTeacherSchedule] = useState([]);
   const [teacherCoverages, setTeacherCoverages] = useState([]);
   const [totalCoverageUsage, setTotalCoverageUsage] = useState(0);
@@ -49,6 +52,52 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
       fetchTeacherSchedule();
     }
   }, [selectedTeacherId]);
+
+  useEffect(() => {
+    if (activeSubTab === 'cursos' && cursos.length === 0) {
+      const fetchCursos = async () => {
+        let allScheds = [];
+        let page = 0;
+        let hasMore = true;
+        while (hasMore) {
+          const { data } = await supabase.from('horarios').select('curso').range(page*1000, (page+1)*1000-1);
+          if (data && data.length > 0) allScheds = [...allScheds, ...data];
+          if (!data || data.length < 1000) hasMore = false;
+          page++;
+        }
+        const allCourses = [];
+        allScheds.forEach(s => {
+          if (s.curso) {
+            s.curso.split(/[\/\-]/).forEach(c => allCourses.push(c.trim()));
+          }
+        });
+        const unique = [...new Set(allCourses)].filter(Boolean).sort();
+        setCursos(unique);
+      };
+      fetchCursos();
+    }
+  }, [activeSubTab, cursos.length]);
+
+  useEffect(() => {
+    if (activeSubTab === 'cursos' && selectedCourse) {
+      const fetchCourseSchedule = async () => {
+        setLoading(true);
+        const { data } = await supabase
+          .from('horarios')
+          .select('*, asignaturas(nombre), profesores(nombre)')
+          .ilike('curso', `%${selectedCourse}%`);
+          
+        const filtered = (data || []).filter(h => {
+          if (!h.curso) return false;
+          const courses = h.curso.split(/[\/\-]/).map(c => c.trim());
+          return courses.includes(selectedCourse);
+        });
+        setCourseSchedule(filtered);
+        setLoading(false);
+      };
+      fetchCourseSchedule();
+    }
+  }, [selectedCourse, activeSubTab]);
 
   async function fetchTeacherSchedule() {
     setLoading(true);
@@ -131,6 +180,10 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
     return null;
   };
 
+  const getCourseHorarioAt = (diaId, horaInicio) => {
+    return courseSchedule.find(h => h.dia_semana === diaId && h.hora_inicio.slice(0, 5) === horaInicio.slice(0, 5));
+  };
+
   const handleSaveBlock = async (e) => {
     e.preventDefault();
     setProcessing(true);
@@ -187,7 +240,12 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
       'dupla': 'Dupla',
       'tc': 'Trabajo Colaborativo',
       'administrativo': 'Administrativo',
-      'bloqueado': 'Bloqueado'
+      'bloqueado': 'Bloqueado',
+      'pie_aula': 'PIE: En Aula',
+      'pie_aula_recursos': 'PIE: Aula Recursos',
+      'pie_tc': 'PIE: Trabajo Colab.',
+      'pie_coordinacion': 'PIE: Coordinación',
+      'orientacion': 'Orientación'
     };
     return typeLabelMap[item.tipo_bloque] || item.tipo_bloque;
   };
@@ -254,10 +312,23 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const handleExportAll = async () => {
     setProcessing(true);
     try {
-      const { data: allSchedules, error } = await supabase
-        .from('horarios')
-        .select('*, asignaturas(nombre)');
-      if (error) throw error;
+      let allSchedules = [];
+      let page = 0;
+      let hasMore = true;
+      while (hasMore) {
+        const { data, error } = await supabase
+          .from('horarios')
+          .select('*, asignaturas(nombre)')
+          .range(page * 1000, (page + 1) * 1000 - 1);
+        if (error) throw error;
+        if (data && data.length > 0) {
+          allSchedules = [...allSchedules, ...data];
+        }
+        if (!data || data.length < 1000) {
+          hasMore = false;
+        }
+        page++;
+      }
       
       const wb = XLSX.utils.book_new();
       const activeProfs = profesores.filter(p => allSchedules.some(s => s.profesor_id === p.id));
@@ -300,10 +371,23 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
   const exportAllToPDF = async () => {
     setProcessing(true);
     try {
-      const { data: allSchedules, error } = await supabase
-        .from('horarios')
-        .select('*, asignaturas(nombre)');
-      if (error) throw error;
+      let allSchedules = [];
+      let page = 0;
+      let hasMore = true;
+      while (hasMore) {
+        const { data, error } = await supabase
+          .from('horarios')
+          .select('*, asignaturas(nombre)')
+          .range(page * 1000, (page + 1) * 1000 - 1);
+        if (error) throw error;
+        if (data && data.length > 0) {
+          allSchedules = [...allSchedules, ...data];
+        }
+        if (!data || data.length < 1000) {
+          hasMore = false;
+        }
+        page++;
+      }
       
       const doc = new jsPDF('landscape');
       const activeProfs = profesores.filter(p => allSchedules.some(s => s.profesor_id === p.id));
@@ -412,6 +496,22 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
           }}
         >
           🧩 Horarios PIE
+        </button>
+        <button
+          onClick={() => setActiveSubTab('cursos')}
+          style={{
+            padding: '0.6rem 1.25rem',
+            borderRadius: '0.5rem 0.5rem 0 0',
+            border: 'none',
+            cursor: 'pointer',
+            fontWeight: 600,
+            fontSize: '0.9rem',
+            background: activeSubTab === 'cursos' ? 'var(--accent)' : 'var(--bg-soft)',
+            color: activeSubTab === 'cursos' ? 'white' : 'var(--text-soft)',
+            transition: 'all 0.2s ease',
+          }}
+        >
+          🎓 Horarios por Curso
         </button>
       </div>
 
@@ -554,6 +654,51 @@ const ScheduleEditor = ({ supabase, profesores, asignaturas }) => {
         </div>
       )}
       </>)}
+
+      {activeSubTab === 'cursos' && (
+        <>
+          <div className="planner-controls" style={{ background: 'var(--bg-soft)', padding: '1.5rem', borderRadius: '1.5rem', marginBottom: '2.5rem' }}>
+            <div className="form-group" style={{ maxWidth: '400px' }}>
+              <label>Seleccionar Curso</label>
+              <select value={selectedCourse} onChange={e => setSelectedCourse(e.target.value)}>
+                <option value="">Seleccione...</option>
+                {cursos.map(c => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+          </div>
+
+          {selectedCourse && (
+            <div className="schedule-container">
+              <div className="grid-wrapper">
+                <table className="schedule-grid">
+                  <thead><tr><th>Bloque</th>{DIAS.map(d => <th key={d.id}>{d.corto}</th>)}</tr></thead>
+                  <tbody>
+                    {BLOQUES.map(b => (
+                      <tr key={b.id}>
+                        <td className="time-col"><span className="block-number">{b.id}°</span><span className="block-time">{b.inicio.slice(0, 5)} - {b.fin.slice(0, 5)}</span></td>
+                        {DIAS.map(d => {
+                          const item = getCourseHorarioAt(d.id, b.inicio);
+                          const isFridayEnd = d.id === 5 && b.id > 6;
+                          return (
+                            <td key={d.id} className={`slot ${isFridayEnd ? 'is-disabled' : item ? 'is-class' : 'is-available'}`}>
+                              {item ? (
+                                <div className="item-content">
+                                  <span className="subject">{getBlockLabel(item)}</span>
+                                  {item.profesores?.nombre && <span className="course">{item.profesores.nombre}</span>}
+                                </div>
+                              ) : !isFridayEnd && <span className="available-label">-</span>}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </>
+      )}
 
       {isModalOpen && (
         <div className="modal-overlay">

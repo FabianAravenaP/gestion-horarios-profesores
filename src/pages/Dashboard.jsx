@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { supabase } from '../services/supabase'
 import AdminDashboard from './AdminDashboard'
 import TeacherDashboard from './TeacherDashboard'
+import AssistantDashboard from './AssistantDashboard'
 import { logActivity } from '../services/activity'
 
 function Dashboard() {
@@ -84,6 +85,8 @@ function Dashboard() {
     <>
       {role === 'admin' ? (
         <AdminDashboard user={sessionUser} />
+      ) : role === 'asistente' ? (
+        <AssistantDashboard user={sessionUser} />
       ) : (
         <TeacherDashboard user={sessionUser} />
       )}

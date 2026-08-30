@@ -17,11 +17,48 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
     activo: true
   });
 
+  const [sortConfig, setSortConfig] = useState({ key: 'nombre', direction: 'asc' });
+
   const filteredProfesores = profesores.filter(p => 
     p.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
     p.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
     (p.cargo && p.cargo.toLowerCase().includes(searchTerm.toLowerCase()))
   );
+
+  const sortedProfesores = [...filteredProfesores].sort((a, b) => {
+    let aVal = a[sortConfig.key];
+    let bVal = b[sortConfig.key];
+
+    if (sortConfig.key === 'rol') {
+      const aIsPIE = a.cargo && a.cargo.toLowerCase().includes('diferencial');
+      const bIsPIE = b.cargo && b.cargo.toLowerCase().includes('diferencial');
+      aVal = a.rol === 'admin' ? 'Admin' : a.rol === 'asistente' ? 'Asistente' : aIsPIE ? 'Profesor PIE' : 'Profesor';
+      bVal = b.rol === 'admin' ? 'Admin' : b.rol === 'asistente' ? 'Asistente' : bIsPIE ? 'Profesor PIE' : 'Profesor';
+    } else if (sortConfig.key === 'email') {
+      aVal = a.email;
+      bVal = b.email;
+    }
+
+    if (aVal === null || aVal === undefined) aVal = '';
+    if (bVal === null || bVal === undefined) bVal = '';
+
+    if (typeof aVal === 'string') {
+      aVal = aVal.toLowerCase();
+      bVal = bVal.toLowerCase();
+    }
+
+    if (aVal < bVal) return sortConfig.direction === 'asc' ? -1 : 1;
+    if (aVal > bVal) return sortConfig.direction === 'asc' ? 1 : -1;
+    return 0;
+  });
+
+  const handleSort = (key) => {
+    let direction = 'asc';
+    if (sortConfig.key === key && sortConfig.direction === 'asc') {
+      direction = 'desc';
+    }
+    setSortConfig({ key, direction });
+  };
 
   const openAddModal = () => {
     setIsEditing(false);
@@ -62,6 +99,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
             nombre: profData.nombre,
             email: profData.email,
             cargo: profData.cargo,
+            rol: profData.rol,
             horas_excedentes: profData.horas_excedentes,
             horas_no_lectivas: profData.horas_no_lectivas,
             contrato_horas: profData.contrato_horas,
@@ -90,7 +128,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
             nombre: profData.nombre,
             email: profData.email,
             cargo: profData.cargo,
-            rol: 'profesor',
+            rol: profData.rol || 'profesor',
             horas_excedentes: profData.horas_excedentes,
             horas_no_lectivas: profData.horas_no_lectivas,
             contrato_horas: profData.contrato_horas,
@@ -116,28 +154,28 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
 
       setIsModalOpen(false);
       onRefresh();
-      alert(isEditing ? 'Profesor actualizado' : 'Profesor agregado');
+      alert(isEditing ? 'Colaborador actualizado' : 'Colaborador agregado');
+      setIsModalOpen(false);
+      onRefresh();
     } catch (err) {
       console.error(err);
-      alert('Error al guardar: ' + err.message);
+      alert('Error: ' + err.message);
     } finally {
       setProcessing(false);
     }
   };
 
   const handleDeleteProfessor = async (id, nombre) => {
-    if (!confirm(`¿Estás seguro de eliminar a ${nombre}?`)) return;
-    
+    if (!window.confirm(`¿Estás seguro de eliminar a ${nombre}?`)) return;
     setProcessing(true);
     try {
       const { error } = await supabase
         .from('profesores')
         .delete()
         .eq('id', id);
-      
       if (error) throw error;
+      alert('Colaborador eliminado');
       onRefresh();
-      alert('Profesor eliminado');
     } catch (err) {
       alert('Error al eliminar: ' + err.message);
     } finally {
@@ -168,7 +206,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
     <>
       <section className="stats-grid">
         <div className="stat-card">
-          <h3>Profesores Activos</h3>
+          <h3>Colaboradores Activos</h3>
           <p>{profesores.filter(p => p.activo).length}</p>
         </div>
         <div className="stat-card">
@@ -189,11 +227,11 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
 
       <section className="admin-actions">
         <div>
-          <h2>Gestión de Profesores</h2>
+          <h2>Gestión de Colaboradores</h2>
           <div className="search-bar" style={{ marginTop: '0.5rem' }}>
             <input 
               type="text" 
-              placeholder="Buscar profesor por nombre, email o cargo..." 
+              placeholder="Buscar colaborador por nombre, email o cargo..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{ maxWidth: '400px', paddingLeft: '3.5rem' }}
@@ -201,7 +239,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
           </div>
         </div>
         <div className="action-buttons">
-          <button className="primary" onClick={openAddModal}>+ Agregar Profesor</button>
+          <button className="primary" onClick={openAddModal}>+ Agregar Colaborador</button>
         </div>
       </section>
 
@@ -209,7 +247,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
         <div className="modal-overlay">
           <div className="modal-content">
             <div className="modal-header">
-              <h3>{isEditing ? 'Editar Profesor' : 'Agregar Nuevo Profesor'}</h3>
+              <h3>{isEditing ? 'Editar Colaborador' : 'Agregar Nuevo Colaborador'}</h3>
               <button className="btn-close" type="button" onClick={() => setIsModalOpen(false)}>Cerrar</button>
             </div>
             <form onSubmit={handleSaveProfessor}>
@@ -240,6 +278,18 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
                   value={newProf.cargo} 
                   onChange={e => setNewProf({...newProf, cargo: e.target.value})} 
                 />
+              </div>
+              <div className="form-group">
+                <label>Rol (Permisos en Plataforma)</label>
+                <select 
+                  value={newProf.rol || 'profesor'} 
+                  onChange={e => setNewProf({...newProf, rol: e.target.value})}
+                  disabled={newProf.email === 'paulina.admin@icomercialpmt.cl'}
+                >
+                  <option value="profesor">Colaborador (Con Horario)</option>
+                  <option value="asistente">Asistente de la Educación</option>
+                  <option value="admin">Administrador</option>
+                </select>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div className="form-group">
@@ -301,7 +351,7 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
                       autoComplete="new-password"
                     />
                     <small style={{ display: 'block', marginTop: '0.25rem', opacity: 0.7 }}>
-                      Al guardar, se forzará al profesor a cambiar la clave en su próximo inicio.
+                      Al guardar, se forzará al colaborador a cambiar la clave en su próximo inicio.
                     </small>
                   </div>
                 </div>
@@ -319,30 +369,55 @@ const ProfessorManager = ({ supabase, profesores, loading, todaySummary, onRefre
       )}
 
       <section className="profesores-list">
-        <h2>Lista de Profesores {searchTerm && <small>({filteredProfesores.length} resultados)</small>}</h2>
+        <h2>Lista de Colaboradores {searchTerm && <small>({filteredProfesores.length} resultados)</small>}</h2>
         {loading ? (
           <p>Cargando lista...</p>
         ) : filteredProfesores.length === 0 ? (
           <div className="empty-state">
-            <p>No se encontraron profesores que coincidan con "{searchTerm}"</p>
+            <p>No se encontraron colaboradores que coincidan con "{searchTerm}"</p>
           </div>
         ) : (
           <table className="responsive-table">
             <thead>
               <tr>
-                <th>Nombre</th>
-                <th>Cargo</th>
-                <th>Contrato</th>
+                <th onClick={() => handleSort('nombre')} style={{ cursor: 'pointer', userSelect: 'none' }}>
+                  Nombre {sortConfig.key === 'nombre' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                </th>
+                <th onClick={() => handleSort('rol')} style={{ cursor: 'pointer', userSelect: 'none' }}>
+                  Rol {sortConfig.key === 'rol' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                </th>
+                <th onClick={() => handleSort('cargo')} style={{ cursor: 'pointer', userSelect: 'none' }}>
+                  Cargo {sortConfig.key === 'cargo' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                </th>
+                <th onClick={() => handleSort('contrato_horas')} style={{ cursor: 'pointer', userSelect: 'none' }}>
+                  Contrato {sortConfig.key === 'contrato_horas' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                </th>
                 <th>Exced. (P)</th>
                 <th>No Lect.</th>
-                <th>Usuario</th>
+                <th onClick={() => handleSort('email')} style={{ cursor: 'pointer', userSelect: 'none' }}>
+                  Usuario {sortConfig.key === 'email' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                </th>
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
-              {filteredProfesores.map(p => (
+              {sortedProfesores.map(p => (
                 <tr key={p.id}>
                   <td data-label="Nombre">{p.nombre}</td>
+                  <td data-label="Rol">
+                    <span style={{ 
+                      fontSize: '0.8rem', 
+                      background: p.rol === 'admin' ? '#ef4444' : p.rol === 'asistente' ? '#f59e0b' : (p.cargo && p.cargo.toLowerCase().includes('diferencial')) ? '#10b981' : '#3b82f6', 
+                      color: 'white', 
+                      padding: '0.2rem 0.5rem', 
+                      borderRadius: '1rem',
+                      textTransform: 'capitalize',
+                      whiteSpace: 'nowrap',
+                      display: 'inline-block'
+                    }}>
+                      {p.rol === 'admin' ? 'Admin' : p.rol === 'asistente' ? 'Asistente' : (p.cargo && p.cargo.toLowerCase().includes('diferencial')) ? 'Profesor PIE' : 'Profesor'}
+                    </span>
+                  </td>
                   <td data-label="Cargo">{p.cargo || '-'}</td>
                   <td data-label="Contrato" style={{ textAlign: 'center' }}>{p.contrato_horas || 0}</td>
                   <td data-label="Exced. (P)" style={{ textAlign: 'center', fontWeight: 'bold', color: 'var(--primary)' }}>
