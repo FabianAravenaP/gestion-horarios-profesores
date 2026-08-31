@@ -1,11 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { BLOQUES, DIAS } from '../../services/constants';
-import { getWeekRange, formatLongDate } from '../../services/dateUtils';
+import React, { useState, useEffect, useCallback } from 'react';
+import { BLOQUES } from '../../services/constants';
+import { getWeekRange } from '../../services/dateUtils';
 import { getDetailedBudget } from '../../services/budgetUtils';
 import { MiniCalendar } from '../MiniCalendar';
 import * as XLSX from 'xlsx';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+
+const normalizeCourse = (c) => {
+  if (!c) return '';
+  return c
+    .toString()
+    .toUpperCase()
+    .replace(/°/g, '')
+    .replace(/MEDIO/g, '')
+    .replace(/\s+/g, '')
+    .trim();
+};
+
+const isMatchingCourse = (courseA, courseB) => {
+  const normA = normalizeCourse(courseA);
+  const normB = normalizeCourse(courseB);
+  if (!normA || !normB) return false;
+  if (normA === normB) return true;
+
+  // Handle multi-course combinations (e.g., "1C/1D" matching "1C" or "1D")
+  const partsA = normA.split('/').map(p => p.trim());
+  const partsB = normB.split('/').map(p => p.trim());
+
+  return partsA.some(a => partsB.includes(a)) || partsB.some(b => partsA.includes(b));
+};
+
+const isPIETeacher = (p) => {
+  if (!p || !p.cargo) return false;
+  const cargoLower = p.cargo.toLowerCase();
+  return cargoLower.includes('diferencial') || cargoLower.includes('pie');
+};
 
 const CoveragePlanner = ({ 
   supabase, 
@@ -24,47 +54,15 @@ const CoveragePlanner = ({
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
   const [summaryCoverages, setSummaryCoverages] = useState([]);
 
-  useEffect(() => {
-    if (absentTeacherId) {
-      fetchAbsentTeacherSchedule();
-    } else {
+  const fetchAbsentTeacherSchedule = useCallback(async () => {
+    if (!absentTeacherId) {
       setAbsentSchedule([]);
-    }
-  }, [absentTeacherId, selectedDate]);
-
-  useEffect(() => {
-    if (!absentTeacherId || absentSchedule.length === 0) {
-      setAssignments({});
       return;
     }
-    const newAssignments = {};
-    absentSchedule.forEach(block => {
-      const existing = plannedCoverages.find(c => 
-        c.estado !== 'cancelada' &&
-        c.fecha === selectedDate &&
-        c.profesor_ausente_id === absentTeacherId &&
-        String(c.horario_id) === String(block.id)
-      );
-      newAssignments[block.id] = existing ? existing.profesor_reemplazante_id : '';
-    });
-
-    setAssignments(prev => {
-      let isDifferent = false;
-      for (const key of absentSchedule.map(b => b.id)) {
-        if (prev[key] !== newAssignments[key]) {
-          isDifferent = true; 
-          break;
-        }
-      }
-      return isDifferent ? { ...prev, ...newAssignments } : prev;
-    });
-  }, [absentSchedule, plannedCoverages, selectedDate, absentTeacherId]);
-
-  async function fetchAbsentTeacherSchedule() {
     setPlannerLoading(true);
     try {
       const dateObj = new Date(selectedDate + 'T00:00:00');
-      const diaSemana = dateObj.getDay() || 7; // Convert 0 (Sun) to 7 if needed, but handled below
+      const diaSemana = dateObj.getDay() || 7;
       
       if (diaSemana === 0 || diaSemana === 6) {
         setAbsentSchedule([]);
@@ -96,7 +94,39 @@ const CoveragePlanner = ({
     } finally {
       setPlannerLoading(false);
     }
-  }
+  }, [absentTeacherId, selectedDate, supabase]);
+
+  useEffect(() => {
+    fetchAbsentTeacherSchedule();
+  }, [fetchAbsentTeacherSchedule]);
+
+  useEffect(() => {
+    if (!absentTeacherId || absentSchedule.length === 0) {
+      setAssignments({});
+      return;
+    }
+    const newAssignments = {};
+    absentSchedule.forEach(block => {
+      const existing = plannedCoverages.find(c => 
+        c.estado !== 'cancelada' &&
+        c.fecha === selectedDate &&
+        c.profesor_ausente_id === absentTeacherId &&
+        String(c.horario_id) === String(block.id)
+      );
+      newAssignments[block.id] = existing ? existing.profesor_reemplazante_id : '';
+    });
+
+    setAssignments(prev => {
+      let isDifferent = false;
+      for (const key of absentSchedule.map(b => b.id)) {
+        if (prev[key] !== newAssignments[key]) {
+          isDifferent = true; 
+          break;
+        }
+      }
+      return isDifferent ? { ...prev, ...newAssignments } : prev;
+    });
+  }, [absentSchedule, plannedCoverages, selectedDate, absentTeacherId]);
 
   const getAvailableTeachers = (horaInicio, cursoAusente) => {
     const dateObj = new Date(selectedDate + 'T00:00:00');
@@ -106,9 +136,7 @@ const CoveragePlanner = ({
 
     const busyIds = allSchedules
       .filter(s => {
-        const d = DIAS.find(day => day.id === s.dia_semana);
-        const selectedDayShort = new Date(selectedDate + 'T00:00:00').toLocaleDateString('es-ES', {weekday: 'short'}).toUpperCase().slice(0,2);
-        if (d?.corto === selectedDayShort && s.hora_inicio === horaInicio) {
+        if (s.dia_semana === diaSemana && s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5)) {
           const isApoderadoAsignatura = s.asignaturas?.nombre?.toLowerCase().includes('apoderado');
           if (s.tipo_bloque === 'apoderado' || isApoderadoAsignatura) {
              return false;
@@ -120,7 +148,6 @@ const CoveragePlanner = ({
       .map(s => s.profesor_id);
 
     // Find all horario IDs that share the same hora_inicio and dia_semana across all teachers
-    // Use allSchedules (which is fully loaded) instead of relying on the nested join in plannedCoverages
     const sameTimeHorarioIds = allSchedules
       .filter(s => s.dia_semana === diaSemana && s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5))
       .map(s => s.id);
@@ -135,14 +162,52 @@ const CoveragePlanner = ({
       )
       .map(c => c.profesor_reemplazante_id);
 
-    const selectedDayShort = new Date(selectedDate + 'T00:00:00').toLocaleDateString('es-ES', {weekday: 'short'}).toUpperCase().slice(0,2);
+    // ── PIE teachers available at this time slot (pie_aula blocks matching course) ──
+    const pieTeachers = profesores
+      .filter(p =>
+        p.activo &&
+        isPIETeacher(p) &&
+        p.id !== absentTeacherId &&
+        !savedBusyIds.includes(p.id)
+      )
+      .filter(p => {
+        // Include if they have a pie_aula block at this exact time on this day AND in the same course
+        return allSchedules.some(s => {
+          if (s.profesor_id !== p.id) return false;
+          if (s.dia_semana !== diaSemana) return false;
+          if (s.hora_inicio?.slice(0, 5) !== horaInicio?.slice(0, 5)) return false;
+          if (s.tipo_bloque !== 'pie_aula') return false;
+
+          return isMatchingCourse(s.curso, cursoAusente);
+        });
+      })
+      .map(p => {
+        // Find the course they're supporting in this block
+        const pieBlock = allSchedules.find(s =>
+          s.profesor_id === p.id &&
+          s.dia_semana === diaSemana &&
+          s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5) &&
+          s.tipo_bloque === 'pie_aula' &&
+          isMatchingCourse(s.curso, cursoAusente)
+        );
+        const cursoLabel = pieBlock?.curso ? ` (${pieBlock.curso})` : (cursoAusente ? ` (${cursoAusente})` : '');
+        return {
+          ...p,
+          weekCount: 0,
+          budget: { surplus: 0, noLectivas: 0, total: 999 },
+          remaining: 999,
+          isOverSurplus: false,
+          statusLabel: `PIE en Aula${cursoLabel}`,
+          isPIE: true,
+        };
+      });
 
     // ── Regular teachers ──────────────────────────────────────────────────────
     const regularTeachers = profesores
       .filter(p =>
         p.activo &&
         p.rol === 'profesor' &&
-        p.cargo !== 'Profesora Diferencial' && // PIE handled separately
+        !isPIETeacher(p) && // PIE handled separately
         p.cargo !== 'Coordinador TP' && // Coordinadores no realizan coberturas
         (teachersWorkingToday.has(p.id) || !teachersWithAnySchedule.has(p.id)) &&
         !busyIds.includes(p.id) &&
@@ -161,10 +226,9 @@ const CoveragePlanner = ({
         const remaining = budget.total - weekCount;
 
         const hasApoderado = allSchedules.some(s => {
-          const d = DIAS.find(day => day.id === s.dia_semana);
           const isApoderadoAsignatura = s.asignaturas?.nombre?.toLowerCase().includes('apoderado');
-          return d?.corto === selectedDayShort &&
-                 s.hora_inicio === horaInicio &&
+          return s.dia_semana === diaSemana &&
+                 s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5) &&
                  s.profesor_id === p.id &&
                  (s.tipo_bloque === 'apoderado' || isApoderadoAsignatura);
         });
@@ -174,49 +238,7 @@ const CoveragePlanner = ({
         return { ...p, weekCount, budget, remaining, isOverSurplus: weekCount >= budget.surplus, statusLabel, isPIE: false };
       });
 
-    // ── PIE teachers available at this time slot (pie_aula blocks only) ───────
-    const pieTeachers = profesores
-      .filter(p =>
-        p.activo &&
-        p.cargo === 'Profesora Diferencial' &&
-        p.id !== absentTeacherId &&
-        !savedBusyIds.includes(p.id)
-      )
-      .filter(p => {
-        // Only include if they have a pie_aula block at this exact time on this day
-        // AND in the exact same course
-        return allSchedules.some(s => {
-          if (s.profesor_id !== p.id) return false;
-          if (s.dia_semana !== diaSemana) return false;
-          if (s.hora_inicio?.slice(0, 5) !== horaInicio?.slice(0, 5)) return false;
-          if (s.tipo_bloque !== 'pie_aula') return false;
-
-          const sCurso = (s.curso || '').replace(/\s+/g, '').toUpperCase();
-          const aCurso = (cursoAusente || '').replace(/\s+/g, '').toUpperCase();
-          return sCurso === aCurso;
-        });
-      })
-      .map(p => {
-        // Find the course they're supporting in this block
-        const pieBlock = allSchedules.find(s =>
-          s.profesor_id === p.id &&
-          s.dia_semana === diaSemana &&
-          s.hora_inicio?.slice(0, 5) === horaInicio?.slice(0, 5) &&
-          s.tipo_bloque === 'pie_aula'
-        );
-        const cursoLabel = pieBlock?.curso ? ` (${pieBlock.curso})` : '';
-        return {
-          ...p,
-          weekCount: 0,
-          budget: { surplus: 0, noLectivas: 0, total: 999 },
-          remaining: 999,
-          isOverSurplus: false,
-          statusLabel: `PIE en Aula${cursoLabel}`,
-          isPIE: true,
-        };
-      });
-
-    return [...regularTeachers, ...pieTeachers];
+    return [...pieTeachers, ...regularTeachers];
   };
 
   const handleSaveCoverages = async () => {
@@ -457,26 +479,43 @@ const CoveragePlanner = ({
                       <div className="class-info">
                         <h4>{block.tipo_bloque === 'orientacion' ? 'Orientación (PIE)' : (block.asignaturas?.nombre || 'Administrativo')}</h4>
                         <p>{block.curso || '-'}</p>
+                        {available.filter(p => p.isPIE).map(p => (
+                          <div 
+                            key={p.id} 
+                            style={{ 
+                              fontSize: '0.8rem', 
+                              color: '#059669', 
+                              fontWeight: '600', 
+                              marginTop: '4px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px'
+                            }}
+                          >
+                            <span>⭐</span>
+                            <span>Acompaña: <strong>{p.nombre}</strong></span>
+                          </div>
+                        ))}
                       </div>
                       <select 
                         value={assignments[block.id] || ''} 
                         onChange={e => setAssignments({...assignments, [block.id]: e.target.value})}
                       >
                         <option value="">Sin reemplazo</option>
-                        {available.filter(p => !p.isPIE).length > 0 && (
-                          <optgroup label="── Profesores Regulares ──">
-                            {available.filter(p => !p.isPIE).map(p => (
-                              <option key={p.id} value={p.id} style={{ color: p.isOverSurplus ? 'red' : 'inherit' }}>
-                                {p.nombre} ({p.statusLabel}) ({p.remaining} blq)
+                        {available.filter(p => p.isPIE).length > 0 && (
+                          <optgroup label="── ⭐ Profesor(a) PIE en Aula (Acompaña al curso) ──">
+                            {available.filter(p => p.isPIE).map(p => (
+                              <option key={p.id} value={p.id} style={{ color: '#059669', fontWeight: 'bold' }}>
+                                ⭐ {p.nombre} — {p.statusLabel}
                               </option>
                             ))}
                           </optgroup>
                         )}
-                        {available.filter(p => p.isPIE).length > 0 && (
-                          <optgroup label="── Profesoras PIE en Aula ──">
-                            {available.filter(p => p.isPIE).map(p => (
-                              <option key={p.id} value={p.id} style={{ color: '#10b981' }}>
-                                ⭐ {p.nombre} — {p.statusLabel}
+                        {available.filter(p => !p.isPIE).length > 0 && (
+                          <optgroup label="── Profesores Regulares Disponibles ──">
+                            {available.filter(p => !p.isPIE).map(p => (
+                              <option key={p.id} value={p.id} style={{ color: p.isOverSurplus ? 'red' : 'inherit' }}>
+                                {p.nombre} ({p.statusLabel}) ({p.remaining} blq)
                               </option>
                             ))}
                           </optgroup>

@@ -36,3 +36,9 @@ dist-ssr/
 
 .vercel
 .env*.local
+
+# Tests
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
