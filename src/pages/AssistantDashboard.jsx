@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../services/supabase';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import { formatLongDate, getWeekRange } from '../services/dateUtils';
 import { BLOQUES, DIAS } from '../services/constants';
 
